@@ -1,5 +1,7 @@
 # WAVE Report Parser
 
+> [Read in English](README.en.md)
+
 Script Node.js para extrair e estruturar os dados de relatórios de acessibilidade gerados pela extensão [WAVE (Web Accessibility Evaluation Tool)](https://wave.webaim.org/).
 
 ## Como funciona
