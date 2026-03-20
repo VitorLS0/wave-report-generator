@@ -11,6 +11,10 @@ The WAVE extension injects a sidebar (`sidebar_container`) into the evaluated pa
 - **Summary counts** per category (Errors, Contrast Errors, Alerts, Features, Structure, ARIA)
 - **AIM score** (Accessibility Improvement Measure), from 0 to 10
 - **Per-type breakdown** within each category, including every instance found on the page and whether it was visually hidden
+- **WCAG mapping** of each issue type to the corresponding success criteria and conformance level (A, AA, AAA)
+- **POUR classification** of each type into the WCAG framework dimensions (Perceivable, Operable, Understandable, Robust)
+- **Screen reader relevance** of each type (`critical`, `high`, `medium`, `low`, `positive`, `informational`)
+- **Per-report POUR and relevance breakdown**, counting only errors and alerts
 
 Results are exported as **JSON** (structured) and **CSV** (spreadsheet).
 
@@ -75,7 +79,19 @@ All results are saved to `output/`:
     "features": 8,
     "structure": 14,
     "aria": 3,
-    "aim_score": 7.4
+    "aim_score": 7.4,
+    "pour_breakdown": {
+      "perceivable": 4,
+      "operable": 2,
+      "understandable": 1,
+      "robust": 1
+    },
+    "sr_relevance_breakdown": {
+      "critical": 2,
+      "high": 3,
+      "medium": 2,
+      "low": 1
+    }
   },
   "categories": [
     {
@@ -87,6 +103,10 @@ All results are saved to `output/`:
           "type_id": "alt_missing",
           "type_label": "Missing alternative text",
           "count": 2,
+          "wcag_criteria": ["1.1.1"],
+          "wcag_level": "A",
+          "pour_dimensions": ["Perceivable"],
+          "sr_relevance": "critical",
           "instances": [
             {
               "index": 1,
@@ -102,7 +122,34 @@ All results are saved to `output/`:
 }
 ```
 
-## Detail CSV columns
+### `pour_breakdown` and `sr_relevance_breakdown`
+
+These fields count only instances from **Errors**, **Contrast Errors**, and **Alerts** — categories that represent barriers. Features, Structure, and ARIA are excluded as they are positive or informational indicators.
+
+A single type may belong to more than one POUR dimension (e.g. `label_missing` maps to both Perceivable and Understandable) and is counted in both.
+
+## Summary CSV columns (`wave-summary.csv`)
+
+| Column | Description |
+|---|---|
+| `source_file` | Name of the source HTML file |
+| `errors` | Total error count |
+| `contrast_errors` | Total contrast error count |
+| `alerts` | Total alert count |
+| `features` | Total accessibility features |
+| `structure` | Total structural elements |
+| `aria` | Total ARIA attributes/roles |
+| `aim_score` | AIM score (0–10) |
+| `pour_perceivable` | Error/alert instances classified as Perceivable |
+| `pour_operable` | Instances classified as Operable |
+| `pour_understandable` | Instances classified as Understandable |
+| `pour_robust` | Instances classified as Robust |
+| `sr_critical` | Instances with `critical` screen reader relevance |
+| `sr_high` | Instances with `high` relevance |
+| `sr_medium` | Instances with `medium` relevance |
+| `sr_low` | Instances with `low` relevance |
+
+## Detail CSV columns (`wave-details.csv`)
 
 | Column | Description |
 |---|---|
@@ -112,10 +159,25 @@ All results are saved to `output/`:
 | `type_id` | Item type ID (e.g. `alt_missing`, `link_suspicious`) |
 | `type_label` | Item type description |
 | `type_count` | Total instances of this type in the report |
+| `wcag_criteria` | Related WCAG criteria, semicolon-separated (e.g. `1.3.1;2.4.1`) |
+| `wcag_level` | WCAG conformance level (`A`, `AA`, or `AAA`) |
+| `pour_dimensions` | POUR dimensions, semicolon-separated (e.g. `Perceivable;Operable`) |
+| `sr_relevance` | Screen reader relevance (`critical`, `high`, `medium`, `low`, `positive`, `informational`) |
 | `instance_index` | Sequential instance number (1, 2, 3...) |
 | `hidden` | `true` if the element is visually hidden on the page |
 | `description` | Full descriptive text of the instance |
 | `label` | Type label without the instance number |
+
+### `sr_relevance` values
+
+| Value | Meaning |
+|---|---|
+| `critical` | Directly blocks screen reader access |
+| `high` | Significantly impacts screen reader experience |
+| `medium` | Impacts experience; workarounds may exist |
+| `low` | Minor impact (e.g. more relevant to low-vision users) |
+| `positive` | Accessibility feature present — benefits screen reader users |
+| `informational` | Neutral element — presence is noted without positive or negative judgement |
 
 ## WAVE categories
 

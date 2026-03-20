@@ -7,7 +7,19 @@
     "features": 19,
     "structure": 56,
     "aria": 61,
-    "aim_score": 9.8
+    "aim_score": 9.8,
+    "pour_breakdown": {
+      "perceivable": 1,
+      "operable": 8,
+      "understandable": 1,
+      "robust": 0
+    },
+    "sr_relevance_breakdown": {
+      "critical": 0,
+      "high": 0,
+      "medium": 9,
+      "low": 0
+    }
   },
   "categories": [
     {
@@ -19,6 +31,14 @@
           "type_id": "link_redundant",
           "type_label": "Redundant link",
           "count": 7,
+          "wcag_criteria": [
+            "2.4.4"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "medium",
           "instances": [
             {
               "index": 1,
@@ -68,6 +88,15 @@
           "type_id": "link_pdf",
           "type_label": "Link to PDF document",
           "count": 1,
+          "wcag_criteria": [
+            "2.4.4"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable",
+            "Understandable"
+          ],
+          "sr_relevance": "medium",
           "instances": [
             {
               "index": 1,
@@ -81,6 +110,14 @@
           "type_id": "youtube_video",
           "type_label": "YouTube video",
           "count": 1,
+          "wcag_criteria": [
+            "1.2.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "medium",
           "instances": [
             {
               "index": 1,
@@ -101,6 +138,14 @@
           "type_id": "alt",
           "type_label": "Alternative text",
           "count": 13,
+          "wcag_criteria": [
+            "1.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -186,6 +231,14 @@
           "type_id": "alt_link",
           "type_label": "Linked image with alternative text",
           "count": 2,
+          "wcag_criteria": [
+            "1.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -205,6 +258,16 @@
           "type_id": "label",
           "type_label": "Form label",
           "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "3.3.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Understandable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -218,6 +281,14 @@
           "type_id": "link_skip",
           "type_label": "Skip link",
           "count": 1,
+          "wcag_criteria": [
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -231,6 +302,14 @@
           "type_id": "link_skip_target",
           "type_label": "Skip link target",
           "count": 1,
+          "wcag_criteria": [
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -244,6 +323,14 @@
           "type_id": "lang",
           "type_label": "Language",
           "count": 1,
+          "wcag_criteria": [
+            "3.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Understandable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -264,6 +351,14 @@
           "type_id": "h1",
           "type_label": "Heading level 1",
           "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -277,6 +372,14 @@
           "type_id": "h2",
           "type_label": "Heading level 2",
           "count": 18,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -392,6 +495,14 @@
           "type_id": "ul",
           "type_label": "Unordered list",
           "count": 28,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -567,6 +678,14 @@
           "type_id": "iframe",
           "type_label": "Inline frame",
           "count": 1,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "informational",
           "instances": [
             {
               "index": 1,
@@ -580,6 +699,16 @@
           "type_id": "header",
           "type_label": "Header",
           "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -593,6 +722,16 @@
           "type_id": "nav",
           "type_label": "Navigation",
           "count": 4,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -624,6 +763,14 @@
           "type_id": "search",
           "type_label": "Search",
           "count": 1,
+          "wcag_criteria": [
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -637,6 +784,16 @@
           "type_id": "main",
           "type_label": "Main content",
           "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -650,6 +807,14 @@
           "type_id": "footer",
           "type_label": "Footer",
           "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -670,6 +835,14 @@
           "type_id": "aria",
           "type_label": "ARIA",
           "count": 12,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "informational",
           "instances": [
             {
               "index": 1,
@@ -749,6 +922,16 @@
           "type_id": "aria_label",
           "type_label": "ARIA label",
           "count": 13,
+          "wcag_criteria": [
+            "1.3.1",
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Robust"
+          ],
+          "sr_relevance": "positive",
           "instances": [
             {
               "index": 1,
@@ -834,6 +1017,14 @@
           "type_id": "aria_tabindex",
           "type_label": "ARIA tabindex",
           "count": 1,
+          "wcag_criteria": [
+            "2.4.3"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "informational",
           "instances": [
             {
               "index": 1,
@@ -847,6 +1038,14 @@
           "type_id": "aria_live_region",
           "type_label": "ARIA alert or live region",
           "count": 1,
+          "wcag_criteria": [
+            "4.1.3"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "informational",
           "instances": [
             {
               "index": 1,
@@ -860,6 +1059,15 @@
           "type_id": "aria_button",
           "type_label": "ARIA button",
           "count": 9,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust",
+            "Operable"
+          ],
+          "sr_relevance": "informational",
           "instances": [
             {
               "index": 1,
@@ -921,6 +1129,15 @@
           "type_id": "aria_hidden",
           "type_label": "ARIA hidden",
           "count": 8,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Robust"
+          ],
+          "sr_relevance": "informational",
           "instances": [
             {
               "index": 1,
@@ -976,6 +1193,14 @@
           "type_id": "aria_expanded",
           "type_label": "ARIA expanded",
           "count": 17,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "informational",
           "instances": [
             {
               "index": 1,
