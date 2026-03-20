@@ -266,16 +266,32 @@ function writeDetailsCSV(reports, outDir) {
 
 // ─── Entry point ───────────────────────────────────────────────────────────────
 
+const ROOT = path.join(__dirname, '..');
+const INPUT_DIR = path.join(ROOT, 'input');
+const OUTPUT_DIR = path.join(ROOT, 'output');
+
 const args = process.argv.slice(2);
+let filePaths;
+
 if (args.length === 0) {
-  console.error('Usage: node wave-parser.js <file1.html> [file2.html ...]');
-  process.exit(1);
+  // Auto-scan input/ directory
+  filePaths = fs.readdirSync(INPUT_DIR)
+    .filter(f => f.toLowerCase().endsWith('.html'))
+    .map(f => path.join(INPUT_DIR, f));
+
+  if (filePaths.length === 0) {
+    console.error(`No HTML files found in ${INPUT_DIR}`);
+    process.exit(1);
+  }
+} else {
+  filePaths = args.map(f => path.resolve(f));
 }
+
+fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
 const reports = [];
 
-for (const filePath of args) {
-  const absPath = path.resolve(filePath);
+for (const absPath of filePaths) {
   if (!fs.existsSync(absPath)) {
     console.error(`File not found: ${absPath}`);
     process.exit(1);
@@ -285,20 +301,20 @@ for (const filePath of args) {
   const report = parseWaveReport(absPath);
   reports.push(report);
 
-  // Write individual JSON
-  const jsonOut = absPath.replace(/\.html$/i, '.json');
+  // Write individual JSON to output/
+  const jsonName = path.basename(absPath).replace(/\.html$/i, '.json');
+  const jsonOut = path.join(OUTPUT_DIR, jsonName);
   fs.writeFileSync(jsonOut, JSON.stringify(report, null, 2), 'utf8');
   console.log(`Wrote:   ${jsonOut}`);
 }
 
 // Write combined JSON
-const outDir = path.dirname(path.resolve(args[0]));
-const combinedJsonPath = path.join(outDir, 'wave-report.json');
+const combinedJsonPath = path.join(OUTPUT_DIR, 'wave-report.json');
 fs.writeFileSync(combinedJsonPath, JSON.stringify(reports, null, 2), 'utf8');
 console.log(`Wrote: ${combinedJsonPath}`);
 
 // Write CSVs
-writeSummaryCSV(reports, outDir);
-writeDetailsCSV(reports, outDir);
+writeSummaryCSV(reports, OUTPUT_DIR);
+writeDetailsCSV(reports, OUTPUT_DIR);
 
 console.log('\nDone.');

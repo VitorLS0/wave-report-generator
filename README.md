@@ -14,6 +14,17 @@ A extensão WAVE injeta uma barra lateral (`sidebar_container`) na página avali
 
 Os resultados são exportados em **JSON** (estruturado) e **CSV** (planilha).
 
+## Estrutura do projeto
+
+```
+wave/
+├── input/          # Arquivos HTML exportados do WAVE
+├── src/            # Código do parser
+│   └── wave-parser.js
+├── output/         # Resultados gerados (JSON e CSV)
+└── README.md
+```
+
 ## Pré-requisitos
 
 - [Node.js](https://nodejs.org/) v14 ou superior (sem dependências externas)
@@ -25,30 +36,32 @@ Os resultados são exportados em **JSON** (estruturado) e **CSV** (planilha).
 1. Acesse a página que deseja avaliar com a extensão WAVE ativa
 2. Clique com o botão direito na barra lateral do WAVE → **Inspecionar**
 3. No DevTools, localize o elemento `<div id="sidebar_container">`, clique com o botão direito → **Copiar** → **Copiar elemento**
-4. Cole o conteúdo em um arquivo `.html` (ex: `meu-site.html`)
+4. Cole o conteúdo em um arquivo `.html` dentro da pasta `input/` (ex: `input/meu-site.html`)
 
 ### 2. Executar o parser
 
+Processar todos os arquivos em `input/` automaticamente:
+
 ```bash
-node wave-parser.js meu-site.html
+node src/wave-parser.js
 ```
 
-Para processar múltiplos arquivos de uma vez:
+Ou especificar arquivos individualmente:
 
 ```bash
-node wave-parser.js site-a.html site-b.html site-c.html
+node src/wave-parser.js input/site-a.html input/site-b.html
 ```
 
 ### 3. Arquivos gerados
 
+Todos os resultados são salvos em `output/`:
+
 | Arquivo | Descrição |
 |---|---|
-| `<nome>.json` | Relatório completo e estruturado de cada arquivo de entrada |
-| `wave-report.json` | Array combinado com todos os relatórios processados |
-| `wave-summary.csv` | Uma linha por arquivo com todas as contagens e a pontuação AIM |
-| `wave-details.csv` | Uma linha por instância encontrada, com todos os detalhes |
-
-Os arquivos são gerados no mesmo diretório dos arquivos de entrada.
+| `output/<nome>.json` | Relatório completo e estruturado de cada arquivo de entrada |
+| `output/wave-report.json` | Array combinado com todos os relatórios processados |
+| `output/wave-summary.csv` | Uma linha por arquivo com todas as contagens e a pontuação AIM |
+| `output/wave-details.csv` | Uma linha por instância encontrada, com todos os detalhes |
 
 ## Estrutura do JSON
 

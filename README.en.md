@@ -14,6 +14,17 @@ The WAVE extension injects a sidebar (`sidebar_container`) into the evaluated pa
 
 Results are exported as **JSON** (structured) and **CSV** (spreadsheet).
 
+## Project structure
+
+```
+wave/
+├── input/          # HTML files exported from WAVE
+├── src/            # Parser source code
+│   └── wave-parser.js
+├── output/         # Generated results (JSON and CSV)
+└── README.en.md
+```
+
 ## Requirements
 
 - [Node.js](https://nodejs.org/) v14 or higher (no external dependencies)
@@ -25,30 +36,32 @@ Results are exported as **JSON** (structured) and **CSV** (spreadsheet).
 1. Open the page you want to evaluate with the WAVE extension active
 2. Right-click the WAVE sidebar → **Inspect**
 3. In DevTools, locate the `<div id="sidebar_container">` element, right-click → **Copy** → **Copy element**
-4. Paste the content into an `.html` file (e.g. `my-site.html`)
+4. Paste the content into an `.html` file inside the `input/` folder (e.g. `input/my-site.html`)
 
 ### 2. Run the parser
 
+Process all files in `input/` automatically:
+
 ```bash
-node wave-parser.js my-site.html
+node src/wave-parser.js
 ```
 
-To process multiple files at once:
+Or specify files individually:
 
 ```bash
-node wave-parser.js site-a.html site-b.html site-c.html
+node src/wave-parser.js input/site-a.html input/site-b.html
 ```
 
 ### 3. Generated files
 
+All results are saved to `output/`:
+
 | File | Description |
 |---|---|
-| `<name>.json` | Full structured report for each input file |
-| `wave-report.json` | Combined array with all processed reports |
-| `wave-summary.csv` | One row per file with all counts and the AIM score |
-| `wave-details.csv` | One row per found instance, with full details |
-
-Files are generated in the same directory as the input files.
+| `output/<name>.json` | Full structured report for each input file |
+| `output/wave-report.json` | Combined array with all processed reports |
+| `output/wave-summary.csv` | One row per file with all counts and the AIM score |
+| `output/wave-details.csv` | One row per found instance, with full details |
 
 ## JSON structure
 
