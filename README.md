@@ -1,4 +1,4 @@
-# WAVE Report Parser
+# Gerador de Relatório WAVE
 
 > [Read in English](README.en.md)
 
