@@ -392,7 +392,7 @@ function writeSummaryCSV(reports, outDir) {
   }
   const outPath = path.join(outDir, 'wave-summary.csv');
   fs.writeFileSync(outPath, rows.join('\n'), 'utf8');
-  console.log(`Wrote: ${outPath}`);
+  console.log(`  Wrote:   ${path.relative(path.join(__dirname, '..'), outPath)}`);
 }
 
 function writeDetailsCSV(reports, outDir) {
@@ -464,7 +464,7 @@ function writeDetailsCSV(reports, outDir) {
   }
   const outPath = path.join(outDir, 'wave-details.csv');
   fs.writeFileSync(outPath, rows.join('\n'), 'utf8');
-  console.log(`Wrote: ${outPath}`);
+  console.log(`  Wrote:   ${path.relative(path.join(__dirname, '..'), outPath)}`);
 }
 
 // ─── Entry point ───────────────────────────────────────────────────────────────
@@ -473,15 +473,25 @@ const ROOT = path.join(__dirname, '..');
 const INPUT_DIR = path.join(ROOT, 'input');
 const OUTPUT_DIR = path.join(ROOT, 'output');
 
+function scanHtmlFiles(dir) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...scanHtmlFiles(full));
+    } else if (entry.isFile() && entry.name.toLowerCase().endsWith('.html')) {
+      files.push(full);
+    }
+  }
+  return files;
+}
+
 const args = process.argv.slice(2);
 let filePaths;
 
 if (args.length === 0) {
-  // Auto-scan input/ directory
-  filePaths = fs.readdirSync(INPUT_DIR)
-    .filter(f => f.toLowerCase().endsWith('.html'))
-    .map(f => path.join(INPUT_DIR, f));
-
+  filePaths = scanHtmlFiles(INPUT_DIR);
   if (filePaths.length === 0) {
     console.error(`No HTML files found in ${INPUT_DIR}`);
     process.exit(1);
@@ -490,34 +500,51 @@ if (args.length === 0) {
   filePaths = args.map(f => path.resolve(f));
 }
 
-fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-
-const reports = [];
-
+// Group files by their output directory, mirroring the input folder structure
+const groups = new Map(); // outDir → [absPath, ...]
 for (const absPath of filePaths) {
-  if (!fs.existsSync(absPath)) {
-    console.error(`File not found: ${absPath}`);
-    process.exit(1);
+  let outDir;
+  const fileDir = path.dirname(absPath);
+  if (fileDir === INPUT_DIR || (fileDir + path.sep).startsWith(INPUT_DIR + path.sep)) {
+    const rel = path.relative(INPUT_DIR, fileDir);
+    outDir = rel ? path.join(OUTPUT_DIR, rel) : OUTPUT_DIR;
+  } else {
+    outDir = OUTPUT_DIR;
   }
-
-  console.log(`Parsing: ${absPath}`);
-  const report = parseWaveReport(absPath);
-  reports.push(report);
-
-  // Write individual JSON to output/
-  const jsonName = path.basename(absPath).replace(/\.html$/i, '.json');
-  const jsonOut = path.join(OUTPUT_DIR, jsonName);
-  fs.writeFileSync(jsonOut, JSON.stringify(report, null, 2), 'utf8');
-  console.log(`Wrote:   ${jsonOut}`);
+  if (!groups.has(outDir)) groups.set(outDir, []);
+  groups.get(outDir).push(absPath);
 }
 
-// Write combined JSON
-const combinedJsonPath = path.join(OUTPUT_DIR, 'wave-report.json');
-fs.writeFileSync(combinedJsonPath, JSON.stringify(reports, null, 2), 'utf8');
-console.log(`Wrote: ${combinedJsonPath}`);
+for (const [outDir, groupFiles] of groups) {
+  fs.mkdirSync(outDir, { recursive: true });
 
-// Write CSVs
-writeSummaryCSV(reports, OUTPUT_DIR);
-writeDetailsCSV(reports, OUTPUT_DIR);
+  const groupLabel = path.relative(OUTPUT_DIR, outDir) || '(root)';
+  console.log(`\nFolder: ${groupLabel}`);
+
+  const groupReports = [];
+
+  for (const absPath of groupFiles) {
+    if (!fs.existsSync(absPath)) {
+      console.error(`File not found: ${absPath}`);
+      process.exit(1);
+    }
+
+    console.log(`  Parsing: ${path.relative(INPUT_DIR, absPath)}`);
+    const report = parseWaveReport(absPath);
+    groupReports.push(report);
+
+    const jsonName = path.basename(absPath).replace(/\.html$/i, '.json');
+    const jsonOut = path.join(outDir, jsonName);
+    fs.writeFileSync(jsonOut, JSON.stringify(report, null, 2), 'utf8');
+    console.log(`  Wrote:   ${path.relative(ROOT, jsonOut)}`);
+  }
+
+  const combinedJsonPath = path.join(outDir, 'wave-report.json');
+  fs.writeFileSync(combinedJsonPath, JSON.stringify(groupReports, null, 2), 'utf8');
+  console.log(`  Wrote:   ${path.relative(ROOT, combinedJsonPath)}`);
+
+  writeSummaryCSV(groupReports, outDir);
+  writeDetailsCSV(groupReports, outDir);
+}
 
 console.log('\nDone.');

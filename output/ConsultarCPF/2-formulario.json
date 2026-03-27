@@ -1,0 +1,303 @@
+{
+  "source_file": "2-formulario.html",
+  "summary": {
+    "errors": 1,
+    "contrast_errors": 1,
+    "alerts": 2,
+    "features": 3,
+    "structure": 4,
+    "aria": 2,
+    "aim_score": 8.2,
+    "pour_breakdown": {
+      "perceivable": 2,
+      "operable": 1,
+      "understandable": 1,
+      "robust": 0
+    },
+    "sr_relevance_breakdown": {
+      "critical": 2,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "categories": [
+    {
+      "category": "error",
+      "category_label": "Errors",
+      "total": 1,
+      "types": [
+        {
+          "type_id": "label_missing",
+          "type_label": "Missing form label",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "3.3.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Understandable"
+          ],
+          "sr_relevance": "critical",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Missing form label 1",
+              "label": "Missing form label"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "contrast",
+      "category_label": "Contrast Errors",
+      "total": 1,
+      "types": [
+        {
+          "type_id": "unknown",
+          "type_label": "Very low contrast",
+          "count": 1,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": []
+        }
+      ]
+    },
+    {
+      "category": "alert",
+      "category_label": "Alerts",
+      "total": 2,
+      "types": [
+        {
+          "type_id": "region_missing",
+          "type_label": "No page regions",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "critical",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "No page regions 1",
+              "label": "No page regions"
+            }
+          ]
+        },
+        {
+          "type_id": "h1_missing",
+          "type_label": "Missing first level heading",
+          "count": 1,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Missing first level heading 1",
+              "label": "Missing first level heading"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "feature",
+      "category_label": "Features",
+      "total": 3,
+      "types": [
+        {
+          "type_id": "label",
+          "type_label": "Form label",
+          "count": 2,
+          "wcag_criteria": [
+            "1.3.1",
+            "3.3.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Understandable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Form label 1",
+              "label": "Form label"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Form label 2",
+              "label": "Form label"
+            }
+          ]
+        },
+        {
+          "type_id": "lang",
+          "type_label": "Language",
+          "count": 1,
+          "wcag_criteria": [
+            "3.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Understandable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Language 1",
+              "label": "Language"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "structure",
+      "category_label": "Structural Elements",
+      "total": 4,
+      "types": [
+        {
+          "type_id": "h2",
+          "type_label": "Heading level 2",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Heading level 2 1",
+              "label": "Heading level 2"
+            }
+          ]
+        },
+        {
+          "type_id": "h3",
+          "type_label": "Heading level 3",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Heading level 3 1",
+              "label": "Heading level 3"
+            }
+          ]
+        },
+        {
+          "type_id": "iframe",
+          "type_label": "Inline frame",
+          "count": 2,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Inline frame 1",
+              "label": "Inline frame"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Inline frame 2",
+              "label": "Inline frame"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "aria",
+      "category_label": "ARIA",
+      "total": 2,
+      "types": [
+        {
+          "type_id": "aria_tabindex",
+          "type_label": "ARIA tabindex",
+          "count": 1,
+          "wcag_criteria": [
+            "2.4.3"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "ARIA tabindex 1",
+              "label": "ARIA tabindex"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_hidden",
+          "type_label": "ARIA hidden",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Robust"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "ARIA hidden 1",
+              "label": "ARIA hidden"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

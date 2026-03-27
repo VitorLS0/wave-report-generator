@@ -37,7 +37,7 @@ wave/
 
 ### 1. Save the WAVE report as HTML
 
-1. Open the page you want to evaluate with the WAVE extension active
+1. Open the page you want to evaluate in Chrome or Brave browser (or any chromium based browser) with the WAVE extension active
 2. Right-click the WAVE sidebar → **Inspect**
 3. In DevTools, locate the `<div id="sidebar_container">` element, right-click → **Copy** → **Copy element**
 4. Paste the content into an `.html` file inside the `input/` folder (e.g. `input/my-site.html`)
@@ -60,12 +60,12 @@ node src/wave-parser.js input/site-a.html input/site-b.html
 
 All results are saved to `output/`:
 
-| File | Description |
-|---|---|
-| `output/<name>.json` | Full structured report for each input file |
-| `output/wave-report.json` | Combined array with all processed reports |
+| File                      | Description                                        |
+| ------------------------- | -------------------------------------------------- |
+| `output/<name>.json`      | Full structured report for each input file         |
+| `output/wave-report.json` | Combined array with all processed reports          |
 | `output/wave-summary.csv` | One row per file with all counts and the AIM score |
-| `output/wave-details.csv` | One row per found instance, with full details |
+| `output/wave-details.csv` | One row per found instance, with full details      |
 
 ## JSON structure
 
@@ -130,62 +130,62 @@ A single type may belong to more than one POUR dimension (e.g. `label_missing` m
 
 ## Summary CSV columns (`wave-summary.csv`)
 
-| Column | Description |
-|---|---|
-| `source_file` | Name of the source HTML file |
-| `errors` | Total error count |
-| `contrast_errors` | Total contrast error count |
-| `alerts` | Total alert count |
-| `features` | Total accessibility features |
-| `structure` | Total structural elements |
-| `aria` | Total ARIA attributes/roles |
-| `aim_score` | AIM score (0–10) |
-| `pour_perceivable` | Error/alert instances classified as Perceivable |
-| `pour_operable` | Instances classified as Operable |
-| `pour_understandable` | Instances classified as Understandable |
-| `pour_robust` | Instances classified as Robust |
-| `sr_critical` | Instances with `critical` screen reader relevance |
-| `sr_high` | Instances with `high` relevance |
-| `sr_medium` | Instances with `medium` relevance |
-| `sr_low` | Instances with `low` relevance |
+| Column                | Description                                       |
+| --------------------- | ------------------------------------------------- |
+| `source_file`         | Name of the source HTML file                      |
+| `errors`              | Total error count                                 |
+| `contrast_errors`     | Total contrast error count                        |
+| `alerts`              | Total alert count                                 |
+| `features`            | Total accessibility features                      |
+| `structure`           | Total structural elements                         |
+| `aria`                | Total ARIA attributes/roles                       |
+| `aim_score`           | AIM score (0–10)                                  |
+| `pour_perceivable`    | Error/alert instances classified as Perceivable   |
+| `pour_operable`       | Instances classified as Operable                  |
+| `pour_understandable` | Instances classified as Understandable            |
+| `pour_robust`         | Instances classified as Robust                    |
+| `sr_critical`         | Instances with `critical` screen reader relevance |
+| `sr_high`             | Instances with `high` relevance                   |
+| `sr_medium`           | Instances with `medium` relevance                 |
+| `sr_low`              | Instances with `low` relevance                    |
 
 ## Detail CSV columns (`wave-details.csv`)
 
-| Column | Description |
-|---|---|
-| `source_file` | Name of the source HTML file |
-| `category` | Category ID (`error`, `alert`, `feature`, `structure`, `aria`) |
-| `category_label` | Human-readable category name |
-| `type_id` | Item type ID (e.g. `alt_missing`, `link_suspicious`) |
-| `type_label` | Item type description |
-| `type_count` | Total instances of this type in the report |
-| `wcag_criteria` | Related WCAG criteria, semicolon-separated (e.g. `1.3.1;2.4.1`) |
-| `wcag_level` | WCAG conformance level (`A`, `AA`, or `AAA`) |
-| `pour_dimensions` | POUR dimensions, semicolon-separated (e.g. `Perceivable;Operable`) |
-| `sr_relevance` | Screen reader relevance (`critical`, `high`, `medium`, `low`, `positive`, `informational`) |
-| `instance_index` | Sequential instance number (1, 2, 3...) |
-| `hidden` | `true` if the element is visually hidden on the page |
-| `description` | Full descriptive text of the instance |
-| `label` | Type label without the instance number |
+| Column            | Description                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------ |
+| `source_file`     | Name of the source HTML file                                                               |
+| `category`        | Category ID (`error`, `alert`, `feature`, `structure`, `aria`)                             |
+| `category_label`  | Human-readable category name                                                               |
+| `type_id`         | Item type ID (e.g. `alt_missing`, `link_suspicious`)                                       |
+| `type_label`      | Item type description                                                                      |
+| `type_count`      | Total instances of this type in the report                                                 |
+| `wcag_criteria`   | Related WCAG criteria, semicolon-separated (e.g. `1.3.1;2.4.1`)                            |
+| `wcag_level`      | WCAG conformance level (`A`, `AA`, or `AAA`)                                               |
+| `pour_dimensions` | POUR dimensions, semicolon-separated (e.g. `Perceivable;Operable`)                         |
+| `sr_relevance`    | Screen reader relevance (`critical`, `high`, `medium`, `low`, `positive`, `informational`) |
+| `instance_index`  | Sequential instance number (1, 2, 3...)                                                    |
+| `hidden`          | `true` if the element is visually hidden on the page                                       |
+| `description`     | Full descriptive text of the instance                                                      |
+| `label`           | Type label without the instance number                                                     |
 
 ### `sr_relevance` values
 
-| Value | Meaning |
-|---|---|
-| `critical` | Directly blocks screen reader access |
-| `high` | Significantly impacts screen reader experience |
-| `medium` | Impacts experience; workarounds may exist |
-| `low` | Minor impact (e.g. more relevant to low-vision users) |
-| `positive` | Accessibility feature present — benefits screen reader users |
+| Value           | Meaning                                                                    |
+| --------------- | -------------------------------------------------------------------------- |
+| `critical`      | Directly blocks screen reader access                                       |
+| `high`          | Significantly impacts screen reader experience                             |
+| `medium`        | Impacts experience; workarounds may exist                                  |
+| `low`           | Minor impact (e.g. more relevant to low-vision users)                      |
+| `positive`      | Accessibility feature present — benefits screen reader users               |
 | `informational` | Neutral element — presence is noted without positive or negative judgement |
 
 ## WAVE categories
 
-| Category | Description |
-|---|---|
-| **Errors** | Issues that definitely impact assistive technology users |
-| **Contrast Errors** | Text with insufficient contrast against its background |
-| **Alerts** | Possible issues that require manual review |
-| **Features** | Accessibility features present on the page |
-| **Structure** | Structural elements (headings, lists, landmarks) |
-| **ARIA** | ARIA attributes and roles identified |
+| Category            | Description                                              |
+| ------------------- | -------------------------------------------------------- |
+| **Errors**          | Issues that definitely impact assistive technology users |
+| **Contrast Errors** | Text with insufficient contrast against its background   |
+| **Alerts**          | Possible issues that require manual review               |
+| **Features**        | Accessibility features present on the page               |
+| **Structure**       | Structural elements (headings, lists, landmarks)         |
+| **ARIA**            | ARIA attributes and roles identified                     |
