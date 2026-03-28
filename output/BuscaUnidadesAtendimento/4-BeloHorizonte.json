@@ -1,0 +1,3290 @@
+{
+  "source_file": "4-BeloHorizonte.html",
+  "summary": {
+    "errors": 5,
+    "contrast_errors": 0,
+    "alerts": 13,
+    "features": 111,
+    "structure": 102,
+    "aria": 241,
+    "aim_score": 8.5,
+    "pour_breakdown": {
+      "perceivable": 1,
+      "operable": 8,
+      "understandable": 0,
+      "robust": 4
+    },
+    "sr_relevance_breakdown": {
+      "critical": 2,
+      "high": 0,
+      "medium": 11,
+      "low": 0
+    }
+  },
+  "categories": [
+    {
+      "category": "error",
+      "category_label": "Errors",
+      "total": 5,
+      "types": [
+        {
+          "type_id": "link_empty",
+          "type_label": "Empty link",
+          "count": 3,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Empty link 1",
+              "label": "Empty link"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Empty link 2",
+              "label": "Empty link"
+            },
+            {
+              "index": 3,
+              "hidden": true,
+              "description": "Empty link 3",
+              "label": "Empty link"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_reference_broken",
+          "type_label": "Broken ARIA reference",
+          "count": 2,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "critical",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Broken ARIA reference 1",
+              "label": "Broken ARIA reference"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Broken ARIA reference 2",
+              "label": "Broken ARIA reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "alert",
+      "category_label": "Alerts",
+      "total": 13,
+      "types": [
+        {
+          "type_id": "alt_duplicate",
+          "type_label": "A nearby image has the same alternative text",
+          "count": 1,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "A nearby image has the same alternative text 1",
+              "label": "A nearby image has the same alternative text"
+            }
+          ]
+        },
+        {
+          "type_id": "label_orphaned",
+          "type_label": "Orphaned form label",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "medium",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Orphaned form label 1",
+              "label": "Orphaned form label"
+            }
+          ]
+        },
+        {
+          "type_id": "link_redundant",
+          "type_label": "Redundant link",
+          "count": 3,
+          "wcag_criteria": [
+            "2.4.4"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "medium",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Redundant link 1",
+              "label": "Redundant link"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Redundant link 2",
+              "label": "Redundant link"
+            },
+            {
+              "index": 3,
+              "hidden": true,
+              "description": "Redundant link 3",
+              "label": "Redundant link"
+            }
+          ]
+        },
+        {
+          "type_id": "noscript",
+          "type_label": "Noscript element",
+          "count": 2,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "medium",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Noscript element 1",
+              "label": "Noscript element"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Noscript element 2",
+              "label": "Noscript element"
+            }
+          ]
+        },
+        {
+          "type_id": "accesskey",
+          "type_label": "Accesskey",
+          "count": 5,
+          "wcag_criteria": [
+            "2.1.4"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "medium",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Accesskey 1",
+              "label": "Accesskey"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Accesskey 2",
+              "label": "Accesskey"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Accesskey 3",
+              "label": "Accesskey"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "Accesskey 4",
+              "label": "Accesskey"
+            },
+            {
+              "index": 5,
+              "hidden": false,
+              "description": "Accesskey 5",
+              "label": "Accesskey"
+            }
+          ]
+        },
+        {
+          "type_id": "title_redundant",
+          "type_label": "Redundant title text",
+          "count": 1,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Redundant title text 1",
+              "label": "Redundant title text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "feature",
+      "category_label": "Features",
+      "total": 111,
+      "types": [
+        {
+          "type_id": "alt",
+          "type_label": "Alternative text",
+          "count": 4,
+          "wcag_criteria": [
+            "1.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Alternative text 1",
+              "label": "Alternative text"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Alternative text 2",
+              "label": "Alternative text"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Alternative text 3",
+              "label": "Alternative text"
+            },
+            {
+              "index": 4,
+              "hidden": true,
+              "description": "Alternative text 4",
+              "label": "Alternative text"
+            }
+          ]
+        },
+        {
+          "type_id": "alt_null",
+          "type_label": "Null or empty alternative text",
+          "count": 2,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Null or empty alternative text 1",
+              "label": "Null or empty alternative text"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Null or empty alternative text 2",
+              "label": "Null or empty alternative text"
+            }
+          ]
+        },
+        {
+          "type_id": "label",
+          "type_label": "Form label",
+          "count": 103,
+          "wcag_criteria": [
+            "1.3.1",
+            "3.3.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Understandable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Form label 1",
+              "label": "Form label"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Form label 2",
+              "label": "Form label"
+            },
+            {
+              "index": 3,
+              "hidden": true,
+              "description": "Form label 3",
+              "label": "Form label"
+            },
+            {
+              "index": 4,
+              "hidden": true,
+              "description": "Form label 4",
+              "label": "Form label"
+            },
+            {
+              "index": 5,
+              "hidden": true,
+              "description": "Form label 5",
+              "label": "Form label"
+            },
+            {
+              "index": 6,
+              "hidden": true,
+              "description": "Form label 6",
+              "label": "Form label"
+            },
+            {
+              "index": 7,
+              "hidden": true,
+              "description": "Form label 7",
+              "label": "Form label"
+            },
+            {
+              "index": 8,
+              "hidden": true,
+              "description": "Form label 8",
+              "label": "Form label"
+            },
+            {
+              "index": 9,
+              "hidden": true,
+              "description": "Form label 9",
+              "label": "Form label"
+            },
+            {
+              "index": 10,
+              "hidden": true,
+              "description": "Form label 10",
+              "label": "Form label"
+            },
+            {
+              "index": 11,
+              "hidden": true,
+              "description": "Form label 11",
+              "label": "Form label"
+            },
+            {
+              "index": 12,
+              "hidden": true,
+              "description": "Form label 12",
+              "label": "Form label"
+            },
+            {
+              "index": 13,
+              "hidden": true,
+              "description": "Form label 13",
+              "label": "Form label"
+            },
+            {
+              "index": 14,
+              "hidden": true,
+              "description": "Form label 14",
+              "label": "Form label"
+            },
+            {
+              "index": 15,
+              "hidden": true,
+              "description": "Form label 15",
+              "label": "Form label"
+            },
+            {
+              "index": 16,
+              "hidden": true,
+              "description": "Form label 16",
+              "label": "Form label"
+            },
+            {
+              "index": 17,
+              "hidden": true,
+              "description": "Form label 17",
+              "label": "Form label"
+            },
+            {
+              "index": 18,
+              "hidden": true,
+              "description": "Form label 18",
+              "label": "Form label"
+            },
+            {
+              "index": 19,
+              "hidden": true,
+              "description": "Form label 19",
+              "label": "Form label"
+            },
+            {
+              "index": 20,
+              "hidden": true,
+              "description": "Form label 20",
+              "label": "Form label"
+            },
+            {
+              "index": 21,
+              "hidden": true,
+              "description": "Form label 21",
+              "label": "Form label"
+            },
+            {
+              "index": 22,
+              "hidden": true,
+              "description": "Form label 22",
+              "label": "Form label"
+            },
+            {
+              "index": 23,
+              "hidden": true,
+              "description": "Form label 23",
+              "label": "Form label"
+            },
+            {
+              "index": 24,
+              "hidden": true,
+              "description": "Form label 24",
+              "label": "Form label"
+            },
+            {
+              "index": 25,
+              "hidden": true,
+              "description": "Form label 25",
+              "label": "Form label"
+            },
+            {
+              "index": 26,
+              "hidden": true,
+              "description": "Form label 26",
+              "label": "Form label"
+            },
+            {
+              "index": 27,
+              "hidden": true,
+              "description": "Form label 27",
+              "label": "Form label"
+            },
+            {
+              "index": 28,
+              "hidden": true,
+              "description": "Form label 28",
+              "label": "Form label"
+            },
+            {
+              "index": 29,
+              "hidden": true,
+              "description": "Form label 29",
+              "label": "Form label"
+            },
+            {
+              "index": 30,
+              "hidden": true,
+              "description": "Form label 30",
+              "label": "Form label"
+            },
+            {
+              "index": 31,
+              "hidden": true,
+              "description": "Form label 31",
+              "label": "Form label"
+            },
+            {
+              "index": 32,
+              "hidden": true,
+              "description": "Form label 32",
+              "label": "Form label"
+            },
+            {
+              "index": 33,
+              "hidden": true,
+              "description": "Form label 33",
+              "label": "Form label"
+            },
+            {
+              "index": 34,
+              "hidden": true,
+              "description": "Form label 34",
+              "label": "Form label"
+            },
+            {
+              "index": 35,
+              "hidden": true,
+              "description": "Form label 35",
+              "label": "Form label"
+            },
+            {
+              "index": 36,
+              "hidden": true,
+              "description": "Form label 36",
+              "label": "Form label"
+            },
+            {
+              "index": 37,
+              "hidden": true,
+              "description": "Form label 37",
+              "label": "Form label"
+            },
+            {
+              "index": 38,
+              "hidden": true,
+              "description": "Form label 38",
+              "label": "Form label"
+            },
+            {
+              "index": 39,
+              "hidden": true,
+              "description": "Form label 39",
+              "label": "Form label"
+            },
+            {
+              "index": 40,
+              "hidden": true,
+              "description": "Form label 40",
+              "label": "Form label"
+            },
+            {
+              "index": 41,
+              "hidden": true,
+              "description": "Form label 41",
+              "label": "Form label"
+            },
+            {
+              "index": 42,
+              "hidden": true,
+              "description": "Form label 42",
+              "label": "Form label"
+            },
+            {
+              "index": 43,
+              "hidden": true,
+              "description": "Form label 43",
+              "label": "Form label"
+            },
+            {
+              "index": 44,
+              "hidden": true,
+              "description": "Form label 44",
+              "label": "Form label"
+            },
+            {
+              "index": 45,
+              "hidden": true,
+              "description": "Form label 45",
+              "label": "Form label"
+            },
+            {
+              "index": 46,
+              "hidden": true,
+              "description": "Form label 46",
+              "label": "Form label"
+            },
+            {
+              "index": 47,
+              "hidden": true,
+              "description": "Form label 47",
+              "label": "Form label"
+            },
+            {
+              "index": 48,
+              "hidden": true,
+              "description": "Form label 48",
+              "label": "Form label"
+            },
+            {
+              "index": 49,
+              "hidden": true,
+              "description": "Form label 49",
+              "label": "Form label"
+            },
+            {
+              "index": 50,
+              "hidden": true,
+              "description": "Form label 50",
+              "label": "Form label"
+            },
+            {
+              "index": 51,
+              "hidden": true,
+              "description": "Form label 51",
+              "label": "Form label"
+            },
+            {
+              "index": 52,
+              "hidden": true,
+              "description": "Form label 52",
+              "label": "Form label"
+            },
+            {
+              "index": 53,
+              "hidden": true,
+              "description": "Form label 53",
+              "label": "Form label"
+            },
+            {
+              "index": 54,
+              "hidden": true,
+              "description": "Form label 54",
+              "label": "Form label"
+            },
+            {
+              "index": 55,
+              "hidden": true,
+              "description": "Form label 55",
+              "label": "Form label"
+            },
+            {
+              "index": 56,
+              "hidden": true,
+              "description": "Form label 56",
+              "label": "Form label"
+            },
+            {
+              "index": 57,
+              "hidden": true,
+              "description": "Form label 57",
+              "label": "Form label"
+            },
+            {
+              "index": 58,
+              "hidden": true,
+              "description": "Form label 58",
+              "label": "Form label"
+            },
+            {
+              "index": 59,
+              "hidden": true,
+              "description": "Form label 59",
+              "label": "Form label"
+            },
+            {
+              "index": 60,
+              "hidden": true,
+              "description": "Form label 60",
+              "label": "Form label"
+            },
+            {
+              "index": 61,
+              "hidden": true,
+              "description": "Form label 61",
+              "label": "Form label"
+            },
+            {
+              "index": 62,
+              "hidden": true,
+              "description": "Form label 62",
+              "label": "Form label"
+            },
+            {
+              "index": 63,
+              "hidden": true,
+              "description": "Form label 63",
+              "label": "Form label"
+            },
+            {
+              "index": 64,
+              "hidden": true,
+              "description": "Form label 64",
+              "label": "Form label"
+            },
+            {
+              "index": 65,
+              "hidden": true,
+              "description": "Form label 65",
+              "label": "Form label"
+            },
+            {
+              "index": 66,
+              "hidden": true,
+              "description": "Form label 66",
+              "label": "Form label"
+            },
+            {
+              "index": 67,
+              "hidden": true,
+              "description": "Form label 67",
+              "label": "Form label"
+            },
+            {
+              "index": 68,
+              "hidden": true,
+              "description": "Form label 68",
+              "label": "Form label"
+            },
+            {
+              "index": 69,
+              "hidden": true,
+              "description": "Form label 69",
+              "label": "Form label"
+            },
+            {
+              "index": 70,
+              "hidden": true,
+              "description": "Form label 70",
+              "label": "Form label"
+            },
+            {
+              "index": 71,
+              "hidden": true,
+              "description": "Form label 71",
+              "label": "Form label"
+            },
+            {
+              "index": 72,
+              "hidden": true,
+              "description": "Form label 72",
+              "label": "Form label"
+            },
+            {
+              "index": 73,
+              "hidden": true,
+              "description": "Form label 73",
+              "label": "Form label"
+            },
+            {
+              "index": 74,
+              "hidden": true,
+              "description": "Form label 74",
+              "label": "Form label"
+            },
+            {
+              "index": 75,
+              "hidden": true,
+              "description": "Form label 75",
+              "label": "Form label"
+            },
+            {
+              "index": 76,
+              "hidden": true,
+              "description": "Form label 76",
+              "label": "Form label"
+            },
+            {
+              "index": 77,
+              "hidden": true,
+              "description": "Form label 77",
+              "label": "Form label"
+            },
+            {
+              "index": 78,
+              "hidden": true,
+              "description": "Form label 78",
+              "label": "Form label"
+            },
+            {
+              "index": 79,
+              "hidden": true,
+              "description": "Form label 79",
+              "label": "Form label"
+            },
+            {
+              "index": 80,
+              "hidden": true,
+              "description": "Form label 80",
+              "label": "Form label"
+            },
+            {
+              "index": 81,
+              "hidden": true,
+              "description": "Form label 81",
+              "label": "Form label"
+            },
+            {
+              "index": 82,
+              "hidden": true,
+              "description": "Form label 82",
+              "label": "Form label"
+            },
+            {
+              "index": 83,
+              "hidden": true,
+              "description": "Form label 83",
+              "label": "Form label"
+            },
+            {
+              "index": 84,
+              "hidden": true,
+              "description": "Form label 84",
+              "label": "Form label"
+            },
+            {
+              "index": 85,
+              "hidden": true,
+              "description": "Form label 85",
+              "label": "Form label"
+            },
+            {
+              "index": 86,
+              "hidden": true,
+              "description": "Form label 86",
+              "label": "Form label"
+            },
+            {
+              "index": 87,
+              "hidden": true,
+              "description": "Form label 87",
+              "label": "Form label"
+            },
+            {
+              "index": 88,
+              "hidden": true,
+              "description": "Form label 88",
+              "label": "Form label"
+            },
+            {
+              "index": 89,
+              "hidden": true,
+              "description": "Form label 89",
+              "label": "Form label"
+            },
+            {
+              "index": 90,
+              "hidden": true,
+              "description": "Form label 90",
+              "label": "Form label"
+            },
+            {
+              "index": 91,
+              "hidden": true,
+              "description": "Form label 91",
+              "label": "Form label"
+            },
+            {
+              "index": 92,
+              "hidden": true,
+              "description": "Form label 92",
+              "label": "Form label"
+            },
+            {
+              "index": 93,
+              "hidden": true,
+              "description": "Form label 93",
+              "label": "Form label"
+            },
+            {
+              "index": 94,
+              "hidden": true,
+              "description": "Form label 94",
+              "label": "Form label"
+            },
+            {
+              "index": 95,
+              "hidden": true,
+              "description": "Form label 95",
+              "label": "Form label"
+            },
+            {
+              "index": 96,
+              "hidden": true,
+              "description": "Form label 96",
+              "label": "Form label"
+            },
+            {
+              "index": 97,
+              "hidden": true,
+              "description": "Form label 97",
+              "label": "Form label"
+            },
+            {
+              "index": 98,
+              "hidden": true,
+              "description": "Form label 98",
+              "label": "Form label"
+            },
+            {
+              "index": 99,
+              "hidden": true,
+              "description": "Form label 99",
+              "label": "Form label"
+            },
+            {
+              "index": 100,
+              "hidden": true,
+              "description": "Form label 100",
+              "label": "Form label"
+            },
+            {
+              "index": 101,
+              "hidden": true,
+              "description": "Form label 101",
+              "label": "Form label"
+            },
+            {
+              "index": 102,
+              "hidden": true,
+              "description": "Form label 102",
+              "label": "Form label"
+            },
+            {
+              "index": 103,
+              "hidden": true,
+              "description": "Form label 103",
+              "label": "Form label"
+            }
+          ]
+        },
+        {
+          "type_id": "lang",
+          "type_label": "Language",
+          "count": 2,
+          "wcag_criteria": [
+            "3.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Understandable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Language 1",
+              "label": "Language"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Language 2",
+              "label": "Language"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "structure",
+      "category_label": "Structural Elements",
+      "total": 102,
+      "types": [
+        {
+          "type_id": "h1",
+          "type_label": "Heading level 1",
+          "count": 2,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Heading level 1 1",
+              "label": "Heading level 1"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Heading level 1 2",
+              "label": "Heading level 1"
+            }
+          ]
+        },
+        {
+          "type_id": "ul",
+          "type_label": "Unordered list",
+          "count": 91,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Unordered list 1",
+              "label": "Unordered list"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Unordered list 2",
+              "label": "Unordered list"
+            },
+            {
+              "index": 3,
+              "hidden": true,
+              "description": "Unordered list 3",
+              "label": "Unordered list"
+            },
+            {
+              "index": 4,
+              "hidden": true,
+              "description": "Unordered list 4",
+              "label": "Unordered list"
+            },
+            {
+              "index": 5,
+              "hidden": true,
+              "description": "Unordered list 5",
+              "label": "Unordered list"
+            },
+            {
+              "index": 6,
+              "hidden": true,
+              "description": "Unordered list 6",
+              "label": "Unordered list"
+            },
+            {
+              "index": 7,
+              "hidden": true,
+              "description": "Unordered list 7",
+              "label": "Unordered list"
+            },
+            {
+              "index": 8,
+              "hidden": true,
+              "description": "Unordered list 8",
+              "label": "Unordered list"
+            },
+            {
+              "index": 9,
+              "hidden": true,
+              "description": "Unordered list 9",
+              "label": "Unordered list"
+            },
+            {
+              "index": 10,
+              "hidden": true,
+              "description": "Unordered list 10",
+              "label": "Unordered list"
+            },
+            {
+              "index": 11,
+              "hidden": true,
+              "description": "Unordered list 11",
+              "label": "Unordered list"
+            },
+            {
+              "index": 12,
+              "hidden": true,
+              "description": "Unordered list 12",
+              "label": "Unordered list"
+            },
+            {
+              "index": 13,
+              "hidden": true,
+              "description": "Unordered list 13",
+              "label": "Unordered list"
+            },
+            {
+              "index": 14,
+              "hidden": true,
+              "description": "Unordered list 14",
+              "label": "Unordered list"
+            },
+            {
+              "index": 15,
+              "hidden": true,
+              "description": "Unordered list 15",
+              "label": "Unordered list"
+            },
+            {
+              "index": 16,
+              "hidden": true,
+              "description": "Unordered list 16",
+              "label": "Unordered list"
+            },
+            {
+              "index": 17,
+              "hidden": true,
+              "description": "Unordered list 17",
+              "label": "Unordered list"
+            },
+            {
+              "index": 18,
+              "hidden": true,
+              "description": "Unordered list 18",
+              "label": "Unordered list"
+            },
+            {
+              "index": 19,
+              "hidden": true,
+              "description": "Unordered list 19",
+              "label": "Unordered list"
+            },
+            {
+              "index": 20,
+              "hidden": true,
+              "description": "Unordered list 20",
+              "label": "Unordered list"
+            },
+            {
+              "index": 21,
+              "hidden": true,
+              "description": "Unordered list 21",
+              "label": "Unordered list"
+            },
+            {
+              "index": 22,
+              "hidden": true,
+              "description": "Unordered list 22",
+              "label": "Unordered list"
+            },
+            {
+              "index": 23,
+              "hidden": true,
+              "description": "Unordered list 23",
+              "label": "Unordered list"
+            },
+            {
+              "index": 24,
+              "hidden": true,
+              "description": "Unordered list 24",
+              "label": "Unordered list"
+            },
+            {
+              "index": 25,
+              "hidden": true,
+              "description": "Unordered list 25",
+              "label": "Unordered list"
+            },
+            {
+              "index": 26,
+              "hidden": true,
+              "description": "Unordered list 26",
+              "label": "Unordered list"
+            },
+            {
+              "index": 27,
+              "hidden": true,
+              "description": "Unordered list 27",
+              "label": "Unordered list"
+            },
+            {
+              "index": 28,
+              "hidden": true,
+              "description": "Unordered list 28",
+              "label": "Unordered list"
+            },
+            {
+              "index": 29,
+              "hidden": true,
+              "description": "Unordered list 29",
+              "label": "Unordered list"
+            },
+            {
+              "index": 30,
+              "hidden": true,
+              "description": "Unordered list 30",
+              "label": "Unordered list"
+            },
+            {
+              "index": 31,
+              "hidden": true,
+              "description": "Unordered list 31",
+              "label": "Unordered list"
+            },
+            {
+              "index": 32,
+              "hidden": true,
+              "description": "Unordered list 32",
+              "label": "Unordered list"
+            },
+            {
+              "index": 33,
+              "hidden": true,
+              "description": "Unordered list 33",
+              "label": "Unordered list"
+            },
+            {
+              "index": 34,
+              "hidden": true,
+              "description": "Unordered list 34",
+              "label": "Unordered list"
+            },
+            {
+              "index": 35,
+              "hidden": true,
+              "description": "Unordered list 35",
+              "label": "Unordered list"
+            },
+            {
+              "index": 36,
+              "hidden": true,
+              "description": "Unordered list 36",
+              "label": "Unordered list"
+            },
+            {
+              "index": 37,
+              "hidden": true,
+              "description": "Unordered list 37",
+              "label": "Unordered list"
+            },
+            {
+              "index": 38,
+              "hidden": true,
+              "description": "Unordered list 38",
+              "label": "Unordered list"
+            },
+            {
+              "index": 39,
+              "hidden": true,
+              "description": "Unordered list 39",
+              "label": "Unordered list"
+            },
+            {
+              "index": 40,
+              "hidden": true,
+              "description": "Unordered list 40",
+              "label": "Unordered list"
+            },
+            {
+              "index": 41,
+              "hidden": true,
+              "description": "Unordered list 41",
+              "label": "Unordered list"
+            },
+            {
+              "index": 42,
+              "hidden": true,
+              "description": "Unordered list 42",
+              "label": "Unordered list"
+            },
+            {
+              "index": 43,
+              "hidden": true,
+              "description": "Unordered list 43",
+              "label": "Unordered list"
+            },
+            {
+              "index": 44,
+              "hidden": true,
+              "description": "Unordered list 44",
+              "label": "Unordered list"
+            },
+            {
+              "index": 45,
+              "hidden": true,
+              "description": "Unordered list 45",
+              "label": "Unordered list"
+            },
+            {
+              "index": 46,
+              "hidden": true,
+              "description": "Unordered list 46",
+              "label": "Unordered list"
+            },
+            {
+              "index": 47,
+              "hidden": true,
+              "description": "Unordered list 47",
+              "label": "Unordered list"
+            },
+            {
+              "index": 48,
+              "hidden": true,
+              "description": "Unordered list 48",
+              "label": "Unordered list"
+            },
+            {
+              "index": 49,
+              "hidden": true,
+              "description": "Unordered list 49",
+              "label": "Unordered list"
+            },
+            {
+              "index": 50,
+              "hidden": true,
+              "description": "Unordered list 50",
+              "label": "Unordered list"
+            },
+            {
+              "index": 51,
+              "hidden": true,
+              "description": "Unordered list 51",
+              "label": "Unordered list"
+            },
+            {
+              "index": 52,
+              "hidden": false,
+              "description": "Unordered list 52",
+              "label": "Unordered list"
+            },
+            {
+              "index": 53,
+              "hidden": false,
+              "description": "Unordered list 53",
+              "label": "Unordered list"
+            },
+            {
+              "index": 54,
+              "hidden": true,
+              "description": "Unordered list 54",
+              "label": "Unordered list"
+            },
+            {
+              "index": 55,
+              "hidden": true,
+              "description": "Unordered list 55",
+              "label": "Unordered list"
+            },
+            {
+              "index": 56,
+              "hidden": true,
+              "description": "Unordered list 56",
+              "label": "Unordered list"
+            },
+            {
+              "index": 57,
+              "hidden": true,
+              "description": "Unordered list 57",
+              "label": "Unordered list"
+            },
+            {
+              "index": 58,
+              "hidden": true,
+              "description": "Unordered list 58",
+              "label": "Unordered list"
+            },
+            {
+              "index": 59,
+              "hidden": true,
+              "description": "Unordered list 59",
+              "label": "Unordered list"
+            },
+            {
+              "index": 60,
+              "hidden": true,
+              "description": "Unordered list 60",
+              "label": "Unordered list"
+            },
+            {
+              "index": 61,
+              "hidden": true,
+              "description": "Unordered list 61",
+              "label": "Unordered list"
+            },
+            {
+              "index": 62,
+              "hidden": true,
+              "description": "Unordered list 62",
+              "label": "Unordered list"
+            },
+            {
+              "index": 63,
+              "hidden": true,
+              "description": "Unordered list 63",
+              "label": "Unordered list"
+            },
+            {
+              "index": 64,
+              "hidden": true,
+              "description": "Unordered list 64",
+              "label": "Unordered list"
+            },
+            {
+              "index": 65,
+              "hidden": true,
+              "description": "Unordered list 65",
+              "label": "Unordered list"
+            },
+            {
+              "index": 66,
+              "hidden": false,
+              "description": "Unordered list 66",
+              "label": "Unordered list"
+            },
+            {
+              "index": 67,
+              "hidden": true,
+              "description": "Unordered list 67",
+              "label": "Unordered list"
+            },
+            {
+              "index": 68,
+              "hidden": true,
+              "description": "Unordered list 68",
+              "label": "Unordered list"
+            },
+            {
+              "index": 69,
+              "hidden": true,
+              "description": "Unordered list 69",
+              "label": "Unordered list"
+            },
+            {
+              "index": 70,
+              "hidden": false,
+              "description": "Unordered list 70",
+              "label": "Unordered list"
+            },
+            {
+              "index": 71,
+              "hidden": true,
+              "description": "Unordered list 71",
+              "label": "Unordered list"
+            },
+            {
+              "index": 72,
+              "hidden": true,
+              "description": "Unordered list 72",
+              "label": "Unordered list"
+            },
+            {
+              "index": 73,
+              "hidden": true,
+              "description": "Unordered list 73",
+              "label": "Unordered list"
+            },
+            {
+              "index": 74,
+              "hidden": true,
+              "description": "Unordered list 74",
+              "label": "Unordered list"
+            },
+            {
+              "index": 75,
+              "hidden": true,
+              "description": "Unordered list 75",
+              "label": "Unordered list"
+            },
+            {
+              "index": 76,
+              "hidden": true,
+              "description": "Unordered list 76",
+              "label": "Unordered list"
+            },
+            {
+              "index": 77,
+              "hidden": true,
+              "description": "Unordered list 77",
+              "label": "Unordered list"
+            },
+            {
+              "index": 78,
+              "hidden": true,
+              "description": "Unordered list 78",
+              "label": "Unordered list"
+            },
+            {
+              "index": 79,
+              "hidden": true,
+              "description": "Unordered list 79",
+              "label": "Unordered list"
+            },
+            {
+              "index": 80,
+              "hidden": false,
+              "description": "Unordered list 80",
+              "label": "Unordered list"
+            },
+            {
+              "index": 81,
+              "hidden": false,
+              "description": "Unordered list 81",
+              "label": "Unordered list"
+            },
+            {
+              "index": 82,
+              "hidden": true,
+              "description": "Unordered list 82",
+              "label": "Unordered list"
+            },
+            {
+              "index": 83,
+              "hidden": true,
+              "description": "Unordered list 83",
+              "label": "Unordered list"
+            },
+            {
+              "index": 84,
+              "hidden": true,
+              "description": "Unordered list 84",
+              "label": "Unordered list"
+            },
+            {
+              "index": 85,
+              "hidden": true,
+              "description": "Unordered list 85",
+              "label": "Unordered list"
+            },
+            {
+              "index": 86,
+              "hidden": true,
+              "description": "Unordered list 86",
+              "label": "Unordered list"
+            },
+            {
+              "index": 87,
+              "hidden": true,
+              "description": "Unordered list 87",
+              "label": "Unordered list"
+            },
+            {
+              "index": 88,
+              "hidden": false,
+              "description": "Unordered list 88",
+              "label": "Unordered list"
+            },
+            {
+              "index": 89,
+              "hidden": false,
+              "description": "Unordered list 89",
+              "label": "Unordered list"
+            },
+            {
+              "index": 90,
+              "hidden": true,
+              "description": "Unordered list 90",
+              "label": "Unordered list"
+            },
+            {
+              "index": 91,
+              "hidden": true,
+              "description": "Unordered list 91",
+              "label": "Unordered list"
+            }
+          ]
+        },
+        {
+          "type_id": "dl",
+          "type_label": "Definition/description list",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Definition/description list 1",
+              "label": "Definition/description list"
+            }
+          ]
+        },
+        {
+          "type_id": "header",
+          "type_label": "Header",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Header 1",
+              "label": "Header"
+            }
+          ]
+        },
+        {
+          "type_id": "nav",
+          "type_label": "Navigation",
+          "count": 4,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Navigation 1",
+              "label": "Navigation"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Navigation 2",
+              "label": "Navigation"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Navigation 3",
+              "label": "Navigation"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "Navigation 4",
+              "label": "Navigation"
+            }
+          ]
+        },
+        {
+          "type_id": "search",
+          "type_label": "Search",
+          "count": 1,
+          "wcag_criteria": [
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Search 1",
+              "label": "Search"
+            }
+          ]
+        },
+        {
+          "type_id": "main",
+          "type_label": "Main content",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Main content 1",
+              "label": "Main content"
+            }
+          ]
+        },
+        {
+          "type_id": "footer",
+          "type_label": "Footer",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Footer 1",
+              "label": "Footer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "aria",
+      "category_label": "ARIA",
+      "total": 241,
+      "types": [
+        {
+          "type_id": "aria",
+          "type_label": "ARIA",
+          "count": 3,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "ARIA 1",
+              "label": "ARIA"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "ARIA 2",
+              "label": "ARIA"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "ARIA 3",
+              "label": "ARIA"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_label",
+          "type_label": "ARIA label",
+          "count": 119,
+          "wcag_criteria": [
+            "1.3.1",
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Robust"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "ARIA label 1",
+              "label": "ARIA label"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "ARIA label 2",
+              "label": "ARIA label"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "ARIA label 3",
+              "label": "ARIA label"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "ARIA label 4",
+              "label": "ARIA label"
+            },
+            {
+              "index": 5,
+              "hidden": true,
+              "description": "ARIA label 5",
+              "label": "ARIA label"
+            },
+            {
+              "index": 6,
+              "hidden": true,
+              "description": "ARIA label 6",
+              "label": "ARIA label"
+            },
+            {
+              "index": 7,
+              "hidden": false,
+              "description": "ARIA label 7",
+              "label": "ARIA label"
+            },
+            {
+              "index": 8,
+              "hidden": false,
+              "description": "ARIA label 8",
+              "label": "ARIA label"
+            },
+            {
+              "index": 9,
+              "hidden": false,
+              "description": "ARIA label 9",
+              "label": "ARIA label"
+            },
+            {
+              "index": 10,
+              "hidden": false,
+              "description": "ARIA label 10",
+              "label": "ARIA label"
+            },
+            {
+              "index": 11,
+              "hidden": true,
+              "description": "ARIA label 11",
+              "label": "ARIA label"
+            },
+            {
+              "index": 12,
+              "hidden": true,
+              "description": "ARIA label 12",
+              "label": "ARIA label"
+            },
+            {
+              "index": 13,
+              "hidden": true,
+              "description": "ARIA label 13",
+              "label": "ARIA label"
+            },
+            {
+              "index": 14,
+              "hidden": true,
+              "description": "ARIA label 14",
+              "label": "ARIA label"
+            },
+            {
+              "index": 15,
+              "hidden": true,
+              "description": "ARIA label 15",
+              "label": "ARIA label"
+            },
+            {
+              "index": 16,
+              "hidden": true,
+              "description": "ARIA label 16",
+              "label": "ARIA label"
+            },
+            {
+              "index": 17,
+              "hidden": true,
+              "description": "ARIA label 17",
+              "label": "ARIA label"
+            },
+            {
+              "index": 18,
+              "hidden": true,
+              "description": "ARIA label 18",
+              "label": "ARIA label"
+            },
+            {
+              "index": 19,
+              "hidden": true,
+              "description": "ARIA label 19",
+              "label": "ARIA label"
+            },
+            {
+              "index": 20,
+              "hidden": true,
+              "description": "ARIA label 20",
+              "label": "ARIA label"
+            },
+            {
+              "index": 21,
+              "hidden": true,
+              "description": "ARIA label 21",
+              "label": "ARIA label"
+            },
+            {
+              "index": 22,
+              "hidden": true,
+              "description": "ARIA label 22",
+              "label": "ARIA label"
+            },
+            {
+              "index": 23,
+              "hidden": true,
+              "description": "ARIA label 23",
+              "label": "ARIA label"
+            },
+            {
+              "index": 24,
+              "hidden": true,
+              "description": "ARIA label 24",
+              "label": "ARIA label"
+            },
+            {
+              "index": 25,
+              "hidden": true,
+              "description": "ARIA label 25",
+              "label": "ARIA label"
+            },
+            {
+              "index": 26,
+              "hidden": true,
+              "description": "ARIA label 26",
+              "label": "ARIA label"
+            },
+            {
+              "index": 27,
+              "hidden": true,
+              "description": "ARIA label 27",
+              "label": "ARIA label"
+            },
+            {
+              "index": 28,
+              "hidden": true,
+              "description": "ARIA label 28",
+              "label": "ARIA label"
+            },
+            {
+              "index": 29,
+              "hidden": true,
+              "description": "ARIA label 29",
+              "label": "ARIA label"
+            },
+            {
+              "index": 30,
+              "hidden": true,
+              "description": "ARIA label 30",
+              "label": "ARIA label"
+            },
+            {
+              "index": 31,
+              "hidden": true,
+              "description": "ARIA label 31",
+              "label": "ARIA label"
+            },
+            {
+              "index": 32,
+              "hidden": true,
+              "description": "ARIA label 32",
+              "label": "ARIA label"
+            },
+            {
+              "index": 33,
+              "hidden": true,
+              "description": "ARIA label 33",
+              "label": "ARIA label"
+            },
+            {
+              "index": 34,
+              "hidden": true,
+              "description": "ARIA label 34",
+              "label": "ARIA label"
+            },
+            {
+              "index": 35,
+              "hidden": true,
+              "description": "ARIA label 35",
+              "label": "ARIA label"
+            },
+            {
+              "index": 36,
+              "hidden": true,
+              "description": "ARIA label 36",
+              "label": "ARIA label"
+            },
+            {
+              "index": 37,
+              "hidden": true,
+              "description": "ARIA label 37",
+              "label": "ARIA label"
+            },
+            {
+              "index": 38,
+              "hidden": true,
+              "description": "ARIA label 38",
+              "label": "ARIA label"
+            },
+            {
+              "index": 39,
+              "hidden": true,
+              "description": "ARIA label 39",
+              "label": "ARIA label"
+            },
+            {
+              "index": 40,
+              "hidden": true,
+              "description": "ARIA label 40",
+              "label": "ARIA label"
+            },
+            {
+              "index": 41,
+              "hidden": true,
+              "description": "ARIA label 41",
+              "label": "ARIA label"
+            },
+            {
+              "index": 42,
+              "hidden": true,
+              "description": "ARIA label 42",
+              "label": "ARIA label"
+            },
+            {
+              "index": 43,
+              "hidden": true,
+              "description": "ARIA label 43",
+              "label": "ARIA label"
+            },
+            {
+              "index": 44,
+              "hidden": true,
+              "description": "ARIA label 44",
+              "label": "ARIA label"
+            },
+            {
+              "index": 45,
+              "hidden": true,
+              "description": "ARIA label 45",
+              "label": "ARIA label"
+            },
+            {
+              "index": 46,
+              "hidden": true,
+              "description": "ARIA label 46",
+              "label": "ARIA label"
+            },
+            {
+              "index": 47,
+              "hidden": true,
+              "description": "ARIA label 47",
+              "label": "ARIA label"
+            },
+            {
+              "index": 48,
+              "hidden": true,
+              "description": "ARIA label 48",
+              "label": "ARIA label"
+            },
+            {
+              "index": 49,
+              "hidden": true,
+              "description": "ARIA label 49",
+              "label": "ARIA label"
+            },
+            {
+              "index": 50,
+              "hidden": true,
+              "description": "ARIA label 50",
+              "label": "ARIA label"
+            },
+            {
+              "index": 51,
+              "hidden": true,
+              "description": "ARIA label 51",
+              "label": "ARIA label"
+            },
+            {
+              "index": 52,
+              "hidden": true,
+              "description": "ARIA label 52",
+              "label": "ARIA label"
+            },
+            {
+              "index": 53,
+              "hidden": true,
+              "description": "ARIA label 53",
+              "label": "ARIA label"
+            },
+            {
+              "index": 54,
+              "hidden": true,
+              "description": "ARIA label 54",
+              "label": "ARIA label"
+            },
+            {
+              "index": 55,
+              "hidden": true,
+              "description": "ARIA label 55",
+              "label": "ARIA label"
+            },
+            {
+              "index": 56,
+              "hidden": true,
+              "description": "ARIA label 56",
+              "label": "ARIA label"
+            },
+            {
+              "index": 57,
+              "hidden": true,
+              "description": "ARIA label 57",
+              "label": "ARIA label"
+            },
+            {
+              "index": 58,
+              "hidden": true,
+              "description": "ARIA label 58",
+              "label": "ARIA label"
+            },
+            {
+              "index": 59,
+              "hidden": true,
+              "description": "ARIA label 59",
+              "label": "ARIA label"
+            },
+            {
+              "index": 60,
+              "hidden": true,
+              "description": "ARIA label 60",
+              "label": "ARIA label"
+            },
+            {
+              "index": 61,
+              "hidden": true,
+              "description": "ARIA label 61",
+              "label": "ARIA label"
+            },
+            {
+              "index": 62,
+              "hidden": true,
+              "description": "ARIA label 62",
+              "label": "ARIA label"
+            },
+            {
+              "index": 63,
+              "hidden": true,
+              "description": "ARIA label 63",
+              "label": "ARIA label"
+            },
+            {
+              "index": 64,
+              "hidden": true,
+              "description": "ARIA label 64",
+              "label": "ARIA label"
+            },
+            {
+              "index": 65,
+              "hidden": true,
+              "description": "ARIA label 65",
+              "label": "ARIA label"
+            },
+            {
+              "index": 66,
+              "hidden": true,
+              "description": "ARIA label 66",
+              "label": "ARIA label"
+            },
+            {
+              "index": 67,
+              "hidden": true,
+              "description": "ARIA label 67",
+              "label": "ARIA label"
+            },
+            {
+              "index": 68,
+              "hidden": true,
+              "description": "ARIA label 68",
+              "label": "ARIA label"
+            },
+            {
+              "index": 69,
+              "hidden": true,
+              "description": "ARIA label 69",
+              "label": "ARIA label"
+            },
+            {
+              "index": 70,
+              "hidden": true,
+              "description": "ARIA label 70",
+              "label": "ARIA label"
+            },
+            {
+              "index": 71,
+              "hidden": true,
+              "description": "ARIA label 71",
+              "label": "ARIA label"
+            },
+            {
+              "index": 72,
+              "hidden": true,
+              "description": "ARIA label 72",
+              "label": "ARIA label"
+            },
+            {
+              "index": 73,
+              "hidden": true,
+              "description": "ARIA label 73",
+              "label": "ARIA label"
+            },
+            {
+              "index": 74,
+              "hidden": true,
+              "description": "ARIA label 74",
+              "label": "ARIA label"
+            },
+            {
+              "index": 75,
+              "hidden": true,
+              "description": "ARIA label 75",
+              "label": "ARIA label"
+            },
+            {
+              "index": 76,
+              "hidden": true,
+              "description": "ARIA label 76",
+              "label": "ARIA label"
+            },
+            {
+              "index": 77,
+              "hidden": true,
+              "description": "ARIA label 77",
+              "label": "ARIA label"
+            },
+            {
+              "index": 78,
+              "hidden": true,
+              "description": "ARIA label 78",
+              "label": "ARIA label"
+            },
+            {
+              "index": 79,
+              "hidden": true,
+              "description": "ARIA label 79",
+              "label": "ARIA label"
+            },
+            {
+              "index": 80,
+              "hidden": true,
+              "description": "ARIA label 80",
+              "label": "ARIA label"
+            },
+            {
+              "index": 81,
+              "hidden": true,
+              "description": "ARIA label 81",
+              "label": "ARIA label"
+            },
+            {
+              "index": 82,
+              "hidden": true,
+              "description": "ARIA label 82",
+              "label": "ARIA label"
+            },
+            {
+              "index": 83,
+              "hidden": true,
+              "description": "ARIA label 83",
+              "label": "ARIA label"
+            },
+            {
+              "index": 84,
+              "hidden": true,
+              "description": "ARIA label 84",
+              "label": "ARIA label"
+            },
+            {
+              "index": 85,
+              "hidden": true,
+              "description": "ARIA label 85",
+              "label": "ARIA label"
+            },
+            {
+              "index": 86,
+              "hidden": true,
+              "description": "ARIA label 86",
+              "label": "ARIA label"
+            },
+            {
+              "index": 87,
+              "hidden": true,
+              "description": "ARIA label 87",
+              "label": "ARIA label"
+            },
+            {
+              "index": 88,
+              "hidden": true,
+              "description": "ARIA label 88",
+              "label": "ARIA label"
+            },
+            {
+              "index": 89,
+              "hidden": true,
+              "description": "ARIA label 89",
+              "label": "ARIA label"
+            },
+            {
+              "index": 90,
+              "hidden": true,
+              "description": "ARIA label 90",
+              "label": "ARIA label"
+            },
+            {
+              "index": 91,
+              "hidden": true,
+              "description": "ARIA label 91",
+              "label": "ARIA label"
+            },
+            {
+              "index": 92,
+              "hidden": true,
+              "description": "ARIA label 92",
+              "label": "ARIA label"
+            },
+            {
+              "index": 93,
+              "hidden": true,
+              "description": "ARIA label 93",
+              "label": "ARIA label"
+            },
+            {
+              "index": 94,
+              "hidden": true,
+              "description": "ARIA label 94",
+              "label": "ARIA label"
+            },
+            {
+              "index": 95,
+              "hidden": true,
+              "description": "ARIA label 95",
+              "label": "ARIA label"
+            },
+            {
+              "index": 96,
+              "hidden": true,
+              "description": "ARIA label 96",
+              "label": "ARIA label"
+            },
+            {
+              "index": 97,
+              "hidden": true,
+              "description": "ARIA label 97",
+              "label": "ARIA label"
+            },
+            {
+              "index": 98,
+              "hidden": true,
+              "description": "ARIA label 98",
+              "label": "ARIA label"
+            },
+            {
+              "index": 99,
+              "hidden": true,
+              "description": "ARIA label 99",
+              "label": "ARIA label"
+            },
+            {
+              "index": 100,
+              "hidden": true,
+              "description": "ARIA label 100",
+              "label": "ARIA label"
+            },
+            {
+              "index": 101,
+              "hidden": true,
+              "description": "ARIA label 101",
+              "label": "ARIA label"
+            },
+            {
+              "index": 102,
+              "hidden": true,
+              "description": "ARIA label 102",
+              "label": "ARIA label"
+            },
+            {
+              "index": 103,
+              "hidden": true,
+              "description": "ARIA label 103",
+              "label": "ARIA label"
+            },
+            {
+              "index": 104,
+              "hidden": true,
+              "description": "ARIA label 104",
+              "label": "ARIA label"
+            },
+            {
+              "index": 105,
+              "hidden": true,
+              "description": "ARIA label 105",
+              "label": "ARIA label"
+            },
+            {
+              "index": 106,
+              "hidden": true,
+              "description": "ARIA label 106",
+              "label": "ARIA label"
+            },
+            {
+              "index": 107,
+              "hidden": true,
+              "description": "ARIA label 107",
+              "label": "ARIA label"
+            },
+            {
+              "index": 108,
+              "hidden": true,
+              "description": "ARIA label 108",
+              "label": "ARIA label"
+            },
+            {
+              "index": 109,
+              "hidden": true,
+              "description": "ARIA label 109",
+              "label": "ARIA label"
+            },
+            {
+              "index": 110,
+              "hidden": true,
+              "description": "ARIA label 110",
+              "label": "ARIA label"
+            },
+            {
+              "index": 111,
+              "hidden": true,
+              "description": "ARIA label 111",
+              "label": "ARIA label"
+            },
+            {
+              "index": 112,
+              "hidden": true,
+              "description": "ARIA label 112",
+              "label": "ARIA label"
+            },
+            {
+              "index": 113,
+              "hidden": true,
+              "description": "ARIA label 113",
+              "label": "ARIA label"
+            },
+            {
+              "index": 114,
+              "hidden": true,
+              "description": "ARIA label 114",
+              "label": "ARIA label"
+            },
+            {
+              "index": 115,
+              "hidden": true,
+              "description": "ARIA label 115",
+              "label": "ARIA label"
+            },
+            {
+              "index": 116,
+              "hidden": true,
+              "description": "ARIA label 116",
+              "label": "ARIA label"
+            },
+            {
+              "index": 117,
+              "hidden": true,
+              "description": "ARIA label 117",
+              "label": "ARIA label"
+            },
+            {
+              "index": 118,
+              "hidden": true,
+              "description": "ARIA label 118",
+              "label": "ARIA label"
+            },
+            {
+              "index": 119,
+              "hidden": false,
+              "description": "ARIA label 119",
+              "label": "ARIA label"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_tabindex",
+          "type_label": "ARIA tabindex",
+          "count": 105,
+          "wcag_criteria": [
+            "2.4.3"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "ARIA tabindex 1",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "ARIA tabindex 2",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 3,
+              "hidden": true,
+              "description": "ARIA tabindex 3",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 4,
+              "hidden": true,
+              "description": "ARIA tabindex 4",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 5,
+              "hidden": true,
+              "description": "ARIA tabindex 5",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 6,
+              "hidden": true,
+              "description": "ARIA tabindex 6",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 7,
+              "hidden": true,
+              "description": "ARIA tabindex 7",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 8,
+              "hidden": true,
+              "description": "ARIA tabindex 8",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 9,
+              "hidden": true,
+              "description": "ARIA tabindex 9",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 10,
+              "hidden": true,
+              "description": "ARIA tabindex 10",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 11,
+              "hidden": true,
+              "description": "ARIA tabindex 11",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 12,
+              "hidden": true,
+              "description": "ARIA tabindex 12",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 13,
+              "hidden": true,
+              "description": "ARIA tabindex 13",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 14,
+              "hidden": true,
+              "description": "ARIA tabindex 14",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 15,
+              "hidden": true,
+              "description": "ARIA tabindex 15",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 16,
+              "hidden": true,
+              "description": "ARIA tabindex 16",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 17,
+              "hidden": true,
+              "description": "ARIA tabindex 17",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 18,
+              "hidden": true,
+              "description": "ARIA tabindex 18",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 19,
+              "hidden": true,
+              "description": "ARIA tabindex 19",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 20,
+              "hidden": true,
+              "description": "ARIA tabindex 20",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 21,
+              "hidden": true,
+              "description": "ARIA tabindex 21",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 22,
+              "hidden": true,
+              "description": "ARIA tabindex 22",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 23,
+              "hidden": true,
+              "description": "ARIA tabindex 23",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 24,
+              "hidden": true,
+              "description": "ARIA tabindex 24",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 25,
+              "hidden": true,
+              "description": "ARIA tabindex 25",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 26,
+              "hidden": true,
+              "description": "ARIA tabindex 26",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 27,
+              "hidden": true,
+              "description": "ARIA tabindex 27",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 28,
+              "hidden": true,
+              "description": "ARIA tabindex 28",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 29,
+              "hidden": true,
+              "description": "ARIA tabindex 29",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 30,
+              "hidden": true,
+              "description": "ARIA tabindex 30",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 31,
+              "hidden": true,
+              "description": "ARIA tabindex 31",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 32,
+              "hidden": true,
+              "description": "ARIA tabindex 32",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 33,
+              "hidden": true,
+              "description": "ARIA tabindex 33",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 34,
+              "hidden": true,
+              "description": "ARIA tabindex 34",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 35,
+              "hidden": true,
+              "description": "ARIA tabindex 35",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 36,
+              "hidden": true,
+              "description": "ARIA tabindex 36",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 37,
+              "hidden": true,
+              "description": "ARIA tabindex 37",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 38,
+              "hidden": true,
+              "description": "ARIA tabindex 38",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 39,
+              "hidden": true,
+              "description": "ARIA tabindex 39",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 40,
+              "hidden": true,
+              "description": "ARIA tabindex 40",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 41,
+              "hidden": true,
+              "description": "ARIA tabindex 41",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 42,
+              "hidden": true,
+              "description": "ARIA tabindex 42",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 43,
+              "hidden": true,
+              "description": "ARIA tabindex 43",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 44,
+              "hidden": true,
+              "description": "ARIA tabindex 44",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 45,
+              "hidden": true,
+              "description": "ARIA tabindex 45",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 46,
+              "hidden": true,
+              "description": "ARIA tabindex 46",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 47,
+              "hidden": true,
+              "description": "ARIA tabindex 47",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 48,
+              "hidden": true,
+              "description": "ARIA tabindex 48",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 49,
+              "hidden": true,
+              "description": "ARIA tabindex 49",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 50,
+              "hidden": true,
+              "description": "ARIA tabindex 50",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 51,
+              "hidden": true,
+              "description": "ARIA tabindex 51",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 52,
+              "hidden": true,
+              "description": "ARIA tabindex 52",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 53,
+              "hidden": true,
+              "description": "ARIA tabindex 53",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 54,
+              "hidden": true,
+              "description": "ARIA tabindex 54",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 55,
+              "hidden": true,
+              "description": "ARIA tabindex 55",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 56,
+              "hidden": true,
+              "description": "ARIA tabindex 56",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 57,
+              "hidden": true,
+              "description": "ARIA tabindex 57",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 58,
+              "hidden": true,
+              "description": "ARIA tabindex 58",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 59,
+              "hidden": true,
+              "description": "ARIA tabindex 59",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 60,
+              "hidden": true,
+              "description": "ARIA tabindex 60",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 61,
+              "hidden": true,
+              "description": "ARIA tabindex 61",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 62,
+              "hidden": true,
+              "description": "ARIA tabindex 62",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 63,
+              "hidden": true,
+              "description": "ARIA tabindex 63",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 64,
+              "hidden": true,
+              "description": "ARIA tabindex 64",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 65,
+              "hidden": true,
+              "description": "ARIA tabindex 65",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 66,
+              "hidden": true,
+              "description": "ARIA tabindex 66",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 67,
+              "hidden": true,
+              "description": "ARIA tabindex 67",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 68,
+              "hidden": true,
+              "description": "ARIA tabindex 68",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 69,
+              "hidden": true,
+              "description": "ARIA tabindex 69",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 70,
+              "hidden": true,
+              "description": "ARIA tabindex 70",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 71,
+              "hidden": true,
+              "description": "ARIA tabindex 71",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 72,
+              "hidden": true,
+              "description": "ARIA tabindex 72",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 73,
+              "hidden": true,
+              "description": "ARIA tabindex 73",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 74,
+              "hidden": true,
+              "description": "ARIA tabindex 74",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 75,
+              "hidden": true,
+              "description": "ARIA tabindex 75",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 76,
+              "hidden": true,
+              "description": "ARIA tabindex 76",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 77,
+              "hidden": true,
+              "description": "ARIA tabindex 77",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 78,
+              "hidden": true,
+              "description": "ARIA tabindex 78",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 79,
+              "hidden": true,
+              "description": "ARIA tabindex 79",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 80,
+              "hidden": true,
+              "description": "ARIA tabindex 80",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 81,
+              "hidden": true,
+              "description": "ARIA tabindex 81",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 82,
+              "hidden": true,
+              "description": "ARIA tabindex 82",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 83,
+              "hidden": true,
+              "description": "ARIA tabindex 83",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 84,
+              "hidden": true,
+              "description": "ARIA tabindex 84",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 85,
+              "hidden": true,
+              "description": "ARIA tabindex 85",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 86,
+              "hidden": true,
+              "description": "ARIA tabindex 86",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 87,
+              "hidden": true,
+              "description": "ARIA tabindex 87",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 88,
+              "hidden": true,
+              "description": "ARIA tabindex 88",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 89,
+              "hidden": true,
+              "description": "ARIA tabindex 89",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 90,
+              "hidden": true,
+              "description": "ARIA tabindex 90",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 91,
+              "hidden": true,
+              "description": "ARIA tabindex 91",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 92,
+              "hidden": true,
+              "description": "ARIA tabindex 92",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 93,
+              "hidden": true,
+              "description": "ARIA tabindex 93",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 94,
+              "hidden": true,
+              "description": "ARIA tabindex 94",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 95,
+              "hidden": true,
+              "description": "ARIA tabindex 95",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 96,
+              "hidden": true,
+              "description": "ARIA tabindex 96",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 97,
+              "hidden": true,
+              "description": "ARIA tabindex 97",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 98,
+              "hidden": true,
+              "description": "ARIA tabindex 98",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 99,
+              "hidden": true,
+              "description": "ARIA tabindex 99",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 100,
+              "hidden": true,
+              "description": "ARIA tabindex 100",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 101,
+              "hidden": true,
+              "description": "ARIA tabindex 101",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 102,
+              "hidden": true,
+              "description": "ARIA tabindex 102",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 103,
+              "hidden": true,
+              "description": "ARIA tabindex 103",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 104,
+              "hidden": true,
+              "description": "ARIA tabindex 104",
+              "label": "ARIA tabindex"
+            },
+            {
+              "index": 105,
+              "hidden": true,
+              "description": "ARIA tabindex 105",
+              "label": "ARIA tabindex"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_button",
+          "type_label": "ARIA button",
+          "count": 1,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust",
+            "Operable"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "ARIA button 1",
+              "label": "ARIA button"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_hidden",
+          "type_label": "ARIA hidden",
+          "count": 11,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Robust"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "ARIA hidden 1",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "ARIA hidden 2",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "ARIA hidden 3",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "ARIA hidden 4",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 5,
+              "hidden": false,
+              "description": "ARIA hidden 5",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 6,
+              "hidden": false,
+              "description": "ARIA hidden 6",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 7,
+              "hidden": false,
+              "description": "ARIA hidden 7",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 8,
+              "hidden": false,
+              "description": "ARIA hidden 8",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 9,
+              "hidden": false,
+              "description": "ARIA hidden 9",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 10,
+              "hidden": false,
+              "description": "ARIA hidden 10",
+              "label": "ARIA hidden"
+            },
+            {
+              "index": 11,
+              "hidden": true,
+              "description": "ARIA hidden 11",
+              "label": "ARIA hidden"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_expanded",
+          "type_label": "ARIA expanded",
+          "count": 1,
+          "wcag_criteria": [
+            "4.1.2"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Robust"
+          ],
+          "sr_relevance": "informational",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "ARIA expanded 1",
+              "label": "ARIA expanded"
+            }
+          ]
+        },
+        {
+          "type_id": "aria_haspopup",
+          "type_label": "ARIA popup",
+          "count": 1,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "ARIA popup 1",
+              "label": "ARIA popup"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
