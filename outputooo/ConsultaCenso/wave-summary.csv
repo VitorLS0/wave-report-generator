@@ -1,0 +1,4 @@
+source_file,errors,contrast_errors,alerts,features,structure,aria,aim_score,pour_perceivable,pour_operable,pour_understandable,pour_robust,sr_critical,sr_high,sr_medium,sr_low
+1-Ibge.html,7,18,34,25,77,23,5.5,8,2,2,1,4,4,3,0
+2-Censo2022.html,5,23,15,17,27,0,4.5,7,7,0,1,5,0,10,0
+3-ResultadosCenso2022.html,5,23,15,17,27,0,4.5,7,7,0,1,5,0,10,0

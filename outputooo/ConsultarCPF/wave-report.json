@@ -1,6 +1,6 @@
 [
   {
-    "source_file": "1-InicioConsultarCadastroCPF.html",
+    "source_file": "1-Inicio.html",
     "summary": {
       "errors": 6,
       "contrast_errors": 0,
@@ -3062,7 +3062,7 @@
     ]
   },
   {
-    "source_file": "2-FormularioConsultaCPF.html",
+    "source_file": "2-formulario.html",
     "summary": {
       "errors": 1,
       "contrast_errors": 1,
@@ -3365,7 +3365,7 @@
     ]
   },
   {
-    "source_file": "3-comprovanteSituacaoCPF.html",
+    "source_file": "3-comprovante.html",
     "summary": {
       "errors": 0,
       "contrast_errors": 0,

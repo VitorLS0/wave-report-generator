@@ -1,4 +1,4 @@
 source_file,errors,contrast_errors,alerts,features,structure,aria,aim_score,pour_perceivable,pour_operable,pour_understandable,pour_robust,sr_critical,sr_high,sr_medium,sr_low
-1-Inicio.html,6,0,18,111,52,239,8.4,9,7,0,4,2,2,10,6
-2-formulario.html,1,1,2,3,4,2,8.2,2,1,1,0,2,0,0,0
-3-comprovante.html,0,0,2,4,0,0,10,2,1,0,0,2,0,0,0
+1-InicioConsultarCadastroCPF.html,6,0,18,111,52,239,8.4,9,7,0,4,2,2,10,6
+2-FormularioConsultaCPF.html,1,1,2,3,4,2,8.2,2,1,1,0,2,0,0,0
+3-comprovanteSituacaoCPF.html,0,0,2,4,0,0,10,2,1,0,0,2,0,0,0

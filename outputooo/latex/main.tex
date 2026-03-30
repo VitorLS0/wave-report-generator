@@ -1,0 +1,144 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\graphicspath{{figures/}}
+
+\title{Relatório de Acessibilidade Web\\
+       \large Análise WAVE --- Perspectiva do Leitor de Tela}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+%% ─────────────────────────────────────────────────────────────
+\section{Visão Geral}
+
+\input{tables/table_summary_all}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/aim_all_pages}
+  \caption{Pontuação AIM por página (escala 0--10, maior é melhor).
+           O valor \textbf{n} indica o total de componentes detectados pelo WAVE,
+           usado como proxy do tamanho da página.
+           Linhas tracejadas delimitam as faixas de qualidade em 5, 7 e 8{,}5.}
+  \label{fig:aim_all}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/elements_all_pages}
+  \caption{Composição de todos os elementos detectados por página.
+           A proporção de elementos negativos (erros, contraste, alertas)
+           sobre o total é indicada como \emph{\% prob.} e permite comparar
+           páginas de tamanhos diferentes.}
+  \label{fig:elements_all}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/issues_overview}
+  \caption{Visão geral dos problemas: tipos de erro (esquerda) e
+           impacto para usuários de leitores de tela (direita).}
+  \label{fig:issues_overview}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/pour_all_pages}
+  \caption{Distribuição dos problemas pelas quatro dimensões WCAG (POUR).}
+  \label{fig:pour_all}
+\end{figure}
+
+%% ─────────────────────────────────────────────────────────────
+\section{Análise por Fluxo}
+
+
+\subsection{Busca Unidades Atendimento}
+
+\input{tables/table_flow_busca_unidades_atendimento}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/flow_busca_unidades_atendimento}
+  \caption{Métricas de acessibilidade — Busca Unidades Atendimento}
+  \label{fig:flow_busca_unidades_atendimento}
+\end{figure}
+
+
+\subsection{Consulta Censo}
+
+\input{tables/table_flow_consulta_censo}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/flow_consulta_censo}
+  \caption{Métricas de acessibilidade — Consulta Censo}
+  \label{fig:flow_consulta_censo}
+\end{figure}
+
+
+\subsection{Consulta Mapa De EMpresas}
+
+\input{tables/table_flow_consulta_mapa_de_empresas}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/flow_consulta_mapa_de_empresas}
+  \caption{Métricas de acessibilidade — Consulta Mapa De EMpresas}
+  \label{fig:flow_consulta_mapa_de_empresas}
+\end{figure}
+
+
+\subsection{Consulta Monitoramento Servicos}
+
+\input{tables/table_flow_consulta_monitoramento_servicos}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/flow_consulta_monitoramento_servicos}
+  \caption{Métricas de acessibilidade — Consulta Monitoramento Servicos}
+  \label{fig:flow_consulta_monitoramento_servicos}
+\end{figure}
+
+
+\subsection{Consultar CPF}
+
+\input{tables/table_flow_consultar_cpf}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/flow_consultar_cpf}
+  \caption{Métricas de acessibilidade — Consultar CPF}
+  \label{fig:flow_consultar_cpf}
+\end{figure}
+
+
+%% ─────────────────────────────────────────────────────────────
+\section{Principais Problemas de Acessibilidade}
+
+\input{tables/table_top_issues}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/top_issues}
+  \caption{Principais 15 problemas de acessibilidade por número total de
+           ocorrências em todos os fluxos.}
+  \label{fig:top_issues}
+\end{figure}
+
+\end{document}

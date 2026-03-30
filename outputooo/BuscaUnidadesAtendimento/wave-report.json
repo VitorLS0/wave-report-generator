@@ -1,6 +1,6 @@
 [
   {
-    "source_file": "1-ReceitaFederal.html",
+    "source_file": "1-ReceitaFedera.html",
     "summary": {
       "errors": 17,
       "contrast_errors": 8,
@@ -7486,7 +7486,7 @@
     ]
   },
   {
-    "source_file": "3-UnidadesMinasGerais.html",
+    "source_file": "3-MinasGerais.html",
     "summary": {
       "errors": 5,
       "contrast_errors": 0,
@@ -10830,7 +10830,7 @@
     ]
   },
   {
-    "source_file": "4-UnidadesBeloHorizonte.html",
+    "source_file": "4-BeloHorizonte.html",
     "summary": {
       "errors": 5,
       "contrast_errors": 0,
