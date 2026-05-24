@@ -1,0 +1,149 @@
+flow,flow_label,page,category,type_id,type_label,count,wcag_criteria,wcag_level,pour_dimensions,sr_relevance
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,error,link_empty,Empty link,15,,,,
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,contrast,unknown,Very low contrast,8,,,,
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,alert,link_redundant,Redundant link,27,2.4.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,alert,text_small,Very small text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Home Receita,alert,title_redundant,Redundant title text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,error,link_empty,Empty link,3,,,,
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,alert,heading_possible,Possible heading,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,alert,text_justified,Justified text,7,1.4.8,AAA,Perceivable,low
+BuscaUnidadesAtendimento,Unidades RF,Atendimento Presencial,alert,title_redundant,Redundant title text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Unidades MG,error,link_empty,Empty link,3,,,,
+BuscaUnidadesAtendimento,Unidades RF,Unidades MG,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+BuscaUnidadesAtendimento,Unidades RF,Unidades MG,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Unidades MG,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Unidades MG,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+BuscaUnidadesAtendimento,Unidades RF,Unidades MG,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Unidades MG,alert,title_redundant,Redundant title text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,error,link_empty,Empty link,3,,,,
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,alert,label_orphaned,Orphaned form label,1,1.3.1,A,Perceivable,medium
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Unidades BH,alert,title_redundant,Redundant title text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Buscador de Unidades,error,link_empty,Empty link,3,,,,
+BuscaUnidadesAtendimento,Unidades RF,Buscador de Unidades,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+BuscaUnidadesAtendimento,Unidades RF,Buscador de Unidades,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+BuscaUnidadesAtendimento,Unidades RF,Buscador de Unidades,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Buscador de Unidades,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+BuscaUnidadesAtendimento,Unidades RF,Buscador de Unidades,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+BuscaUnidadesAtendimento,Unidades RF,Buscador de Unidades,alert,title_redundant,Redundant title text,1,,,,
+ConsultaCenso,Censo 2022,Portal IBGE,error,alt_missing,Missing alternative text,1,1.1.1,A,Perceivable,critical
+ConsultaCenso,Censo 2022,Portal IBGE,error,alt_link_missing,Linked image missing alternative text,1,1.1.1,A,Perceivable,critical
+ConsultaCenso,Censo 2022,Portal IBGE,error,label_missing,Missing form label,2,1.3.1;3.3.2,A,Perceivable;Understandable,critical
+ConsultaCenso,Censo 2022,Portal IBGE,error,label_empty,Empty form label,1,1.3.1,A,Perceivable,high
+ConsultaCenso,Censo 2022,Portal IBGE,error,label_multiple,Multiple form labels,2,1.3.1,A,Perceivable,high
+ConsultaCenso,Censo 2022,Portal IBGE,contrast,unknown,Very low contrast,18,,,,
+ConsultaCenso,Censo 2022,Portal IBGE,alert,alt_duplicate,A nearby image has the same alternative text,8,,,,
+ConsultaCenso,Censo 2022,Portal IBGE,alert,heading_skipped,Skipped heading level,1,1.3.1,A,Perceivable,high
+ConsultaCenso,Censo 2022,Portal IBGE,alert,heading_possible,Possible heading,12,,,,
+ConsultaCenso,Censo 2022,Portal IBGE,alert,link_internal_broken,Broken same-page link,1,2.4.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Portal IBGE,alert,noscript,Noscript element,1,4.1.2,A,Robust,medium
+ConsultaCenso,Censo 2022,Portal IBGE,alert,javascript_jumpmenu,JavaScript jump menu,1,,,,
+ConsultaCenso,Censo 2022,Portal IBGE,alert,accesskey,Accesskey,1,2.1.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Portal IBGE,alert,title_redundant,Redundant title text,9,,,,
+ConsultaCenso,Censo 2022,Censo 2022,error,alt_link_missing,Linked image missing alternative text,5,1.1.1,A,Perceivable,critical
+ConsultaCenso,Censo 2022,Censo 2022,contrast,unknown,Very low contrast,23,,,,
+ConsultaCenso,Censo 2022,Censo 2022,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultaCenso,Censo 2022,Censo 2022,alert,h1_missing,Missing first level heading,1,,,,
+ConsultaCenso,Censo 2022,Censo 2022,alert,link_internal_broken,Broken same-page link,1,2.4.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Censo 2022,alert,link_redundant,Redundant link,5,2.4.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Censo 2022,alert,noscript,Noscript element,1,4.1.2,A,Robust,medium
+ConsultaCenso,Censo 2022,Censo 2022,alert,accesskey,Accesskey,1,2.1.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Censo 2022,alert,title_redundant,Redundant title text,3,,,,
+ConsultaCenso,Censo 2022,Censo 2022,alert,html5_video_audio,HTML5 video or audio,2,1.2.1,A,Perceivable,medium
+ConsultaCenso,Censo 2022,Panorama Censo 2022,error,alt_link_missing,Linked image missing alternative text,5,1.1.1,A,Perceivable,critical
+ConsultaCenso,Censo 2022,Panorama Censo 2022,contrast,unknown,Very low contrast,23,,,,
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,h1_missing,Missing first level heading,1,,,,
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,link_internal_broken,Broken same-page link,1,2.4.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,link_redundant,Redundant link,5,2.4.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,noscript,Noscript element,1,4.1.2,A,Robust,medium
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,accesskey,Accesskey,1,2.1.4,A,Operable,medium
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,title_redundant,Redundant title text,3,,,,
+ConsultaCenso,Censo 2022,Panorama Censo 2022,alert,html5_video_audio,HTML5 video or audio,2,1.2.1,A,Perceivable,medium
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,error,heading_empty,Empty heading,2,,,,
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,error,link_empty,Empty link,3,,,,
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,alert,label_orphaned,Orphaned form label,2,1.3.1,A,Perceivable,medium
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,alert,link_redundant,Redundant link,1,2.4.4,A,Operable,medium
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,alert,link_pdf,Link to PDF document,1,2.4.4,A,Operable;Understandable,medium
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+ConsultaMapaDeEMpresas,Mapa de Empresas,Mapa de Empresas,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,error,link_empty,Empty link,9,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,alt_suspicious,Suspicious alternative text,2,1.1.1,A,Perceivable,high
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,alt_long,Long alternative text,2,1.1.1,A,Perceivable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,link_redundant,Redundant link,9,2.4.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,link_pdf,Link to PDF document,2,2.4.4,A,Operable;Understandable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,text_small,Very small text,1,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Home Gov Digital,alert,youtube_video,YouTube video,7,1.2.2,A,Perceivable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,error,link_empty,Empty link,3,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,contrast,unknown,Very low contrast,1,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,alert,link_pdf,Link to PDF document,2,2.4.4,A,Operable;Understandable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,alert,text_justified,Justified text,1,1.4.8,AAA,Perceivable,low
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Estratégias Gov.,alert,youtube_video,YouTube video,2,1.2.2,A,Perceivable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,error,link_empty,Empty link,3,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,contrast,unknown,Very low contrast,10,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,alert,link_pdf,Link to PDF document,2,2.4.4,A,Operable;Understandable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,alert,title_redundant,Redundant title text,5,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Transformação Digital,alert,youtube_video,YouTube video,2,1.2.2,A,Perceivable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,error,link_empty,Empty link,3,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,contrast,unknown,Very low contrast,10,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,alert,alt_duplicate,A nearby image has the same alternative text,2,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,alert,link_pdf,Link to PDF document,2,2.4.4,A,Operable;Understandable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Central de Qualidade,alert,youtube_video,YouTube video,2,1.2.2,A,Perceivable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,error,link_empty,Empty link,3,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,contrast,unknown,Very low contrast,9,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,alert,link_redundant,Redundant link,3,2.4.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,alert,link_pdf,Link to PDF document,3,2.4.4,A,Operable;Understandable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+ConsultaMonitoramentoServicos,Monitoramento Serviços,Painel Monitoramento,alert,youtube_video,YouTube video,2,1.2.2,A,Perceivable,medium
+ConsultarCPF,Consultar CPF,Início CPF,error,label_empty,Empty form label,1,1.3.1,A,Perceivable,high
+ConsultarCPF,Consultar CPF,Início CPF,error,link_empty,Empty link,3,,,,
+ConsultarCPF,Consultar CPF,Início CPF,error,aria_reference_broken,Broken ARIA reference,2,4.1.2,A,Robust,critical
+ConsultarCPF,Consultar CPF,Início CPF,alert,alt_duplicate,A nearby image has the same alternative text,1,,,,
+ConsultarCPF,Consultar CPF,Início CPF,alert,label_orphaned,Orphaned form label,1,1.3.1,A,Perceivable,medium
+ConsultarCPF,Consultar CPF,Início CPF,alert,fieldset_missing,Missing fieldset,1,1.3.1,A,Perceivable,high
+ConsultarCPF,Consultar CPF,Início CPF,alert,link_redundant,Redundant link,2,2.4.4,A,Operable,medium
+ConsultarCPF,Consultar CPF,Início CPF,alert,noscript,Noscript element,2,4.1.2,A,Robust,medium
+ConsultarCPF,Consultar CPF,Início CPF,alert,accesskey,Accesskey,5,2.1.4,A,Operable,medium
+ConsultarCPF,Consultar CPF,Início CPF,alert,text_justified,Justified text,6,1.4.8,AAA,Perceivable,low
+ConsultarCPF,Consultar CPF,Formulário CPF,error,label_missing,Missing form label,1,1.3.1;3.3.2,A,Perceivable;Understandable,critical
+ConsultarCPF,Consultar CPF,Formulário CPF,contrast,unknown,Very low contrast,1,,,,
+ConsultarCPF,Consultar CPF,Formulário CPF,alert,region_missing,No page regions,1,1.3.1;2.4.1,A,Perceivable;Operable,critical
+ConsultarCPF,Consultar CPF,Formulário CPF,alert,h1_missing,Missing first level heading,1,,,,
+ConsultarCPF,Consultar CPF,Comprovante CPF,alert,heading_missing,No heading structure,1,1.3.1,A,Perceivable,critical
+ConsultarCPF,Consultar CPF,Comprovante CPF,alert,region_missing,No page regions,1,1.3.1;2.4.1,A,Perceivable;Operable,critical

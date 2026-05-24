@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GQM — Objetivo (i): WAVE × ASES</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #f8fafc;
+  color: #1e293b; line-height: 1.5; }
+.app-header { background: #1e293b; color: #f8fafc; padding: 1.25rem 2rem; }
+.app-header h1 { font-size: 1.5rem; font-weight: 700; }
+.app-header p { color: #94a3b8; font-size: 0.875rem; margin-top: 0.25rem; }
+.main { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+h2 { font-size: 1.35rem; font-weight: 700; margin: 2rem 0 0.75rem; color: #0f172a;
+  border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+h3 { font-size: 1.05rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: #1e293b; }
+.lead { color: #475569; font-size: 0.95rem; margin-bottom: 1rem; }
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem; margin-bottom: 1.5rem; }
+.kpi-card { background: #fff; border-radius: 0.75rem; padding: 1.1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.kpi-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+.kpi-value { font-size: 1.5rem; font-weight: 800; line-height: 1.1; }
+.kpi-label { font-size: 0.78rem; color: #64748b; margin-top: 0.35rem; }
+.chart-card { background: #fff; border-radius: 0.75rem; padding: 1rem 0.5rem 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 1rem; }
+.chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 1rem; margin-bottom: 1rem; }
+.chart-full { grid-column: 1 / -1; }
+.table-wrap { overflow-x: auto; border-radius: 0.75rem; border: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; background: #fff; }
+.data-table th { background: #f1f5f9; padding: 0.55rem 0.8rem; text-align: left;
+  font-weight: 600; color: #475569; font-size: 0.8rem; white-space: nowrap;
+  border-bottom: 1px solid #e2e8f0; }
+.data-table td { padding: 0.5rem 0.8rem; border-bottom: 1px solid #f1f5f9; }
+.data-table tr:hover td { background: #f8fafc; }
+.note { background: #fff7ed; border-left: 3px solid #f97316; padding: 0.75rem 1rem;
+  border-radius: 0.375rem; color: #7c2d12; font-size: 0.875rem; margin: 1rem 0; }
+.stub { background: #f1f5f9; border: 1px dashed #94a3b8; border-radius: 0.75rem;
+  padding: 1.5rem; color: #475569; margin: 1rem 0; }
+.stub strong { color: #1e293b; }
+.stub code { background: #fff; padding: 0.15rem 0.45rem; border-radius: 0.25rem;
+  font-size: 0.85rem; border: 1px solid #e2e8f0; }
+.callout-cpf { background: #fef2f2; border-left: 4px solid #dc2626;
+  padding: 1rem 1.25rem; border-radius: 0.5rem; margin: 1rem 0; color: #7f1d1d; }
+.callout-cpf strong { color: #991b1b; }
+</style>
+</head>
+<body>
+<header class="app-header">
+  <h1>GQM — Objetivo (i): caracterização automática WAVE × ASES</h1>
+  <p>Comparação das notas, rankings e tipos de problema reportados pelas duas ferramentas.</p>
+</header>
+
+<main class="main">
+
+  <section>
+    <div class="kpi-grid">
+    <div class="kpi-card" style="border-left:4px solid #3b82f6">
+      <div class="kpi-icon">📄</div>
+      <div class="kpi-value" style="color:#3b82f6">17</div>
+      <div class="kpi-label">Páginas pareadas</div>
+    </div>
+    <div class="kpi-card" style="border-left:4px solid #22c55e">
+      <div class="kpi-icon">🎯</div>
+      <div class="kpi-value" style="color:#22c55e">7.59/10</div>
+      <div class="kpi-label">AIM médio (WAVE)</div>
+    </div>
+    <div class="kpi-card" style="border-left:4px solid #10b981">
+      <div class="kpi-icon">🎯</div>
+      <div class="kpi-value" style="color:#10b981">92.81%</div>
+      <div class="kpi-label">ASES médio</div>
+    </div>
+    <div class="kpi-card" style="border-left:4px solid #8b5cf6">
+      <div class="kpi-icon">🔗</div>
+      <div class="kpi-value" style="color:#8b5cf6">ρ = 0.12</div>
+      <div class="kpi-label">Spearman WAVE×ASES (p=0.652)</div>
+    </div>
+    <div class="kpi-card" style="border-left:4px solid #dc2626">
+      <div class="kpi-icon">⚠️</div>
+      <div class="kpi-value" style="color:#dc2626">Comprovante CPF</div>
+      <div class="kpi-label">AIM 10/10 × ASES 89.53% (Δ -10.5 pp)</div>
+    </div></div>
+    <p class="lead">
+      WAVE retorna a pontuação AIM (0–10) e categoriza problemas por tipo e princípio WCAG/POUR.
+      ASES retorna nota percentual (0–100%) e agrupa por seção do eMAG.
+      Esta análise pareia as duas ferramentas por página, calcula a correlação de Spearman
+      e destaca onde os problemas se concentram — e onde elas <em>discordam</em>.
+    </p>
+  </section>
+
+  <h2>Q1 — Em que medida WAVE e ASES concordam?</h2>
+  <p class="lead">
+    Resultado central: <strong>quase nada</strong>. ρ de Spearman = 0,12 indica que
+    as duas ferramentas ordenam as páginas de formas praticamente independentes.
+  </p>
+  <div class="chart-card chart-full"><div>                            <div id="84013ac4-5cd2-4be6-8674-24c71921382b" class="plotly-graph-div" style="height:620px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("84013ac4-5cd2-4be6-8674-24c71921382b")) {                    Plotly.newPlot(                        "84013ac4-5cd2-4be6-8674-24c71921382b",                        [{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cbr\u003eASES: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ea580c","line":{"color":"#1e293b","width":1.5},"size":14},"mode":"markers","name":"Censo 2022","text":["Portal IBGE","Censo 2022","Panorama Censo 2022"],"x":{"dtype":"f8","bdata":"AAAAAAAAFkAAAAAAAAASQAAAAAAAABJA"},"y":{"dtype":"f8","bdata":"XI\u002fC9SiMVEAzMzMzMxNXQPYoXI\u002fCpVZA"},"type":"scatter"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cbr\u003eASES: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#60a5fa","line":{"color":"#1e293b","width":1.5},"size":14},"mode":"markers","name":"Consultar CPF","text":["Início CPF","Formulário CPF","Comprovante CPF"],"x":{"dtype":"f8","bdata":"zczMzMzMIEBmZmZmZmYgQAAAAAAAACRA"},"y":{"dtype":"f8","bdata":"PQrXo3D9V0Bcj8L1KDxVQFK4HoXrYVZA"},"type":"scatter"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cbr\u003eASES: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#16a34a","line":{"color":"#1e293b","width":1.5},"size":14},"mode":"markers","name":"Mapa de Empresas","text":["Mapa de Empresas"],"x":{"dtype":"f8","bdata":"AAAAAAAAIUA="},"y":{"dtype":"f8","bdata":"zczMzMz8V0A="},"type":"scatter"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cbr\u003eASES: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#7c3aed","line":{"color":"#1e293b","width":1.5},"size":14},"mode":"markers","name":"Monitoramento Serviços","text":["Home Gov Digital","Estratégias Gov.","Transformação Digital","Central de Qualidade","Painel Monitoramento"],"x":{"dtype":"f8","bdata":"zczMzMzMHkDNzMzMzMwgQDMzMzMzMx9AMzMzMzMzH0AzMzMzMzMfQA=="},"y":{"dtype":"f8","bdata":"AAAAAADgV0BI4XoUrgdYQLgehetRCFhAKVyPwvUYWECamZmZmQlYQA=="},"type":"scatter"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cbr\u003eASES: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#db2777","line":{"color":"#1e293b","width":1.5},"size":14},"mode":"markers","name":"Unidades RF","text":["Home Receita","Atendimento Presencial","Unidades MG","Unidades BH","Buscador de Unidades"],"x":{"dtype":"f8","bdata":"ZmZmZmZmGEDNzMzMzMwgQAAAAAAAACFAAAAAAAAAIUAAAAAAAAAhQA=="},"y":{"dtype":"f8","bdata":"rkfhehTeV0CamZmZmQlYQOF6FK5HAVhAj8L1KFz\u002fV0CF61G4HpVUQA=="},"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#94a3b8","dash":"dash"},"mode":"lines","name":"Ajuste linear","showlegend":false,"x":[0,10],"y":[88.02414831524482,94.32155177309438],"type":"scatter"},{"hoverinfo":"skip","marker":{"color":"rgba(0,0,0,0)","line":{"color":"#dc2626","width":3},"size":22},"mode":"markers","name":"Maior divergência","x":[10.0],"y":[89.53],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"annotations":[{"align":"left","arrowcolor":"#dc2626","arrowhead":2,"arrowsize":1,"arrowwidth":2,"ax":-220,"ay":120,"bgcolor":"#fee2e2","bordercolor":"#dc2626","borderpad":8,"borderwidth":1.5,"font":{"color":"#7f1d1d","size":11},"showarrow":true,"text":"\u003cb\u003eComprovante CPF\u003c\u002fb\u003e\u003cbr\u003eAIM 10\u002f10 (perfeito) × ASES 89,5%\u003cbr\u003eOnde um usuário travou na sessão real.","x":10.0,"y":89.53},{"align":"right","bgcolor":"rgba(254, 243, 199, 0.95)","bordercolor":"#d97706","borderpad":10,"borderwidth":1.5,"font":{"color":"#78350f","size":15},"showarrow":false,"text":"\u003cb\u003eρ Spearman = 0.12\u003c\u002fb\u003e\u003cbr\u003e\u003cspan style='font-size:11px'\u003ep = 0.652 • Pearson r = 0.19\u003c\u002fspan\u003e\u003cbr\u003e\u003cspan style='font-size:11px'\u003e→ rankings das duas ferramentas\u003cbr\u003epraticamente não se correlacionam\u003c\u002fspan\u003e","x":0.99,"xanchor":"right","xref":"paper","y":0.02,"yanchor":"bottom","yref":"paper"}],"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"margin":{"l":20,"r":20,"t":80,"b":110},"legend":{"orientation":"h","yanchor":"top","y":-0.22,"xanchor":"center","x":0.5,"bgcolor":"rgba(255,255,255,0.85)"},"title":{"font":{"size":15,"color":"#0f172a"},"text":"Concordância WAVE × ASES — escalas originais","x":0.02,"xanchor":"left","y":0.96,"yanchor":"top"},"xaxis":{"range":[0,10.5],"title":{"text":"AIM (WAVE) — 0 a 10"},"gridcolor":"#e2e8f0","zeroline":false},"yaxis":{"range":[0,100],"title":{"text":"Nota ASES — 0 a 100 (%)"},"gridcolor":"#e2e8f0","zeroline":false},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","height":620},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+  
+  <div class="callout-cpf">
+    <strong>Maior divergência entre as ferramentas — Comprovante CPF.</strong>
+    WAVE atribuiu AIM <strong>10/10</strong> (sinaliza apenas 2
+    erros/alertas), enquanto ASES atribuiu <strong>89.53%</strong>
+    com 67 ocorrências em suas seções. Nas sessões com usuários,
+    foi exatamente nesta página que um participante travou — sugerindo que a métrica
+    "perfeita" do WAVE deixou de capturar barreiras vividas na prática.
+  </div>
+
+  <h2>Q2 — Principais tipos de problema</h2>
+  <p class="lead">Top tipos reportados pelo WAVE e distribuição por seção do ASES.</p>
+  <div class="chart-card"><div>                            <div id="9dce21a3-34f8-4e83-b5bd-afdec5a0b3e9" class="plotly-graph-div" style="height:510px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("9dce21a3-34f8-4e83-b5bd-afdec5a0b3e9")) {                    Plotly.newPlot(                        "9dce21a3-34f8-4e83-b5bd-afdec5a0b3e9",                        [{"hovertemplate":"%{y}\u003cbr\u003e%{x} ocorrências\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#f97316","#eab308","#eab308","#ef4444","#eab308","#eab308","#ef4444","#eab308","#eab308","#eab308","#eab308","#eab308","#ef4444","#eab308","#eab308"]},"orientation":"h","showlegend":false,"text":{"dtype":"f8","bdata":"AAAAAADAWUAAAAAAAEBSQAAAAAAAgE9AAAAAAAAAS0AAAAAAAAA7QAAAAAAAADlAAAAAAAAAOEAAAAAAAAA3QAAAAAAAAC5AAAAAAAAALEAAAAAAAAAqQAAAAAAAAChAAAAAAAAAJkAAAAAAAAAQQAAAAAAAABBA"},"textposition":"outside","x":{"dtype":"i1","bdata":"Z0k\u002fNhsZGBcPDg0MCwQE"},"y":["Very low contrast","Redundant link","Accesskey","Empty link","Noscript element","Redundant title text","Broken ARIA reference","A nearby image has the same alternative text","YouTube video","Justified text","Possible heading","Link to PDF document","Linked image missing alternative text","HTML5 video or audio","Orphaned form label"],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"margin":{"l":20,"r":20,"t":80,"b":40},"legend":{"visible":false},"title":{"font":{"size":15,"color":"#0f172a"},"text":"Top-15 tipos de problema reportados pelo WAVE","x":0.02,"xanchor":"left","y":0.96,"yanchor":"top"},"yaxis":{"autorange":"reversed"},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","height":510,"xaxis":{"title":{"text":"Ocorrências"}}},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+  <div class="chart-grid">
+    <div class="chart-card"><div>                            <div id="e53167a7-5337-4b8c-ad43-4cf39fefc054" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("e53167a7-5337-4b8c-ad43-4cf39fefc054")) {                    Plotly.newPlot(                        "e53167a7-5337-4b8c-ad43-4cf39fefc054",                        [{"marker":{"color":["#eab308","#f97316","#ef4444"]},"showlegend":false,"text":{"dtype":"f8","bdata":"AAAAAAAwckAAAAAAAMBZQAAAAAAAwFhA"},"textposition":"outside","x":["Alertas","Erros de Contraste","Erros"],"y":{"dtype":"i2","bdata":"IwFnAGMA"},"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"margin":{"l":20,"r":20,"t":80,"b":60},"legend":{"visible":false},"title":{"font":{"size":15,"color":"#0f172a"},"text":"Categorias WAVE — total agregado","x":0.02,"xanchor":"left","y":0.96,"yanchor":"top"},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","height":400,"yaxis":{"title":{"text":"Ocorrências"}}},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+    <div class="chart-card"><div>                            <div id="7ed68787-932a-401b-81e6-af5699406d39" class="plotly-graph-div" style="height:440px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("7ed68787-932a-401b-81e6-af5699406d39")) {                    Plotly.newPlot(                        "7ed68787-932a-401b-81e6-af5699406d39",                        [{"marker":{"color":"#ef4444"},"name":"Erros","x":["Marcação","Conteúdo\u002fInformação","Formulários","Comportamento","Apresentação \u002f Design","Multimídia"],"y":{"dtype":"i2","bdata":"QgVjBA0ABwABAAAA"},"type":"bar"},{"marker":{"color":"#eab308"},"name":"Alertas","x":["Marcação","Conteúdo\u002fInformação","Formulários","Comportamento","Apresentação \u002f Design","Multimídia"],"y":{"dtype":"i2","bdata":"mUgcApMEtQAYAAAA"},"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"margin":{"l":20,"r":20,"t":80,"b":110},"legend":{"orientation":"h","yanchor":"top","y":-0.22,"xanchor":"center","x":0.5,"bgcolor":"rgba(255,255,255,0.85)"},"title":{"font":{"size":15,"color":"#0f172a"},"text":"ASES — erros e alertas por seção (agregado)","x":0.02,"xanchor":"left","y":0.96,"yanchor":"top"},"xaxis":{"tickangle":-15},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","barmode":"stack","height":440,"yaxis":{"title":{"text":"Ocorrências"}}},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+  </div>
+
+  <h3>Top tipos WAVE — tabela com metadados WCAG/POUR/LS</h3>
+  <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Problema</th>
+      <th>type_id</th>
+      <th>Categoria</th>
+      <th>Ocorrências</th>
+      <th>Páginas</th>
+      <th>WCAG</th>
+      <th>Nível</th>
+      <th>POUR</th>
+      <th>Impacto LS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Very low contrast</td>
+      <td>unknown</td>
+      <td>contrast</td>
+      <td>103</td>
+      <td>9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Redundant link</td>
+      <td>link_redundant</td>
+      <td>alert</td>
+      <td>73</td>
+      <td>14</td>
+      <td>2.4.4</td>
+      <td>A</td>
+      <td>Operable</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>Accesskey</td>
+      <td>accesskey</td>
+      <td>alert</td>
+      <td>63</td>
+      <td>15</td>
+      <td>2.1.4</td>
+      <td>A</td>
+      <td>Operable</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>Empty link</td>
+      <td>link_empty</td>
+      <td>error</td>
+      <td>54</td>
+      <td>12</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Noscript element</td>
+      <td>noscript</td>
+      <td>alert</td>
+      <td>27</td>
+      <td>15</td>
+      <td>4.1.2</td>
+      <td>A</td>
+      <td>Robust</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>Redundant title text</td>
+      <td>title_redundant</td>
+      <td>alert</td>
+      <td>25</td>
+      <td>9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Broken ARIA reference</td>
+      <td>aria_reference_broken</td>
+      <td>error</td>
+      <td>24</td>
+      <td>12</td>
+      <td>4.1.2</td>
+      <td>A</td>
+      <td>Robust</td>
+      <td>critical</td>
+    </tr>
+    <tr>
+      <td>A nearby image has the same alternative text</td>
+      <td>alt_duplicate</td>
+      <td>alert</td>
+      <td>23</td>
+      <td>15</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>YouTube video</td>
+      <td>youtube_video</td>
+      <td>alert</td>
+      <td>15</td>
+      <td>5</td>
+      <td>1.2.2</td>
+      <td>A</td>
+      <td>Perceivable</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>Justified text</td>
+      <td>text_justified</td>
+      <td>alert</td>
+      <td>14</td>
+      <td>3</td>
+      <td>1.4.8</td>
+      <td>AAA</td>
+      <td>Perceivable</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <td>Possible heading</td>
+      <td>heading_possible</td>
+      <td>alert</td>
+      <td>13</td>
+      <td>2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Link to PDF document</td>
+      <td>link_pdf</td>
+      <td>alert</td>
+      <td>12</td>
+      <td>6</td>
+      <td>2.4.4</td>
+      <td>A</td>
+      <td>Operable;Understandable</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>Linked image missing alternative text</td>
+      <td>alt_link_missing</td>
+      <td>error</td>
+      <td>11</td>
+      <td>3</td>
+      <td>1.1.1</td>
+      <td>A</td>
+      <td>Perceivable</td>
+      <td>critical</td>
+    </tr>
+    <tr>
+      <td>HTML5 video or audio</td>
+      <td>html5_video_audio</td>
+      <td>alert</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1.2.1</td>
+      <td>A</td>
+      <td>Perceivable</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>Orphaned form label</td>
+      <td>label_orphaned</td>
+      <td>alert</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1.3.1</td>
+      <td>A</td>
+      <td>Perceivable</td>
+      <td>medium</td>
+    </tr>
+  </tbody>
+</table></div>
+
+  <h3>ASES — totais por seção (todas as páginas)</h3>
+  <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Seção (ASES)</th>
+      <th>Erros</th>
+      <th>Alertas</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Marcação</td>
+      <td>1346</td>
+      <td>18585</td>
+      <td>19931</td>
+    </tr>
+    <tr>
+      <td>Conteúdo/Informação</td>
+      <td>1123</td>
+      <td>540</td>
+      <td>1663</td>
+    </tr>
+    <tr>
+      <td>Formulários</td>
+      <td>13</td>
+      <td>1171</td>
+      <td>1184</td>
+    </tr>
+    <tr>
+      <td>Comportamento</td>
+      <td>7</td>
+      <td>181</td>
+      <td>188</td>
+    </tr>
+    <tr>
+      <td>Apresentação / Design</td>
+      <td>1</td>
+      <td>24</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Multimídia</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table></div>
+
+  <h2>Q3 — Ranking teórico de acessibilidade</h2>
+  <p class="lead">
+    Páginas ordenadas pelo AIM (WAVE) crescente, com a nota ASES espelhada para
+    comparação visual. As barras ASES "saltando" para cima e para baixo são a versão
+    visual do ρ baixo: páginas vizinhas no eixo AIM não estão próximas no eixo ASES.
+  </p>
+  <div class="chart-card chart-full"><div>                            <div id="03fa0f8a-50d1-4f26-b5d6-28b7a098f514" class="plotly-graph-div" style="height:646px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("03fa0f8a-50d1-4f26-b5d6-28b7a098f514")) {                    Plotly.newPlot(                        "03fa0f8a-50d1-4f26-b5d6-28b7a098f514",                        [{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Unidades RF","marker":{"color":"#db2777"},"name":"Unidades RF","orientation":"h","showlegend":true,"text":{"dtype":"f8","bdata":"ZmZmZmZmGEDNzMzMzMwgQAAAAAAAACFAAAAAAAAAIUAAAAAAAAAhQA=="},"textposition":"outside","x":{"dtype":"f8","bdata":"ZmZmZmZmGEDNzMzMzMwgQAAAAAAAACFAAAAAAAAAIUAAAAAAAAAhQA=="},"y":["Unidades RF — Home Receita","Unidades RF — Atendimento Presencial","Unidades RF — Buscador de Unidades","Unidades RF — Unidades BH","Unidades RF — Unidades MG"],"type":"bar","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eASES: %{x:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Unidades RF","marker":{"color":"#db2777"},"name":"Unidades RF","orientation":"h","showlegend":false,"text":["82.33%","95.47%","95.99%","96.02%","96.15%"],"textposition":"outside","x":{"dtype":"f8","bdata":"hetRuB6VVECuR+F6FN5XQI\u002fC9Shc\u002f1dA4XoUrkcBWECamZmZmQlYQA=="},"y":["Unidades RF — Buscador de Unidades","Unidades RF — Home Receita","Unidades RF — Unidades BH","Unidades RF — Unidades MG","Unidades RF — Atendimento Presencial"],"type":"bar","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Censo 2022","marker":{"color":"#ea580c"},"name":"Censo 2022","orientation":"h","showlegend":true,"text":{"dtype":"f8","bdata":"AAAAAAAAEkAAAAAAAAASQAAAAAAAABZA"},"textposition":"outside","x":{"dtype":"f8","bdata":"AAAAAAAAEkAAAAAAAAASQAAAAAAAABZA"},"y":["Censo 2022 — Censo 2022","Censo 2022 — Panorama Censo 2022","Censo 2022 — Portal IBGE"],"type":"bar","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eASES: %{x:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Censo 2022","marker":{"color":"#ea580c"},"name":"Censo 2022","orientation":"h","showlegend":false,"text":["82.19%","90.59%","92.3%"],"textposition":"outside","x":{"dtype":"f8","bdata":"XI\u002fC9SiMVED2KFyPwqVWQDMzMzMzE1dA"},"y":["Censo 2022 — Portal IBGE","Censo 2022 — Panorama Censo 2022","Censo 2022 — Censo 2022"],"type":"bar","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Mapa de Empresas","marker":{"color":"#16a34a"},"name":"Mapa de Empresas","orientation":"h","showlegend":true,"text":{"dtype":"f8","bdata":"AAAAAAAAIUA="},"textposition":"outside","x":{"dtype":"f8","bdata":"AAAAAAAAIUA="},"y":["Mapa de Empresas — Mapa de Empresas"],"type":"bar","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eASES: %{x:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Mapa de Empresas","marker":{"color":"#16a34a"},"name":"Mapa de Empresas","orientation":"h","showlegend":false,"text":["95.95%"],"textposition":"outside","x":{"dtype":"f8","bdata":"zczMzMz8V0A="},"y":["Mapa de Empresas — Mapa de Empresas"],"type":"bar","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Monitoramento Serviços","marker":{"color":"#7c3aed"},"name":"Monitoramento Serviços","orientation":"h","showlegend":true,"text":{"dtype":"f8","bdata":"zczMzMzMHkAzMzMzMzMfQDMzMzMzMx9AMzMzMzMzH0DNzMzMzMwgQA=="},"textposition":"outside","x":{"dtype":"f8","bdata":"zczMzMzMHkAzMzMzMzMfQDMzMzMzMx9AMzMzMzMzH0DNzMzMzMwgQA=="},"y":["Monitoramento Serviços — Home Gov Digital","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Monitoramento Serviços — Estratégias Gov."],"type":"bar","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eASES: %{x:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Monitoramento Serviços","marker":{"color":"#7c3aed"},"name":"Monitoramento Serviços","orientation":"h","showlegend":false,"text":["95.5%","96.12%","96.13%","96.15%","96.39%"],"textposition":"outside","x":{"dtype":"f8","bdata":"AAAAAADgV0BI4XoUrgdYQLgehetRCFhAmpmZmZkJWEApXI\u002fC9RhYQA=="},"y":["Monitoramento Serviços — Home Gov Digital","Monitoramento Serviços — Estratégias Gov.","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Monitoramento Serviços — Central de Qualidade"],"type":"bar","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eAIM: %{x:.2f}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Consultar CPF","marker":{"color":"#60a5fa"},"name":"Consultar CPF","orientation":"h","showlegend":true,"text":{"dtype":"f8","bdata":"ZmZmZmZmIEDNzMzMzMwgQAAAAAAAACRA"},"textposition":"outside","x":{"dtype":"f8","bdata":"ZmZmZmZmIEDNzMzMzMwgQAAAAAAAACRA"},"y":["Consultar CPF — Formulário CPF","Consultar CPF — Início CPF","Consultar CPF — Comprovante CPF"],"type":"bar","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eASES: %{x:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Consultar CPF","marker":{"color":"#60a5fa"},"name":"Consultar CPF","orientation":"h","showlegend":false,"text":["84.94%","89.53%","95.96%"],"textposition":"outside","x":{"dtype":"f8","bdata":"XI\u002fC9Sg8VUBSuB6F62FWQD0K16Nw\u002fVdA"},"y":["Consultar CPF — Formulário CPF","Consultar CPF — Comprovante CPF","Consultar CPF — Início CPF"],"type":"bar","xaxis":"x2","yaxis":"y2"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.48],"range":[0,10.6]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"categoryorder":"array","categoryarray":["Censo 2022 — Censo 2022","Censo 2022 — Panorama Censo 2022","Censo 2022 — Portal IBGE","Unidades RF — Home Receita","Monitoramento Serviços — Home Gov Digital","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Consultar CPF — Formulário CPF","Monitoramento Serviços — Estratégias Gov.","Consultar CPF — Início CPF","Unidades RF — Atendimento Presencial","Unidades RF — Buscador de Unidades","Unidades RF — Unidades BH","Unidades RF — Unidades MG","Mapa de Empresas — Mapa de Empresas","Consultar CPF — Comprovante CPF"]},"xaxis2":{"anchor":"y2","domain":[0.52,1.0],"range":[60,105]},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"categoryorder":"array","categoryarray":["Censo 2022 — Portal IBGE","Unidades RF — Buscador de Unidades","Consultar CPF — Formulário CPF","Consultar CPF — Comprovante CPF","Censo 2022 — Panorama Censo 2022","Censo 2022 — Censo 2022","Unidades RF — Home Receita","Monitoramento Serviços — Home Gov Digital","Mapa de Empresas — Mapa de Empresas","Consultar CPF — Início CPF","Unidades RF — Unidades BH","Unidades RF — Unidades MG","Monitoramento Serviços — Estratégias Gov.","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Unidades RF — Atendimento Presencial","Monitoramento Serviços — Central de Qualidade"],"side":"right"},"annotations":[{"font":{"size":16},"showarrow":false,"text":"AIM (WAVE) — 0–10  •  ranking próprio","x":0.24,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"ASES — 0–100 (%)  •  ranking próprio","x":0.76,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"}],"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"title":{"font":{"size":15,"color":"#0f172a"},"text":"Ranking teórico — cada ferramenta ordenada pelo seu próprio ranking (melhor no topo)","x":0.02,"xanchor":"left","y":0.97},"margin":{"l":220,"r":220,"t":80,"b":90},"legend":{"orientation":"h","yanchor":"top","y":-0.05,"xanchor":"center","x":0.5,"bgcolor":"rgba(255,255,255,0.85)"},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","height":646},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+  <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Fluxo</th>
+      <th>Página</th>
+      <th>AIM</th>
+      <th>Rank AIM</th>
+      <th>ASES (%)</th>
+      <th>Rank ASES</th>
+      <th>WAVE erros+alertas</th>
+      <th>ASES erros+alertas</th>
+      <th>POUR P</th>
+      <th>POUR O</th>
+      <th>POUR U</th>
+      <th>POUR R</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Unidades RF</td>
+      <td>Home Receita</td>
+      <td>6.1</td>
+      <td>14</td>
+      <td>95.47</td>
+      <td>11</td>
+      <td>62</td>
+      <td>2371</td>
+      <td>0</td>
+      <td>32</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Unidades RF</td>
+      <td>Atendimento Presencial</td>
+      <td>8.4</td>
+      <td>6</td>
+      <td>96.15</td>
+      <td>2</td>
+      <td>25</td>
+      <td>1800</td>
+      <td>7</td>
+      <td>8</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Unidades RF</td>
+      <td>Unidades MG</td>
+      <td>8.5</td>
+      <td>2</td>
+      <td>96.02</td>
+      <td>6</td>
+      <td>17</td>
+      <td>1782</td>
+      <td>0</td>
+      <td>8</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Unidades RF</td>
+      <td>Unidades BH</td>
+      <td>8.5</td>
+      <td>2</td>
+      <td>95.99</td>
+      <td>7</td>
+      <td>18</td>
+      <td>1789</td>
+      <td>1</td>
+      <td>8</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Unidades RF</td>
+      <td>Buscador de Unidades</td>
+      <td>8.5</td>
+      <td>2</td>
+      <td>82.33</td>
+      <td>16</td>
+      <td>17</td>
+      <td>73</td>
+      <td>0</td>
+      <td>8</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Censo 2022</td>
+      <td>Portal IBGE</td>
+      <td>5.5</td>
+      <td>15</td>
+      <td>82.19</td>
+      <td>17</td>
+      <td>59</td>
+      <td>399</td>
+      <td>8</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Censo 2022</td>
+      <td>Censo 2022</td>
+      <td>4.5</td>
+      <td>16</td>
+      <td>92.30</td>
+      <td>12</td>
+      <td>43</td>
+      <td>134</td>
+      <td>7</td>
+      <td>7</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Censo 2022</td>
+      <td>Panorama Censo 2022</td>
+      <td>4.5</td>
+      <td>16</td>
+      <td>90.59</td>
+      <td>13</td>
+      <td>43</td>
+      <td>1547</td>
+      <td>7</td>
+      <td>7</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Mapa de Empresas</td>
+      <td>Mapa de Empresas</td>
+      <td>8.5</td>
+      <td>2</td>
+      <td>95.95</td>
+      <td>9</td>
+      <td>19</td>
+      <td>1856</td>
+      <td>2</td>
+      <td>7</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Monitoramento Serviços</td>
+      <td>Home Gov Digital</td>
+      <td>7.7</td>
+      <td>13</td>
+      <td>95.50</td>
+      <td>10</td>
+      <td>42</td>
+      <td>2124</td>
+      <td>11</td>
+      <td>16</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Monitoramento Serviços</td>
+      <td>Estratégias Gov.</td>
+      <td>8.4</td>
+      <td>6</td>
+      <td>96.12</td>
+      <td>5</td>
+      <td>22</td>
+      <td>1770</td>
+      <td>3</td>
+      <td>10</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Monitoramento Serviços</td>
+      <td>Transformação Digital</td>
+      <td>7.8</td>
+      <td>10</td>
+      <td>96.13</td>
+      <td>4</td>
+      <td>35</td>
+      <td>1810</td>
+      <td>2</td>
+      <td>10</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Monitoramento Serviços</td>
+      <td>Central de Qualidade</td>
+      <td>7.8</td>
+      <td>10</td>
+      <td>96.39</td>
+      <td>1</td>
+      <td>31</td>
+      <td>1802</td>
+      <td>2</td>
+      <td>10</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Monitoramento Serviços</td>
+      <td>Painel Monitoramento</td>
+      <td>7.8</td>
+      <td>10</td>
+      <td>96.15</td>
+      <td>2</td>
+      <td>30</td>
+      <td>1838</td>
+      <td>2</td>
+      <td>11</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Consultar CPF</td>
+      <td>Início CPF</td>
+      <td>8.4</td>
+      <td>6</td>
+      <td>95.96</td>
+      <td>8</td>
+      <td>24</td>
+      <td>1754</td>
+      <td>9</td>
+      <td>7</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Consultar CPF</td>
+      <td>Formulário CPF</td>
+      <td>8.2</td>
+      <td>9</td>
+      <td>84.94</td>
+      <td>15</td>
+      <td>4</td>
+      <td>75</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Consultar CPF</td>
+      <td>Comprovante CPF</td>
+      <td>10.0</td>
+      <td>1</td>
+      <td>89.53</td>
+      <td>14</td>
+      <td>2</td>
+      <td>67</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table></div>
+
+  <h2>Q4 — Concentração por princípio WCAG (POUR)</h2>
+  <p class="lead">
+    Distribuição das ocorrências de erros e alertas do WAVE pelos quatro princípios
+    do WCAG (Perceptível / Operável / Compreensível / Robusto). Um mesmo tipo pode
+    contar em mais de uma dimensão.
+  </p>
+  <div class="chart-grid">
+    <div class="chart-card"><div>                            <div id="47878836-1605-4968-8dfb-809f91f779f3" class="plotly-graph-div" style="height:420px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("47878836-1605-4968-8dfb-809f91f779f3")) {                    Plotly.newPlot(                        "47878836-1605-4968-8dfb-809f91f779f3",                        [{"marker":{"color":["#3b82f6","#8b5cf6","#ec4899","#14b8a6"]},"showlegend":false,"text":["65","153","15","51"],"textposition":"outside","x":["Perceptível","Operável","Compreensível","Robusto"],"y":[65,153,15,51],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"margin":{"l":20,"r":20,"t":80,"b":60},"legend":{"visible":false},"title":{"font":{"size":15,"color":"#0f172a"},"text":"Concentração de problemas WAVE por princípio WCAG (POUR)","x":0.02,"xanchor":"left","y":0.96,"yanchor":"top"},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","height":420,"yaxis":{"title":{"text":"Ocorrências de erros\u002falertas"}}},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+    <div class="chart-card"><div>                            <div id="4a13738a-7f56-4377-9bbc-fa25965b48c6" class="plotly-graph-div" style="height:544px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("4a13738a-7f56-4377-9bbc-fa25965b48c6")) {                    Plotly.newPlot(                        "4a13738a-7f56-4377-9bbc-fa25965b48c6",                        [{"hovertemplate":"Perceptível: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#3b82f6"},"name":"Perceptível","orientation":"h","x":{"dtype":"i1","bdata":"AAcAAQAIBwcCCwMCAgIJAgI="},"y":["Unidades RF — Home Receita","Unidades RF — Atendimento Presencial","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Buscador de Unidades","Censo 2022 — Portal IBGE","Censo 2022 — Censo 2022","Censo 2022 — Panorama Censo 2022","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Monitoramento Serviços — Estratégias Gov.","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Painel Monitoramento","Consultar CPF — Início CPF","Consultar CPF — Formulário CPF","Consultar CPF — Comprovante CPF"],"type":"bar"},{"hovertemplate":"Operável: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#8b5cf6"},"name":"Operável","orientation":"h","x":{"dtype":"i1","bdata":"IAgICAgCBwcHEAoKCgsHAQE="},"y":["Unidades RF — Home Receita","Unidades RF — Atendimento Presencial","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Buscador de Unidades","Censo 2022 — Portal IBGE","Censo 2022 — Censo 2022","Censo 2022 — Panorama Censo 2022","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Monitoramento Serviços — Estratégias Gov.","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Painel Monitoramento","Consultar CPF — Início CPF","Consultar CPF — Formulário CPF","Consultar CPF — Comprovante CPF"],"type":"bar"},{"hovertemplate":"Compreensível: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ec4899"},"name":"Compreensível","orientation":"h","x":{"dtype":"i1","bdata":"AAAAAAACAAABAgICAgMAAQA="},"y":["Unidades RF — Home Receita","Unidades RF — Atendimento Presencial","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Buscador de Unidades","Censo 2022 — Portal IBGE","Censo 2022 — Censo 2022","Censo 2022 — Panorama Censo 2022","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Monitoramento Serviços — Estratégias Gov.","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Painel Monitoramento","Consultar CPF — Início CPF","Consultar CPF — Formulário CPF","Consultar CPF — Comprovante CPF"],"type":"bar"},{"hovertemplate":"Robusto: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#14b8a6"},"name":"Robusto","orientation":"h","x":{"dtype":"i1","bdata":"BAQEBAQBAQEEBAQEBAQEAAA="},"y":["Unidades RF — Home Receita","Unidades RF — Atendimento Presencial","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Buscador de Unidades","Censo 2022 — Portal IBGE","Censo 2022 — Censo 2022","Censo 2022 — Panorama Censo 2022","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Monitoramento Serviços — Estratégias Gov.","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Painel Monitoramento","Consultar CPF — Início CPF","Consultar CPF — Formulário CPF","Consultar CPF — Comprovante CPF"],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"margin":{"l":20,"r":20,"t":80,"b":110},"legend":{"orientation":"h","yanchor":"top","y":-0.22,"xanchor":"center","x":0.5,"bgcolor":"rgba(255,255,255,0.85)"},"title":{"font":{"size":15,"color":"#0f172a"},"text":"POUR por página — distribuição empilhada","x":0.02,"xanchor":"left","y":0.96,"yanchor":"top"},"yaxis":{"autorange":"reversed"},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","barmode":"stack","height":544,"xaxis":{"title":{"text":"Ocorrências de erros\u002falertas"}}},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+  </div>
+
+  <h3>ASES — concentração por seção e por página</h3>
+  <div class="chart-card chart-full"><div>                            <div id="a36aa26a-54f1-4309-84a8-890d91c7801c" class="plotly-graph-div" style="height:544px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("a36aa26a-54f1-4309-84a8-890d91c7801c")) {                    Plotly.newPlot(                        "a36aa26a-54f1-4309-84a8-890d91c7801c",                        [{"hovertemplate":"Marcação: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#3b82f6"},"name":"Marcação","orientation":"h","x":{"dtype":"i2","bdata":"NAA3ADkAbQA\u002fAfMFRAYHBh8GJwYwBi8GKQYUBigG8wZQBw=="},"y":["Consultar CPF — Comprovante CPF","Unidades RF — Buscador de Unidades","Consultar CPF — Formulário CPF","Censo 2022 — Censo 2022","Censo 2022 — Portal IBGE","Censo 2022 — Panorama Censo 2022","Consultar CPF — Início CPF","Monitoramento Serviços — Estratégias Gov.","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Atendimento Presencial","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Unidades RF — Home Receita"],"type":"bar"},{"hovertemplate":"Conteúdo\u002fInformação: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ec4899"},"name":"Conteúdo\u002fInformação","orientation":"h","x":{"dtype":"i2","bdata":"BwAOAAUAEwA7ABUAFABtAFoAWwBbAGQAcwCkAKIA4AB0AQ=="},"y":["Consultar CPF — Comprovante CPF","Unidades RF — Buscador de Unidades","Consultar CPF — Formulário CPF","Censo 2022 — Censo 2022","Censo 2022 — Portal IBGE","Censo 2022 — Panorama Censo 2022","Consultar CPF — Início CPF","Monitoramento Serviços — Estratégias Gov.","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Atendimento Presencial","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Unidades RF — Home Receita"],"type":"bar"},{"hovertemplate":"Formulários: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ef4444"},"name":"Formulários","orientation":"h","x":{"dtype":"i1","bdata":"AQEJAAgAb2lqamppaWlpaWo="},"y":["Consultar CPF — Comprovante CPF","Unidades RF — Buscador de Unidades","Consultar CPF — Formulário CPF","Censo 2022 — Censo 2022","Censo 2022 — Portal IBGE","Censo 2022 — Panorama Censo 2022","Consultar CPF — Início CPF","Monitoramento Serviços — Estratégias Gov.","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Atendimento Presencial","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Unidades RF — Home Receita"],"type":"bar"},{"hovertemplate":"Comportamento: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#8b5cf6"},"name":"Comportamento","orientation":"h","x":{"dtype":"i1","bdata":"BwMEBggDEw0ODA4ODQ0NEBA="},"y":["Consultar CPF — Comprovante CPF","Unidades RF — Buscador de Unidades","Consultar CPF — Formulário CPF","Censo 2022 — Censo 2022","Censo 2022 — Portal IBGE","Censo 2022 — Panorama Censo 2022","Consultar CPF — Início CPF","Monitoramento Serviços — Estratégias Gov.","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Atendimento Presencial","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Unidades RF — Home Receita"],"type":"bar"},{"hovertemplate":"Apresentação \u002f Design: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#f59e0b"},"name":"Apresentação \u002f Design","orientation":"h","x":{"dtype":"i1","bdata":"AAAAAAUAAAAFBQUAAAAAAAU="},"y":["Consultar CPF — Comprovante CPF","Unidades RF — Buscador de Unidades","Consultar CPF — Formulário CPF","Censo 2022 — Censo 2022","Censo 2022 — Portal IBGE","Censo 2022 — Panorama Censo 2022","Consultar CPF — Início CPF","Monitoramento Serviços — Estratégias Gov.","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Atendimento Presencial","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Unidades RF — Home Receita"],"type":"bar"},{"hovertemplate":"Multimídia: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#14b8a6"},"name":"Multimídia","orientation":"h","x":{"dtype":"i1","bdata":"AAAAAAAAAAAAAAAAAAAAAAA="},"y":["Consultar CPF — Comprovante CPF","Unidades RF — Buscador de Unidades","Consultar CPF — Formulário CPF","Censo 2022 — Censo 2022","Censo 2022 — Portal IBGE","Censo 2022 — Panorama Censo 2022","Consultar CPF — Início CPF","Monitoramento Serviços — Estratégias Gov.","Unidades RF — Unidades MG","Unidades RF — Unidades BH","Unidades RF — Atendimento Presencial","Monitoramento Serviços — Central de Qualidade","Monitoramento Serviços — Transformação Digital","Monitoramento Serviços — Painel Monitoramento","Mapa de Empresas — Mapa de Empresas","Monitoramento Serviços — Home Gov Digital","Unidades RF — Home Receita"],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"family":"system-ui, sans-serif","size":12,"color":"#1e293b"},"margin":{"l":20,"r":20,"t":80,"b":110},"legend":{"orientation":"h","yanchor":"top","y":-0.22,"xanchor":"center","x":0.5,"bgcolor":"rgba(255,255,255,0.85)"},"title":{"font":{"size":15,"color":"#0f172a"},"text":"ASES — erros + alertas por seção e por página","x":0.02,"xanchor":"left","y":0.96,"yanchor":"top"},"paper_bgcolor":"white","plot_bgcolor":"#f8fafc","barmode":"stack","height":544,"xaxis":{"title":{"text":"Ocorrências (erros + alertas)"}}},                        {"displaylogo": false, "responsive": true}                    )                };            </script>        </div></div>
+
+  <h2>Confronto técnico × vivido <small style="color:#94a3b8;font-weight:400">(objetivo (iii) do GQM)</small></h2>
+  <p class="lead">
+    Aqui a nota técnica de cada página (AIM e ASES) é confrontada com o desempenho real
+    dos usuários (taxa de conclusão e NASA-TLX). É a evidência mais importante: se as
+    ferramentas automáticas não predizem o que os usuários vivem, o uso isolado delas
+    como métrica de acessibilidade fica fragilizado.
+  </p>
+  
+  <div class="stub">
+    <strong>Aguardando dados de desempenho dos usuários.</strong>
+    Para gerar o cruzamento técnico × vivido, crie
+    <code>input/user-performance.json</code> com o seguinte formato:
+    <pre style="background:#fff;padding:0.75rem;border-radius:0.5rem;margin-top:0.5rem;
+      border:1px solid #e2e8f0;font-size:0.8rem;overflow-x:auto">
+{
+  "tasks": [
+    {"page": "Comprovante CPF", "completion_rate": 0.6, "nasa_tlx_mean": 72.5, "n": 5},
+    {"page": "Buscador de Unidades", "completion_rate": 0.8, "nasa_tlx_mean": 55.0, "n": 5}
+  ]
+}</pre>
+    A chave <code>page</code> precisa bater com os nomes legíveis das páginas
+    (veja a coluna "Página" na tabela do Q3 abaixo). Rode novamente
+    <code>py -3 src/gqm_analysis.py</code> e o gráfico aparece automaticamente aqui.
+  </div>
+
+  <div class="note">
+    <strong>Como interpretar ρ de Spearman:</strong> varia de −1 a 1. Próximo de +1, as
+    duas ferramentas concordam sobre quais páginas são mais acessíveis; próximo de 0,
+    os rankings são essencialmente independentes; negativo, discordam sistematicamente.
+    Com ρ = 0,12, escolher entre WAVE e ASES para classificar páginas é praticamente
+    arbitrário — o que reforça a necessidade do confronto técnico × vivido acima.
+  </div>
+
+</main>
+</body>
+</html>
