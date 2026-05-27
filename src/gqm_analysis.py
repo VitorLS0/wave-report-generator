@@ -385,6 +385,8 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
             orientation="h",
             marker_color=color,
             text=sa["aim_score"].round(2), textposition="outside",
+            textfont=dict(size=15, color="#0f172a", family="system-ui, sans-serif"),
+            cliponaxis=False,
             hovertemplate="<b>%{y}</b><br>AIM: %{x:.2f}<extra></extra>",
             name=flow_lbl, legendgroup=flow_lbl, showlegend=True,
         ), row=1, col=1)
@@ -395,6 +397,8 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
             orientation="h",
             marker_color=color,
             text=sb["ases_score"].round(2).astype(str) + "%", textposition="outside",
+            textfont=dict(size=15, color="#0f172a", family="system-ui, sans-serif"),
+            cliponaxis=False,
             hovertemplate="<b>%{y}</b><br>ASES: %{x:.2f}%<extra></extra>",
             name=flow_lbl, legendgroup=flow_lbl, showlegend=False,
         ), row=1, col=2)
@@ -402,22 +406,32 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
     # Cada lado tem sua ordem (ascendente → melhor fica no topo).
     # Labels do AIM ficam à esquerda; labels do ASES vão à direita para não
     # colidirem com as barras do AIM.
-    fig.update_yaxes(categoryorder="array", categoryarray=aim_labels,  row=1, col=1)
+    tick_font = dict(size=14, color="#1e293b", family="system-ui, sans-serif")
+    axis_tick_font = dict(size=13, color="#475569", family="system-ui, sans-serif")
+    fig.update_yaxes(categoryorder="array", categoryarray=aim_labels,
+                     tickfont=tick_font, row=1, col=1)
     fig.update_yaxes(categoryorder="array", categoryarray=ases_labels,
-                     side="right", row=1, col=2)
-    fig.update_xaxes(range=[0, 10.6], row=1, col=1)
-    fig.update_xaxes(range=[60, 105], row=1, col=2)
+                     side="right", tickfont=tick_font, row=1, col=2)
+    fig.update_xaxes(range=[0, 10.6], tickfont=axis_tick_font, row=1, col=1)
+    fig.update_xaxes(range=[60, 105], tickfont=axis_tick_font, row=1, col=2)
+
+    # Subtítulos dos subplots (anotações criadas por make_subplots) também maiores.
+    for ann in fig["layout"]["annotations"]:
+        ann["font"] = dict(size=15, color="#0f172a", family="system-ui, sans-serif")
+
     fig.update_layout(
         paper_bgcolor="white", plot_bgcolor="#f8fafc",
-        font=dict(family="system-ui, sans-serif", size=12, color="#1e293b"),
+        font=dict(family="system-ui, sans-serif", size=14, color="#1e293b"),
         title=dict(text="Ranking teórico — cada ferramenta ordenada pelo seu próprio ranking (melhor no topo)",
                    x=0.02, xanchor="left", y=0.97,
-                   font=dict(size=15, color="#0f172a")),
-        margin=dict(l=220, r=220, t=80, b=90),
+                   font=dict(size=18, color="#0f172a")),
+        margin=dict(l=260, r=260, t=96, b=100),
         legend=dict(orientation="h", yanchor="top", y=-0.05,
                     xanchor="center", x=0.5,
-                    bgcolor="rgba(255,255,255,0.85)"),
-        height=max(460, 38 * len(df)),
+                    bgcolor="rgba(255,255,255,0.85)",
+                    font=dict(size=13, color="#1e293b")),
+        height=max(520, 46 * len(df)),
+        uniformtext=dict(minsize=13, mode="show"),
     )
     return fig
 
@@ -895,7 +909,7 @@ def main():
 
     print(f"Exportando PNGs para {FIG_DIR}/ …")
     save_png(figs["scatter"],       "01-scatter-wave-ases",       width=1100, height=680)
-    save_png(figs["rankings"],      "03-rankings-side-by-side",   width=1500, height=720)
+    save_png(figs["rankings"],      "03-rankings-side-by-side",   width=1600, height=860)
     save_png(figs["top_wave"],      "04-top-wave-types",          width=1100, height=620)
     save_png(figs["top_wave_cats"], "05-top-wave-categories",     width=900,  height=440)
     save_png(figs["top_ases"],      "06-top-ases-sections",       width=900,  height=460)
