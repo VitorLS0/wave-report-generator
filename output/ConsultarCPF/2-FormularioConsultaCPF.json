@@ -1,23 +1,23 @@
 {
   "source_file": "2-FormularioConsultaCPF.html",
   "summary": {
-    "errors": 1,
-    "contrast_errors": 1,
-    "alerts": 2,
-    "features": 3,
-    "structure": 4,
+    "errors": 5,
+    "contrast_errors": 11,
+    "alerts": 22,
+    "features": 6,
+    "structure": 16,
     "aria": 2,
-    "aim_score": 8.2,
+    "aim_score": 5.4,
     "pour_breakdown": {
       "perceivable": 2,
-      "operable": 1,
+      "operable": 7,
       "understandable": 1,
       "robust": 0
     },
     "sr_relevance_breakdown": {
       "critical": 2,
       "high": 0,
-      "medium": 0,
+      "medium": 7,
       "low": 0
     }
   },
@@ -25,8 +25,46 @@
     {
       "category": "error",
       "category_label": "Errors",
-      "total": 1,
+      "total": 5,
       "types": [
+        {
+          "type_id": "alt_missing",
+          "type_label": "Missing alternative text",
+          "count": 1,
+          "wcag_criteria": [
+            "1.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "critical",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Missing alternative text 1",
+              "label": "Missing alternative text"
+            }
+          ]
+        },
+        {
+          "type_id": "alt_spacer_missing",
+          "type_label": "Spacer image missing alternative text",
+          "count": 1,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Spacer image missing alternative text 1",
+              "label": "Spacer image missing alternative text"
+            }
+          ]
+        },
         {
           "type_id": "label_missing",
           "type_label": "Missing form label",
@@ -49,18 +87,41 @@
               "label": "Missing form label"
             }
           ]
+        },
+        {
+          "type_id": "link_empty",
+          "type_label": "Empty link",
+          "count": 2,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Empty link 1",
+              "label": "Empty link"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Empty link 2",
+              "label": "Empty link"
+            }
+          ]
         }
       ]
     },
     {
       "category": "contrast",
       "category_label": "Contrast Errors",
-      "total": 1,
+      "total": 11,
       "types": [
         {
           "type_id": "unknown",
           "type_label": "Very low contrast",
-          "count": 1,
+          "count": 11,
           "wcag_criteria": null,
           "wcag_level": null,
           "pour_dimensions": null,
@@ -72,35 +133,69 @@
     {
       "category": "alert",
       "category_label": "Alerts",
-      "total": 2,
+      "total": 22,
       "types": [
         {
-          "type_id": "region_missing",
-          "type_label": "No page regions",
-          "count": 1,
+          "type_id": "accesskey",
+          "type_label": "Accesskey",
+          "count": 7,
           "wcag_criteria": [
-            "1.3.1",
-            "2.4.1"
+            "2.1.4"
           ],
           "wcag_level": "A",
           "pour_dimensions": [
-            "Perceivable",
             "Operable"
           ],
-          "sr_relevance": "critical",
+          "sr_relevance": "medium",
           "instances": [
             {
               "index": 1,
               "hidden": false,
-              "description": "No page regions 1",
-              "label": "No page regions"
+              "description": "Accesskey 1",
+              "label": "Accesskey"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Accesskey 2",
+              "label": "Accesskey"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Accesskey 3",
+              "label": "Accesskey"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "Accesskey 4",
+              "label": "Accesskey"
+            },
+            {
+              "index": 5,
+              "hidden": true,
+              "description": "Accesskey 5",
+              "label": "Accesskey"
+            },
+            {
+              "index": 6,
+              "hidden": true,
+              "description": "Accesskey 6",
+              "label": "Accesskey"
+            },
+            {
+              "index": 7,
+              "hidden": true,
+              "description": "Accesskey 7",
+              "label": "Accesskey"
             }
           ]
         },
         {
-          "type_id": "h1_missing",
-          "type_label": "Missing first level heading",
-          "count": 1,
+          "type_id": "text_small",
+          "type_label": "Very small text",
+          "count": 4,
           "wcag_criteria": null,
           "wcag_level": null,
           "pour_dimensions": null,
@@ -109,8 +204,103 @@
             {
               "index": 1,
               "hidden": false,
-              "description": "Missing first level heading 1",
-              "label": "Missing first level heading"
+              "description": "Very small text 1",
+              "label": "Very small text"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Very small text 2",
+              "label": "Very small text"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Very small text 3",
+              "label": "Very small text"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "Very small text 4",
+              "label": "Very small text"
+            }
+          ]
+        },
+        {
+          "type_id": "title_redundant",
+          "type_label": "Redundant title text",
+          "count": 11,
+          "wcag_criteria": null,
+          "wcag_level": null,
+          "pour_dimensions": null,
+          "sr_relevance": null,
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Redundant title text 1",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Redundant title text 2",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Redundant title text 3",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "Redundant title text 4",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 5,
+              "hidden": false,
+              "description": "Redundant title text 5",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 6,
+              "hidden": false,
+              "description": "Redundant title text 6",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 7,
+              "hidden": false,
+              "description": "Redundant title text 7",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 8,
+              "hidden": false,
+              "description": "Redundant title text 8",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 9,
+              "hidden": false,
+              "description": "Redundant title text 9",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 10,
+              "hidden": false,
+              "description": "Redundant title text 10",
+              "label": "Redundant title text"
+            },
+            {
+              "index": 11,
+              "hidden": false,
+              "description": "Redundant title text 11",
+              "label": "Redundant title text"
             }
           ]
         }
@@ -119,12 +309,33 @@
     {
       "category": "feature",
       "category_label": "Features",
-      "total": 3,
+      "total": 6,
       "types": [
+        {
+          "type_id": "alt_link",
+          "type_label": "Linked image with alternative text",
+          "count": 1,
+          "wcag_criteria": [
+            "1.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Linked image with alternative text 1",
+              "label": "Linked image with alternative text"
+            }
+          ]
+        },
         {
           "type_id": "label",
           "type_label": "Form label",
-          "count": 2,
+          "count": 3,
           "wcag_criteria": [
             "1.3.1",
             "3.3.2"
@@ -147,6 +358,33 @@
               "hidden": false,
               "description": "Form label 2",
               "label": "Form label"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Form label 3",
+              "label": "Form label"
+            }
+          ]
+        },
+        {
+          "type_id": "fieldset",
+          "type_label": "Fieldset",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Fieldset 1",
+              "label": "Fieldset"
             }
           ]
         },
@@ -176,8 +414,29 @@
     {
       "category": "structure",
       "category_label": "Structural Elements",
-      "total": 4,
+      "total": 16,
       "types": [
+        {
+          "type_id": "h1",
+          "type_label": "Heading level 1",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Heading level 1 1",
+              "label": "Heading level 1"
+            }
+          ]
+        },
         {
           "type_id": "h2",
           "type_label": "Heading level 2",
@@ -221,6 +480,57 @@
           ]
         },
         {
+          "type_id": "ul",
+          "type_label": "Unordered list",
+          "count": 6,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Unordered list 1",
+              "label": "Unordered list"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Unordered list 2",
+              "label": "Unordered list"
+            },
+            {
+              "index": 3,
+              "hidden": false,
+              "description": "Unordered list 3",
+              "label": "Unordered list"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "Unordered list 4",
+              "label": "Unordered list"
+            },
+            {
+              "index": 5,
+              "hidden": false,
+              "description": "Unordered list 5",
+              "label": "Unordered list"
+            },
+            {
+              "index": 6,
+              "hidden": true,
+              "description": "Unordered list 6",
+              "label": "Unordered list"
+            }
+          ]
+        },
+        {
           "type_id": "iframe",
           "type_label": "Inline frame",
           "count": 2,
@@ -244,6 +554,117 @@
               "hidden": false,
               "description": "Inline frame 2",
               "label": "Inline frame"
+            }
+          ]
+        },
+        {
+          "type_id": "header",
+          "type_label": "Header",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Header 1",
+              "label": "Header"
+            }
+          ]
+        },
+        {
+          "type_id": "nav",
+          "type_label": "Navigation",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": true,
+              "description": "Navigation 1",
+              "label": "Navigation"
+            }
+          ]
+        },
+        {
+          "type_id": "search",
+          "type_label": "Search",
+          "count": 1,
+          "wcag_criteria": [
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Search 1",
+              "label": "Search"
+            }
+          ]
+        },
+        {
+          "type_id": "main",
+          "type_label": "Main content",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1",
+            "2.4.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable",
+            "Operable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Main content 1",
+              "label": "Main content"
+            }
+          ]
+        },
+        {
+          "type_id": "footer",
+          "type_label": "Footer",
+          "count": 1,
+          "wcag_criteria": [
+            "1.3.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "positive",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Footer 1",
+              "label": "Footer"
             }
           ]
         }

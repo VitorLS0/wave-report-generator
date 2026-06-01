@@ -1,6 +1,7 @@
 source_file,category,category_label,type_id,type_label,type_count,wcag_criteria,wcag_level,pour_dimensions,sr_relevance,instance_index,hidden,description,label
-1-MapaDeEmpresas.html,error,Errors,heading_empty,Empty heading,2,,,,,1,true,Empty heading 1,Empty heading
-1-MapaDeEmpresas.html,error,Errors,heading_empty,Empty heading,2,,,,,2,true,Empty heading 2,Empty heading
+1-MapaDeEmpresas.html,error,Errors,heading_empty,Empty heading,3,,,,,1,true,Empty heading 1,Empty heading
+1-MapaDeEmpresas.html,error,Errors,heading_empty,Empty heading,3,,,,,2,true,Empty heading 2,Empty heading
+1-MapaDeEmpresas.html,error,Errors,heading_empty,Empty heading,3,,,,,3,true,Empty heading 3,Empty heading
 1-MapaDeEmpresas.html,error,Errors,link_empty,Empty link,3,,,,,1,true,Empty link 1,Empty link
 1-MapaDeEmpresas.html,error,Errors,link_empty,Empty link,3,,,,,2,true,Empty link 2,Empty link
 1-MapaDeEmpresas.html,error,Errors,link_empty,Empty link,3,,,,,3,true,Empty link 3,Empty link
@@ -124,146 +125,152 @@ source_file,category,category_label,type_id,type_label,type_count,wcag_criteria,
 1-MapaDeEmpresas.html,feature,Features,label,Form label,103,1.3.1;3.3.2,A,Perceivable;Understandable,positive,102,true,Form label 102,Form label
 1-MapaDeEmpresas.html,feature,Features,label,Form label,103,1.3.1;3.3.2,A,Perceivable;Understandable,positive,103,true,Form label 103,Form label
 1-MapaDeEmpresas.html,feature,Features,lang,Language,1,3.1.1,A,Understandable,positive,1,false,Language 1,Language
-1-MapaDeEmpresas.html,structure,Structural Elements,h1,Heading level 1,2,1.3.1,A,Perceivable,positive,1,false,Heading level 1 1,Heading level 1
-1-MapaDeEmpresas.html,structure,Structural Elements,h1,Heading level 1,2,1.3.1,A,Perceivable,positive,2,true,Heading level 1 2,Heading level 1
-1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,5,1.3.1,A,Perceivable,positive,1,false,Heading level 2 1,Heading level 2
-1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,5,1.3.1,A,Perceivable,positive,2,true,Heading level 2 2,Heading level 2
-1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,5,1.3.1,A,Perceivable,positive,3,false,Heading level 2 3,Heading level 2
-1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,5,1.3.1,A,Perceivable,positive,4,true,Heading level 2 4,Heading level 2
-1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,5,1.3.1,A,Perceivable,positive,5,false,Heading level 2 5,Heading level 2
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,1,true,Unordered list 1,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,2,true,Unordered list 2,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,3,true,Unordered list 3,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,4,true,Unordered list 4,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,5,true,Unordered list 5,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,6,true,Unordered list 6,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,7,true,Unordered list 7,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,8,true,Unordered list 8,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,9,true,Unordered list 9,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,10,true,Unordered list 10,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,11,true,Unordered list 11,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,12,true,Unordered list 12,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,13,true,Unordered list 13,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,14,true,Unordered list 14,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,15,true,Unordered list 15,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,16,true,Unordered list 16,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,17,true,Unordered list 17,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,18,true,Unordered list 18,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,19,true,Unordered list 19,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,20,true,Unordered list 20,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,21,true,Unordered list 21,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,22,true,Unordered list 22,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,23,true,Unordered list 23,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,24,true,Unordered list 24,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,25,true,Unordered list 25,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,26,true,Unordered list 26,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,27,true,Unordered list 27,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,28,true,Unordered list 28,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,29,true,Unordered list 29,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,30,true,Unordered list 30,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,31,true,Unordered list 31,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,32,true,Unordered list 32,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,33,true,Unordered list 33,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,34,true,Unordered list 34,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,35,true,Unordered list 35,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,36,true,Unordered list 36,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,37,true,Unordered list 37,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,38,true,Unordered list 38,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,39,true,Unordered list 39,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,40,true,Unordered list 40,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,41,true,Unordered list 41,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,42,true,Unordered list 42,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,43,true,Unordered list 43,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,44,true,Unordered list 44,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,45,true,Unordered list 45,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,46,true,Unordered list 46,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,47,true,Unordered list 47,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,48,true,Unordered list 48,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,49,true,Unordered list 49,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,50,true,Unordered list 50,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,51,true,Unordered list 51,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,52,true,Unordered list 52,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,53,true,Unordered list 53,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,54,true,Unordered list 54,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,55,true,Unordered list 55,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,56,true,Unordered list 56,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,57,true,Unordered list 57,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,58,true,Unordered list 58,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,59,true,Unordered list 59,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,60,true,Unordered list 60,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,61,true,Unordered list 61,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,62,true,Unordered list 62,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,63,true,Unordered list 63,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,64,true,Unordered list 64,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,65,true,Unordered list 65,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,66,true,Unordered list 66,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,67,true,Unordered list 67,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,68,true,Unordered list 68,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,69,true,Unordered list 69,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,70,true,Unordered list 70,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,71,false,Unordered list 71,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,72,false,Unordered list 72,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,73,true,Unordered list 73,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,74,true,Unordered list 74,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,75,true,Unordered list 75,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,76,false,Unordered list 76,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,77,true,Unordered list 77,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,78,true,Unordered list 78,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,79,true,Unordered list 79,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,80,true,Unordered list 80,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,81,true,Unordered list 81,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,82,true,Unordered list 82,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,83,true,Unordered list 83,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,84,true,Unordered list 84,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,85,false,Unordered list 85,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,86,true,Unordered list 86,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,87,true,Unordered list 87,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,88,true,Unordered list 88,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,89,true,Unordered list 89,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,90,true,Unordered list 90,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,91,true,Unordered list 91,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,92,true,Unordered list 92,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,93,true,Unordered list 93,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,94,true,Unordered list 94,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,95,true,Unordered list 95,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,96,true,Unordered list 96,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,97,true,Unordered list 97,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,98,true,Unordered list 98,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,99,false,Unordered list 99,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,100,true,Unordered list 100,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,101,true,Unordered list 101,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,102,false,Unordered list 102,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,103,true,Unordered list 103,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,104,true,Unordered list 104,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,105,true,Unordered list 105,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,106,false,Unordered list 106,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,107,true,Unordered list 107,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,108,true,Unordered list 108,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,109,true,Unordered list 109,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,110,true,Unordered list 110,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,111,true,Unordered list 111,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,112,true,Unordered list 112,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,113,false,Unordered list 113,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,114,false,Unordered list 114,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,115,true,Unordered list 115,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,116,true,Unordered list 116,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,117,true,Unordered list 117,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,118,true,Unordered list 118,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,119,true,Unordered list 119,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,120,true,Unordered list 120,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,121,true,Unordered list 121,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,122,true,Unordered list 122,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,123,true,Unordered list 123,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,124,true,Unordered list 124,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,125,true,Unordered list 125,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,126,false,Unordered list 126,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,127,false,Unordered list 127,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,128,true,Unordered list 128,Unordered list
-1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,129,1.3.1,A,Perceivable,positive,129,true,Unordered list 129,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,h1,Heading level 1,1,1.3.1,A,Perceivable,positive,1,false,Heading level 1 1,Heading level 1
+1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,7,1.3.1,A,Perceivable,positive,1,false,Heading level 2 1,Heading level 2
+1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,7,1.3.1,A,Perceivable,positive,2,true,Heading level 2 2,Heading level 2
+1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,7,1.3.1,A,Perceivable,positive,3,false,Heading level 2 3,Heading level 2
+1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,7,1.3.1,A,Perceivable,positive,4,true,Heading level 2 4,Heading level 2
+1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,7,1.3.1,A,Perceivable,positive,5,false,Heading level 2 5,Heading level 2
+1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,7,1.3.1,A,Perceivable,positive,6,true,Heading level 2 6,Heading level 2
+1-MapaDeEmpresas.html,structure,Structural Elements,h2,Heading level 2,7,1.3.1,A,Perceivable,positive,7,false,Heading level 2 7,Heading level 2
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,1,true,Unordered list 1,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,2,true,Unordered list 2,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,3,true,Unordered list 3,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,4,true,Unordered list 4,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,5,true,Unordered list 5,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,6,true,Unordered list 6,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,7,true,Unordered list 7,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,8,true,Unordered list 8,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,9,true,Unordered list 9,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,10,true,Unordered list 10,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,11,true,Unordered list 11,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,12,true,Unordered list 12,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,13,true,Unordered list 13,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,14,true,Unordered list 14,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,15,true,Unordered list 15,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,16,true,Unordered list 16,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,17,true,Unordered list 17,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,18,true,Unordered list 18,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,19,true,Unordered list 19,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,20,true,Unordered list 20,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,21,true,Unordered list 21,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,22,true,Unordered list 22,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,23,true,Unordered list 23,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,24,true,Unordered list 24,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,25,true,Unordered list 25,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,26,true,Unordered list 26,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,27,true,Unordered list 27,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,28,true,Unordered list 28,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,29,true,Unordered list 29,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,30,true,Unordered list 30,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,31,true,Unordered list 31,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,32,true,Unordered list 32,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,33,true,Unordered list 33,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,34,true,Unordered list 34,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,35,true,Unordered list 35,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,36,true,Unordered list 36,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,37,true,Unordered list 37,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,38,true,Unordered list 38,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,39,true,Unordered list 39,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,40,true,Unordered list 40,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,41,true,Unordered list 41,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,42,true,Unordered list 42,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,43,true,Unordered list 43,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,44,true,Unordered list 44,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,45,true,Unordered list 45,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,46,true,Unordered list 46,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,47,true,Unordered list 47,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,48,true,Unordered list 48,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,49,true,Unordered list 49,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,50,true,Unordered list 50,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,51,true,Unordered list 51,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,52,true,Unordered list 52,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,53,true,Unordered list 53,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,54,true,Unordered list 54,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,55,true,Unordered list 55,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,56,true,Unordered list 56,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,57,true,Unordered list 57,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,58,true,Unordered list 58,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,59,true,Unordered list 59,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,60,true,Unordered list 60,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,61,true,Unordered list 61,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,62,true,Unordered list 62,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,63,true,Unordered list 63,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,64,true,Unordered list 64,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,65,true,Unordered list 65,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,66,true,Unordered list 66,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,67,true,Unordered list 67,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,68,true,Unordered list 68,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,69,true,Unordered list 69,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,70,true,Unordered list 70,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,71,true,Unordered list 71,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,72,true,Unordered list 72,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,73,false,Unordered list 73,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,74,false,Unordered list 74,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,75,true,Unordered list 75,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,76,true,Unordered list 76,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,77,true,Unordered list 77,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,78,false,Unordered list 78,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,79,true,Unordered list 79,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,80,true,Unordered list 80,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,81,true,Unordered list 81,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,82,true,Unordered list 82,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,83,true,Unordered list 83,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,84,true,Unordered list 84,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,85,true,Unordered list 85,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,86,true,Unordered list 86,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,87,false,Unordered list 87,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,88,true,Unordered list 88,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,89,true,Unordered list 89,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,90,true,Unordered list 90,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,91,true,Unordered list 91,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,92,true,Unordered list 92,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,93,true,Unordered list 93,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,94,true,Unordered list 94,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,95,true,Unordered list 95,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,96,true,Unordered list 96,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,97,false,Unordered list 97,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,98,true,Unordered list 98,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,99,true,Unordered list 99,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,100,false,Unordered list 100,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,101,true,Unordered list 101,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,102,true,Unordered list 102,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,103,true,Unordered list 103,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,104,false,Unordered list 104,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,105,true,Unordered list 105,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,106,true,Unordered list 106,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,107,true,Unordered list 107,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,108,true,Unordered list 108,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,109,true,Unordered list 109,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,110,true,Unordered list 110,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,111,false,Unordered list 111,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,112,true,Unordered list 112,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,113,true,Unordered list 113,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,114,true,Unordered list 114,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,115,true,Unordered list 115,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,116,true,Unordered list 116,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,117,true,Unordered list 117,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,118,false,Unordered list 118,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,119,false,Unordered list 119,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,120,true,Unordered list 120,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,121,true,Unordered list 121,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,122,true,Unordered list 122,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,123,true,Unordered list 123,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,124,true,Unordered list 124,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,125,true,Unordered list 125,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,126,true,Unordered list 126,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,127,true,Unordered list 127,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,128,true,Unordered list 128,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,129,true,Unordered list 129,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,130,false,Unordered list 130,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,131,false,Unordered list 131,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,132,true,Unordered list 132,Unordered list
+1-MapaDeEmpresas.html,structure,Structural Elements,ul,Unordered list,133,1.3.1,A,Perceivable,positive,133,true,Unordered list 133,Unordered list
 1-MapaDeEmpresas.html,structure,Structural Elements,dl,Definition/description list,1,1.3.1,A,Perceivable,positive,1,true,Definition/description list 1,Definition/description list
-1-MapaDeEmpresas.html,structure,Structural Elements,iframe,Inline frame,3,4.1.2,A,Robust,informational,1,false,Inline frame 1,Inline frame
-1-MapaDeEmpresas.html,structure,Structural Elements,iframe,Inline frame,3,4.1.2,A,Robust,informational,2,false,Inline frame 2,Inline frame
-1-MapaDeEmpresas.html,structure,Structural Elements,iframe,Inline frame,3,4.1.2,A,Robust,informational,3,false,Inline frame 3,Inline frame
+1-MapaDeEmpresas.html,structure,Structural Elements,iframe,Inline frame,4,4.1.2,A,Robust,informational,1,false,Inline frame 1,Inline frame
+1-MapaDeEmpresas.html,structure,Structural Elements,iframe,Inline frame,4,4.1.2,A,Robust,informational,2,false,Inline frame 2,Inline frame
+1-MapaDeEmpresas.html,structure,Structural Elements,iframe,Inline frame,4,4.1.2,A,Robust,informational,3,false,Inline frame 3,Inline frame
+1-MapaDeEmpresas.html,structure,Structural Elements,iframe,Inline frame,4,4.1.2,A,Robust,informational,4,false,Inline frame 4,Inline frame
 1-MapaDeEmpresas.html,structure,Structural Elements,header,Header,1,1.3.1;2.4.1,A,Perceivable;Operable,positive,1,false,Header 1,Header
 1-MapaDeEmpresas.html,structure,Structural Elements,nav,Navigation,4,1.3.1;2.4.1,A,Perceivable;Operable,positive,1,false,Navigation 1,Navigation
 1-MapaDeEmpresas.html,structure,Structural Elements,nav,Navigation,4,1.3.1;2.4.1,A,Perceivable;Operable,positive,2,true,Navigation 2,Navigation
@@ -277,7 +284,7 @@ source_file,category,category_label,type_id,type_label,type_count,wcag_criteria,
 1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,1,false,ARIA label 1,ARIA label
 1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,2,true,ARIA label 2,ARIA label
 1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,3,false,ARIA label 3,ARIA label
-1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,4,true,ARIA label 4,ARIA label
+1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,4,false,ARIA label 4,ARIA label
 1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,5,true,ARIA label 5,ARIA label
 1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,6,true,ARIA label 6,ARIA label
 1-MapaDeEmpresas.html,aria,ARIA,aria_label,ARIA label,116,1.3.1;4.1.2,A,Perceivable;Robust,positive,7,false,ARIA label 7,ARIA label
@@ -494,7 +501,7 @@ source_file,category,category_label,type_id,type_label,type_count,wcag_criteria,
 1-MapaDeEmpresas.html,aria,ARIA,aria_tabindex,ARIA tabindex,104,2.4.3,A,Operable,informational,102,true,ARIA tabindex 102,ARIA tabindex
 1-MapaDeEmpresas.html,aria,ARIA,aria_tabindex,ARIA tabindex,104,2.4.3,A,Operable,informational,103,true,ARIA tabindex 103,ARIA tabindex
 1-MapaDeEmpresas.html,aria,ARIA,aria_tabindex,ARIA tabindex,104,2.4.3,A,Operable,informational,104,true,ARIA tabindex 104,ARIA tabindex
-1-MapaDeEmpresas.html,aria,ARIA,aria_hidden,ARIA hidden,14,1.3.1,A,Perceivable;Robust,informational,1,true,ARIA hidden 1,ARIA hidden
+1-MapaDeEmpresas.html,aria,ARIA,aria_hidden,ARIA hidden,14,1.3.1,A,Perceivable;Robust,informational,1,false,ARIA hidden 1,ARIA hidden
 1-MapaDeEmpresas.html,aria,ARIA,aria_hidden,ARIA hidden,14,1.3.1,A,Perceivable;Robust,informational,2,true,ARIA hidden 2,ARIA hidden
 1-MapaDeEmpresas.html,aria,ARIA,aria_hidden,ARIA hidden,14,1.3.1,A,Perceivable;Robust,informational,3,false,ARIA hidden 3,ARIA hidden
 1-MapaDeEmpresas.html,aria,ARIA,aria_hidden,ARIA hidden,14,1.3.1,A,Perceivable;Robust,informational,4,false,ARIA hidden 4,ARIA hidden

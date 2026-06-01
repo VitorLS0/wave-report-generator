@@ -93,9 +93,18 @@ def load_flows() -> list[dict]:
     return flows
 
 
+FLOW_NAMES = {
+    "ConsultarCPF":                  "T1: Consulta CPF",
+    "ConsultaMonitoramentoServicos": "T2: Painel de Monitoramento",
+    "BuscaUnidadesAtendimento":      "T3: Receita Federal",
+    "ConsultaCenso":                 "T4: IBGE Censo",
+    "ConsultaMapaDeEMpresas":        "T5: Mapa de Empresas",
+}
+
+
 def flow_label(name: str) -> str:
     import re
-    return re.sub(r"([A-Z])", r" \1", name).strip()
+    return FLOW_NAMES.get(name, re.sub(r"([A-Z])", r" \1", name).strip())
 
 
 # ─── DataFrames ───────────────────────────────────────────────────────────────

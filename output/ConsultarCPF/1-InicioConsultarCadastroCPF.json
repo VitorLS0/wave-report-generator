@@ -5,9 +5,9 @@
     "contrast_errors": 0,
     "alerts": 18,
     "features": 111,
-    "structure": 52,
+    "structure": 51,
     "aria": 239,
-    "aim_score": 8.4,
+    "aim_score": 8.5,
     "pour_breakdown": {
       "perceivable": 9,
       "operable": 7,
@@ -1056,12 +1056,12 @@
     {
       "category": "structure",
       "category_label": "Structural Elements",
-      "total": 52,
+      "total": 51,
       "types": [
         {
           "type_id": "h1",
           "type_label": "Heading level 1",
-          "count": 2,
+          "count": 1,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -1075,12 +1075,6 @@
               "index": 1,
               "hidden": true,
               "description": "Heading level 1 1",
-              "label": "Heading level 1"
-            },
-            {
-              "index": 2,
-              "hidden": true,
-              "description": "Heading level 1 2",
               "label": "Heading level 1"
             }
           ]

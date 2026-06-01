@@ -84,10 +84,23 @@ def aim_color(score):
     return "#22c55e"
 
 
+FLOW_NAMES = {
+    "ConsultarCPF":                  "T1: Consulta CPF",
+    "ConsultaMonitoramentoServicos": "T2: Painel de Monitoramento",
+    "BuscaUnidadesAtendimento":      "T3: Receita Federal",
+    "ConsultaCenso":                 "T4: IBGE Censo",
+    "ConsultaMapaDeEMpresas":        "T5: Mapa de Empresas",
+}
+
+
 def flow_label(name: str) -> str:
-    """Split CamelCase but keep consecutive uppercase (acronyms) together."""
-    # Insert space between lowercase→uppercase transitions only
-    return re.sub(r"([a-z])([A-Z])", r"\1 \2", name).strip()
+    """Map folder name → display label (T1: …, T2: …). Falls back to CamelCase split."""
+    return FLOW_NAMES.get(name, re.sub(r"([a-z])([A-Z])", r"\1 \2", name).strip())
+
+
+def flow_slug(label: str) -> str:
+    """Filename-safe slug derived from the display label (no colon/space/accents)."""
+    return re.sub(r"[^a-z0-9]+", "_", label.lower()).strip("_")
 
 
 def page_name(filename: str) -> str:
@@ -413,7 +426,7 @@ def fig_top_issues(issues_df: pd.DataFrame, n: int = 15) -> str:
 # ─── Per-flow figures ─────────────────────────────────────────────────────────
 
 def fig_flow_summary(df: pd.DataFrame, flow_name: str) -> str:
-    slug   = re.sub(r"\s+", "_", flow_name).lower()
+    slug   = flow_slug(flow_name)
     pages  = df["page"].tolist()
     n      = len(pages)
     x      = np.arange(n)
@@ -529,7 +542,7 @@ def table_summary_all(df: pd.DataFrame) -> str:
 
 
 def table_flow_summary(df: pd.DataFrame, fname: str) -> str:
-    slug = re.sub(r"\s+", "_", fname).lower()
+    slug = flow_slug(fname)
     display = df[["page", "aim_score", "total_elements", "issue_rate",
                   "errors", "contrast_errors", "alerts",
                   "features", "structure", "aria",
@@ -578,7 +591,7 @@ def build_main_tex(flows: list[dict]) -> str:
     for flow in flows:
         name  = flow["name"]
         label = flow_label(name)
-        slug  = re.sub(r"\s+", "_", label).lower()
+        slug  = flow_slug(label)
         flow_sections += f"""
 \\subsection{{{tex_escape(label)}}}
 
@@ -720,7 +733,7 @@ if __name__ == "__main__":
     for flow in flows:
         fdf   = summary_df[summary_df["flow"] == flow["name"]].copy()
         label = flow_label(flow["name"])
-        slug  = re.sub(r"\s+", "_", label).lower()
+        slug  = flow_slug(label)
         fname = TABLES_DIR / f"table_flow_{slug}.tex"
         fname.write_text(table_flow_summary(fdf, label), encoding="utf-8")
         print(f"  Table: {fname.name}")

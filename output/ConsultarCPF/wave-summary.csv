@@ -1,4 +1,4 @@
 source_file,errors,contrast_errors,alerts,features,structure,aria,aim_score,pour_perceivable,pour_operable,pour_understandable,pour_robust,sr_critical,sr_high,sr_medium,sr_low
-1-InicioConsultarCadastroCPF.html,6,0,18,111,52,239,8.4,9,7,0,4,2,2,10,6
-2-FormularioConsultaCPF.html,1,1,2,3,4,2,8.2,2,1,1,0,2,0,0,0
-3-comprovanteSituacaoCPF.html,0,0,2,4,0,0,10,2,1,0,0,2,0,0,0
+1-InicioConsultarCadastroCPF.html,6,0,18,111,51,239,8.5,9,7,0,4,2,2,10,6
+2-FormularioConsultaCPF.html,5,11,22,6,16,2,5.4,2,7,1,0,2,0,7,0
+3-comprovanteSituacaoCPF.html,4,9,23,8,11,0,6,1,7,0,0,1,0,7,0

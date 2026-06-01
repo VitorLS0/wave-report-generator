@@ -5,9 +5,9 @@
     "contrast_errors": 0,
     "alerts": 13,
     "features": 111,
-    "structure": 102,
+    "structure": 103,
     "aria": 241,
-    "aim_score": 8.5,
+    "aim_score": 9.1,
     "pour_breakdown": {
       "perceivable": 1,
       "operable": 8,
@@ -986,12 +986,12 @@
     {
       "category": "structure",
       "category_label": "Structural Elements",
-      "total": 102,
+      "total": 103,
       "types": [
         {
           "type_id": "h1",
           "type_label": "Heading level 1",
-          "count": 2,
+          "count": 1,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -1006,19 +1006,13 @@
               "hidden": false,
               "description": "Heading level 1 1",
               "label": "Heading level 1"
-            },
-            {
-              "index": 2,
-              "hidden": true,
-              "description": "Heading level 1 2",
-              "label": "Heading level 1"
             }
           ]
         },
         {
           "type_id": "ul",
           "type_label": "Unordered list",
-          "count": 91,
+          "count": 93,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -1336,7 +1330,7 @@
             },
             {
               "index": 52,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 52",
               "label": "Unordered list"
             },
@@ -1348,7 +1342,7 @@
             },
             {
               "index": 54,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 54",
               "label": "Unordered list"
             },
@@ -1420,13 +1414,13 @@
             },
             {
               "index": 66,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 66",
               "label": "Unordered list"
             },
             {
               "index": 67,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 67",
               "label": "Unordered list"
             },
@@ -1444,13 +1438,13 @@
             },
             {
               "index": 70,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 70",
               "label": "Unordered list"
             },
             {
               "index": 71,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 71",
               "label": "Unordered list"
             },
@@ -1504,7 +1498,7 @@
             },
             {
               "index": 80,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 80",
               "label": "Unordered list"
             },
@@ -1522,7 +1516,7 @@
             },
             {
               "index": 83,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 83",
               "label": "Unordered list"
             },
@@ -1552,26 +1546,38 @@
             },
             {
               "index": 88,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 88",
               "label": "Unordered list"
             },
             {
               "index": 89,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 89",
               "label": "Unordered list"
             },
             {
               "index": 90,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 90",
               "label": "Unordered list"
             },
             {
               "index": 91,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 91",
+              "label": "Unordered list"
+            },
+            {
+              "index": 92,
+              "hidden": true,
+              "description": "Unordered list 92",
+              "label": "Unordered list"
+            },
+            {
+              "index": 93,
+              "hidden": true,
+              "description": "Unordered list 93",
               "label": "Unordered list"
             }
           ]

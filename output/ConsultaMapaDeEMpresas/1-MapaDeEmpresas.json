@@ -1,13 +1,13 @@
 {
   "source_file": "1-MapaDeEmpresas.html",
   "summary": {
-    "errors": 7,
+    "errors": 8,
     "contrast_errors": 0,
     "alerts": 12,
     "features": 106,
-    "structure": 148,
+    "structure": 154,
     "aria": 238,
-    "aim_score": 8.5,
+    "aim_score": 8.6,
     "pour_breakdown": {
       "perceivable": 2,
       "operable": 7,
@@ -25,12 +25,12 @@
     {
       "category": "error",
       "category_label": "Errors",
-      "total": 7,
+      "total": 8,
       "types": [
         {
           "type_id": "heading_empty",
           "type_label": "Empty heading",
-          "count": 2,
+          "count": 3,
           "wcag_criteria": null,
           "wcag_level": null,
           "pour_dimensions": null,
@@ -46,6 +46,12 @@
               "index": 2,
               "hidden": true,
               "description": "Empty heading 2",
+              "label": "Empty heading"
+            },
+            {
+              "index": 3,
+              "hidden": true,
+              "description": "Empty heading 3",
               "label": "Empty heading"
             }
           ]
@@ -978,12 +984,12 @@
     {
       "category": "structure",
       "category_label": "Structural Elements",
-      "total": 148,
+      "total": 154,
       "types": [
         {
           "type_id": "h1",
           "type_label": "Heading level 1",
-          "count": 2,
+          "count": 1,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -998,19 +1004,13 @@
               "hidden": false,
               "description": "Heading level 1 1",
               "label": "Heading level 1"
-            },
-            {
-              "index": 2,
-              "hidden": true,
-              "description": "Heading level 1 2",
-              "label": "Heading level 1"
             }
           ]
         },
         {
           "type_id": "h2",
           "type_label": "Heading level 2",
-          "count": 5,
+          "count": 7,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -1049,13 +1049,25 @@
               "hidden": false,
               "description": "Heading level 2 5",
               "label": "Heading level 2"
+            },
+            {
+              "index": 6,
+              "hidden": true,
+              "description": "Heading level 2 6",
+              "label": "Heading level 2"
+            },
+            {
+              "index": 7,
+              "hidden": false,
+              "description": "Heading level 2 7",
+              "label": "Heading level 2"
             }
           ]
         },
         {
           "type_id": "ul",
           "type_label": "Unordered list",
-          "count": 129,
+          "count": 133,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -1487,25 +1499,25 @@
             },
             {
               "index": 71,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 71",
               "label": "Unordered list"
             },
             {
               "index": 72,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 72",
               "label": "Unordered list"
             },
             {
               "index": 73,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 73",
               "label": "Unordered list"
             },
             {
               "index": 74,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 74",
               "label": "Unordered list"
             },
@@ -1517,7 +1529,7 @@
             },
             {
               "index": 76,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 76",
               "label": "Unordered list"
             },
@@ -1529,7 +1541,7 @@
             },
             {
               "index": 78,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 78",
               "label": "Unordered list"
             },
@@ -1571,7 +1583,7 @@
             },
             {
               "index": 85,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 85",
               "label": "Unordered list"
             },
@@ -1583,7 +1595,7 @@
             },
             {
               "index": 87,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 87",
               "label": "Unordered list"
             },
@@ -1643,7 +1655,7 @@
             },
             {
               "index": 97,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 97",
               "label": "Unordered list"
             },
@@ -1655,13 +1667,13 @@
             },
             {
               "index": 99,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 99",
               "label": "Unordered list"
             },
             {
               "index": 100,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 100",
               "label": "Unordered list"
             },
@@ -1673,7 +1685,7 @@
             },
             {
               "index": 102,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 102",
               "label": "Unordered list"
             },
@@ -1685,7 +1697,7 @@
             },
             {
               "index": 104,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 104",
               "label": "Unordered list"
             },
@@ -1697,7 +1709,7 @@
             },
             {
               "index": 106,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 106",
               "label": "Unordered list"
             },
@@ -1727,7 +1739,7 @@
             },
             {
               "index": 111,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 111",
               "label": "Unordered list"
             },
@@ -1739,13 +1751,13 @@
             },
             {
               "index": 113,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 113",
               "label": "Unordered list"
             },
             {
               "index": 114,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 114",
               "label": "Unordered list"
             },
@@ -1769,13 +1781,13 @@
             },
             {
               "index": 118,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 118",
               "label": "Unordered list"
             },
             {
               "index": 119,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 119",
               "label": "Unordered list"
             },
@@ -1817,13 +1829,13 @@
             },
             {
               "index": 126,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 126",
               "label": "Unordered list"
             },
             {
               "index": 127,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 127",
               "label": "Unordered list"
             },
@@ -1837,6 +1849,30 @@
               "index": 129,
               "hidden": true,
               "description": "Unordered list 129",
+              "label": "Unordered list"
+            },
+            {
+              "index": 130,
+              "hidden": false,
+              "description": "Unordered list 130",
+              "label": "Unordered list"
+            },
+            {
+              "index": 131,
+              "hidden": false,
+              "description": "Unordered list 131",
+              "label": "Unordered list"
+            },
+            {
+              "index": 132,
+              "hidden": true,
+              "description": "Unordered list 132",
+              "label": "Unordered list"
+            },
+            {
+              "index": 133,
+              "hidden": true,
+              "description": "Unordered list 133",
               "label": "Unordered list"
             }
           ]
@@ -1865,7 +1901,7 @@
         {
           "type_id": "iframe",
           "type_label": "Inline frame",
-          "count": 3,
+          "count": 4,
           "wcag_criteria": [
             "4.1.2"
           ],
@@ -1891,6 +1927,12 @@
               "index": 3,
               "hidden": false,
               "description": "Inline frame 3",
+              "label": "Inline frame"
+            },
+            {
+              "index": 4,
+              "hidden": false,
+              "description": "Inline frame 4",
               "label": "Inline frame"
             }
           ]
@@ -2093,7 +2135,7 @@
             },
             {
               "index": 4,
-              "hidden": true,
+              "hidden": false,
               "description": "ARIA label 4",
               "label": "ARIA label"
             },
@@ -3426,7 +3468,7 @@
           "instances": [
             {
               "index": 1,
-              "hidden": true,
+              "hidden": false,
               "description": "ARIA hidden 1",
               "label": "ARIA hidden"
             },

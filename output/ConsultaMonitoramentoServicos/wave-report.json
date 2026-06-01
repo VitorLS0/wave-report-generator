@@ -4,13 +4,13 @@
     "summary": {
       "errors": 11,
       "contrast_errors": 0,
-      "alerts": 31,
+      "alerts": 33,
       "features": 118,
-      "structure": 113,
-      "aria": 318,
+      "structure": 112,
+      "aria": 352,
       "aim_score": 7.7,
       "pour_breakdown": {
-        "perceivable": 11,
+        "perceivable": 12,
         "operable": 16,
         "understandable": 2,
         "robust": 4
@@ -18,7 +18,7 @@
       "sr_relevance_breakdown": {
         "critical": 2,
         "high": 2,
-        "medium": 27,
+        "medium": 28,
         "low": 0
       }
     },
@@ -125,7 +125,7 @@
       {
         "category": "alert",
         "category_label": "Alerts",
-        "total": 31,
+        "total": 33,
         "types": [
           {
             "type_id": "alt_suspicious",
@@ -174,7 +174,7 @@
           {
             "type_id": "alt_long",
             "type_label": "Long alternative text",
-            "count": 2,
+            "count": 3,
             "wcag_criteria": [
               "1.1.1"
             ],
@@ -194,6 +194,12 @@
                 "index": 2,
                 "hidden": false,
                 "description": "Long alternative text 2",
+                "label": "Long alternative text"
+              },
+              {
+                "index": 3,
+                "hidden": false,
+                "description": "Long alternative text 3",
                 "label": "Long alternative text"
               }
             ]
@@ -370,7 +376,7 @@
           {
             "type_id": "text_small",
             "type_label": "Very small text",
-            "count": 1,
+            "count": 2,
             "wcag_criteria": null,
             "wcag_level": null,
             "pour_dimensions": null,
@@ -380,6 +386,12 @@
                 "index": 1,
                 "hidden": true,
                 "description": "Very small text 1",
+                "label": "Very small text"
+              },
+              {
+                "index": 2,
+                "hidden": true,
+                "description": "Very small text 2",
                 "label": "Very small text"
               }
             ]
@@ -1234,12 +1246,12 @@
       {
         "category": "structure",
         "category_label": "Structural Elements",
-        "total": 113,
+        "total": 112,
         "types": [
           {
             "type_id": "h1",
             "type_label": "Heading level 1",
-            "count": 2,
+            "count": 1,
             "wcag_criteria": [
               "1.3.1"
             ],
@@ -1253,12 +1265,6 @@
                 "index": 1,
                 "hidden": false,
                 "description": "Heading level 1 1",
-                "label": "Heading level 1"
-              },
-              {
-                "index": 2,
-                "hidden": true,
-                "description": "Heading level 1 2",
                 "label": "Heading level 1"
               }
             ]
@@ -2075,7 +2081,7 @@
       {
         "category": "aria",
         "category_label": "ARIA",
-        "total": 318,
+        "total": 352,
         "types": [
           {
             "type_id": "aria",
@@ -2119,7 +2125,7 @@
           {
             "type_id": "aria_label",
             "type_label": "ARIA label",
-            "count": 139,
+            "count": 150,
             "wcag_criteria": [
               "1.3.1",
               "4.1.2"
@@ -2151,7 +2157,7 @@
               },
               {
                 "index": 4,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 4",
                 "label": "ARIA label"
               },
@@ -2319,67 +2325,67 @@
               },
               {
                 "index": 32,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 32",
                 "label": "ARIA label"
               },
               {
                 "index": 33,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 33",
                 "label": "ARIA label"
               },
               {
                 "index": 34,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 34",
                 "label": "ARIA label"
               },
               {
                 "index": 35,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 35",
                 "label": "ARIA label"
               },
               {
                 "index": 36,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 36",
                 "label": "ARIA label"
               },
               {
                 "index": 37,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 37",
                 "label": "ARIA label"
               },
               {
                 "index": 38,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 38",
                 "label": "ARIA label"
               },
               {
                 "index": 39,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 39",
                 "label": "ARIA label"
               },
               {
                 "index": 40,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 40",
                 "label": "ARIA label"
               },
               {
                 "index": 41,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 41",
                 "label": "ARIA label"
               },
               {
                 "index": 42,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA label 42",
                 "label": "ARIA label"
               },
@@ -2964,13 +2970,79 @@
                 "hidden": true,
                 "description": "ARIA label 139",
                 "label": "ARIA label"
+              },
+              {
+                "index": 140,
+                "hidden": true,
+                "description": "ARIA label 140",
+                "label": "ARIA label"
+              },
+              {
+                "index": 141,
+                "hidden": true,
+                "description": "ARIA label 141",
+                "label": "ARIA label"
+              },
+              {
+                "index": 142,
+                "hidden": true,
+                "description": "ARIA label 142",
+                "label": "ARIA label"
+              },
+              {
+                "index": 143,
+                "hidden": true,
+                "description": "ARIA label 143",
+                "label": "ARIA label"
+              },
+              {
+                "index": 144,
+                "hidden": true,
+                "description": "ARIA label 144",
+                "label": "ARIA label"
+              },
+              {
+                "index": 145,
+                "hidden": true,
+                "description": "ARIA label 145",
+                "label": "ARIA label"
+              },
+              {
+                "index": 146,
+                "hidden": true,
+                "description": "ARIA label 146",
+                "label": "ARIA label"
+              },
+              {
+                "index": 147,
+                "hidden": true,
+                "description": "ARIA label 147",
+                "label": "ARIA label"
+              },
+              {
+                "index": 148,
+                "hidden": true,
+                "description": "ARIA label 148",
+                "label": "ARIA label"
+              },
+              {
+                "index": 149,
+                "hidden": true,
+                "description": "ARIA label 149",
+                "label": "ARIA label"
+              },
+              {
+                "index": 150,
+                "hidden": true,
+                "description": "ARIA label 150",
+                "label": "ARIA label"
               }
             ]
           },
           {
             "type_id": "aria_tabindex",
             "type_label": "ARIA tabindex",
-            "count": 135,
+            "count": 147,
             "wcag_criteria": [
               "2.4.3"
             ],
@@ -3168,73 +3240,73 @@
               },
               {
                 "index": 32,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 32",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 33,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 33",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 34,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 34",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 35,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 35",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 36,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 36",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 37,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 37",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 38,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 38",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 39,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 39",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 40,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 40",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 41,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 41",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 42,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 42",
                 "label": "ARIA tabindex"
               },
               {
                 "index": 43,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA tabindex 43",
                 "label": "ARIA tabindex"
               },
@@ -3789,6 +3861,78 @@
                 "hidden": true,
                 "description": "ARIA tabindex 135",
                 "label": "ARIA tabindex"
+              },
+              {
+                "index": 136,
+                "hidden": true,
+                "description": "ARIA tabindex 136",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 137,
+                "hidden": true,
+                "description": "ARIA tabindex 137",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 138,
+                "hidden": true,
+                "description": "ARIA tabindex 138",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 139,
+                "hidden": true,
+                "description": "ARIA tabindex 139",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 140,
+                "hidden": true,
+                "description": "ARIA tabindex 140",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 141,
+                "hidden": true,
+                "description": "ARIA tabindex 141",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 142,
+                "hidden": true,
+                "description": "ARIA tabindex 142",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 143,
+                "hidden": true,
+                "description": "ARIA tabindex 143",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 144,
+                "hidden": true,
+                "description": "ARIA tabindex 144",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 145,
+                "hidden": true,
+                "description": "ARIA tabindex 145",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 146,
+                "hidden": true,
+                "description": "ARIA tabindex 146",
+                "label": "ARIA tabindex"
+              },
+              {
+                "index": 147,
+                "hidden": true,
+                "description": "ARIA tabindex 147",
+                "label": "ARIA tabindex"
               }
             ]
           },
@@ -3822,7 +3966,7 @@
           {
             "type_id": "aria_button",
             "type_label": "ARIA button",
-            "count": 24,
+            "count": 35,
             "wcag_criteria": [
               "4.1.2"
             ],
@@ -3976,6 +4120,72 @@
                 "hidden": false,
                 "description": "ARIA button 24",
                 "label": "ARIA button"
+              },
+              {
+                "index": 25,
+                "hidden": false,
+                "description": "ARIA button 25",
+                "label": "ARIA button"
+              },
+              {
+                "index": 26,
+                "hidden": false,
+                "description": "ARIA button 26",
+                "label": "ARIA button"
+              },
+              {
+                "index": 27,
+                "hidden": false,
+                "description": "ARIA button 27",
+                "label": "ARIA button"
+              },
+              {
+                "index": 28,
+                "hidden": false,
+                "description": "ARIA button 28",
+                "label": "ARIA button"
+              },
+              {
+                "index": 29,
+                "hidden": false,
+                "description": "ARIA button 29",
+                "label": "ARIA button"
+              },
+              {
+                "index": 30,
+                "hidden": false,
+                "description": "ARIA button 30",
+                "label": "ARIA button"
+              },
+              {
+                "index": 31,
+                "hidden": false,
+                "description": "ARIA button 31",
+                "label": "ARIA button"
+              },
+              {
+                "index": 32,
+                "hidden": false,
+                "description": "ARIA button 32",
+                "label": "ARIA button"
+              },
+              {
+                "index": 33,
+                "hidden": false,
+                "description": "ARIA button 33",
+                "label": "ARIA button"
+              },
+              {
+                "index": 34,
+                "hidden": false,
+                "description": "ARIA button 34",
+                "label": "ARIA button"
+              },
+              {
+                "index": 35,
+                "hidden": false,
+                "description": "ARIA button 35",
+                "label": "ARIA button"
               }
             ]
           },
@@ -3995,7 +4205,7 @@
             "instances": [
               {
                 "index": 1,
-                "hidden": true,
+                "hidden": false,
                 "description": "ARIA hidden 1",
                 "label": "ARIA hidden"
               },
@@ -4116,9 +4326,9 @@
       "contrast_errors": 1,
       "alerts": 16,
       "features": 107,
-      "structure": 92,
+      "structure": 91,
       "aria": 237,
-      "aim_score": 8.4,
+      "aim_score": 8.5,
       "pour_breakdown": {
         "perceivable": 3,
         "operable": 10,
@@ -5128,12 +5338,12 @@
       {
         "category": "structure",
         "category_label": "Structural Elements",
-        "total": 92,
+        "total": 91,
         "types": [
           {
             "type_id": "h1",
             "type_label": "Heading level 1",
-            "count": 2,
+            "count": 1,
             "wcag_criteria": [
               "1.3.1"
             ],
@@ -5147,12 +5357,6 @@
                 "index": 1,
                 "hidden": true,
                 "description": "Heading level 1 1",
-                "label": "Heading level 1"
-              },
-              {
-                "index": 2,
-                "hidden": true,
-                "description": "Heading level 1 2",
                 "label": "Heading level 1"
               }
             ]
@@ -7352,7 +7556,7 @@
       "contrast_errors": 10,
       "alerts": 20,
       "features": 107,
-      "structure": 91,
+      "structure": 90,
       "aria": 248,
       "aim_score": 7.8,
       "pour_breakdown": {
@@ -8384,12 +8588,12 @@
       {
         "category": "structure",
         "category_label": "Structural Elements",
-        "total": 91,
+        "total": 90,
         "types": [
           {
             "type_id": "h1",
             "type_label": "Heading level 1",
-            "count": 2,
+            "count": 1,
             "wcag_criteria": [
               "1.3.1"
             ],
@@ -8403,12 +8607,6 @@
                 "index": 1,
                 "hidden": true,
                 "description": "Heading level 1 1",
-                "label": "Heading level 1"
-              },
-              {
-                "index": 2,
-                "hidden": true,
-                "description": "Heading level 1 2",
                 "label": "Heading level 1"
               }
             ]
@@ -10668,9 +10866,9 @@
       "contrast_errors": 10,
       "alerts": 16,
       "features": 110,
-      "structure": 100,
+      "structure": 99,
       "aria": 240,
-      "aim_score": 7.8,
+      "aim_score": 7.9,
       "pour_breakdown": {
         "perceivable": 2,
         "operable": 10,
@@ -11683,12 +11881,12 @@
       {
         "category": "structure",
         "category_label": "Structural Elements",
-        "total": 100,
+        "total": 99,
         "types": [
           {
             "type_id": "h1",
             "type_label": "Heading level 1",
-            "count": 2,
+            "count": 1,
             "wcag_criteria": [
               "1.3.1"
             ],
@@ -11702,12 +11900,6 @@
                 "index": 1,
                 "hidden": false,
                 "description": "Heading level 1 1",
-                "label": "Heading level 1"
-              },
-              {
-                "index": 2,
-                "hidden": true,
-                "description": "Heading level 1 2",
                 "label": "Heading level 1"
               }
             ]
@@ -13988,9 +14180,9 @@
       "contrast_errors": 9,
       "alerts": 16,
       "features": 107,
-      "structure": 93,
+      "structure": 92,
       "aria": 236,
-      "aim_score": 7.8,
+      "aim_score": 7.9,
       "pour_breakdown": {
         "perceivable": 2,
         "operable": 11,
@@ -14985,12 +15177,12 @@
       {
         "category": "structure",
         "category_label": "Structural Elements",
-        "total": 93,
+        "total": 92,
         "types": [
           {
             "type_id": "h1",
             "type_label": "Heading level 1",
-            "count": 2,
+            "count": 1,
             "wcag_criteria": [
               "1.3.1"
             ],
@@ -15004,12 +15196,6 @@
                 "index": 1,
                 "hidden": true,
                 "description": "Heading level 1 1",
-                "label": "Heading level 1"
-              },
-              {
-                "index": 2,
-                "hidden": true,
-                "description": "Heading level 1 2",
                 "label": "Heading level 1"
               }
             ]

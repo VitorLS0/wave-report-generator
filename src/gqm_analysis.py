@@ -36,11 +36,11 @@ FIG_DIR     = OUTPUT_DIR / "gqm"
 # Mantidos como dicionário explícito para evitar derivação frágil do filename.
 
 FLOW_NAMES = {
-    "ConsultarCPF":                  "Consultar CPF",
-    "ConsultaMonitoramentoServicos": "Monitoramento Serviços",
-    "BuscaUnidadesAtendimento":      "Unidades RF",
-    "ConsultaCenso":                 "Censo 2022",
-    "ConsultaMapaDeEMpresas":        "Mapa de Empresas",
+    "ConsultarCPF":                  "T1: Consulta CPF",
+    "ConsultaMonitoramentoServicos": "T2: Painel de Monitoramento",
+    "BuscaUnidadesAtendimento":      "T3: Receita Federal",
+    "ConsultaCenso":                 "T4: IBGE Censo",
+    "ConsultaMapaDeEMpresas":        "T5: Mapa de Empresas",
 }
 PAGE_NAMES = {
     "1-InicioConsultarCadastroCPF.html":   "Início CPF",
@@ -57,8 +57,7 @@ PAGE_NAMES = {
     "4-UnidadesBeloHorizonte.html":        "Unidades BH",
     "5-UnidadesDeAtendimento.html":        "Buscador de Unidades",
     "1-Ibge.html":                         "Portal IBGE",
-    "2-Censo2022.html":                    "Censo 2022",
-    "3-ResultadosCenso2022.html":          "Panorama Censo 2022",
+    "2-ResultadosCenso2022.html":          "Panorama Censo 2022",
     "1-MapaDeEmpresas.html":               "Mapa de Empresas",
 }
 
@@ -102,11 +101,11 @@ SECTION_COLORS = {
 }
 
 FLOW_COLORS = {
-    "Consultar CPF":           "#60a5fa",
-    "Monitoramento Serviços":  "#7c3aed",
-    "Unidades RF":             "#db2777",
-    "Censo 2022":              "#ea580c",
-    "Mapa de Empresas":        "#16a34a",
+    "T1: Consulta CPF":            "#ff7f0e",
+    "T2: Painel de Monitoramento": "#2ca02c",
+    "T3: Receita Federal":         "#d62728",
+    "T4: IBGE Censo":              "#9467bd",
+    "T5: Mapa de Empresas":        "#8c564b",
 }
 
 # Layout base: legenda sempre embaixo (fora do título), margens generosas.

@@ -1,18 +1,17 @@
 flow,flow_label,source_file,page,ases_title,aim_score,ases_score,wave_errors,wave_contrast_errors,wave_alerts,wave_total_negatives,ases_errors,ases_warnings,ases_total_negatives,pour_perceivable,pour_operable,pour_understandable,pour_robust
-BuscaUnidadesAtendimento,Unidades RF,1-ReceitaFederal.html,Home Receita,Receita Federal — Receita Federal,6.1,95.47,17,8,37,62,431,1940,2371,0,32,0,4
-BuscaUnidadesAtendimento,Unidades RF,2-AtendimentoPresencial.html,Atendimento Presencial,Atendimento presencial — Receita Federal,8.4,96.15,5,0,20,25,176,1624,1800,7,8,0,4
-BuscaUnidadesAtendimento,Unidades RF,3-UnidadesMinasGerais.html,Unidades MG,Minas Gerais — Receita Federal,8.5,96.02,5,0,12,17,176,1606,1782,0,8,0,4
-BuscaUnidadesAtendimento,Unidades RF,4-UnidadesBeloHorizonte.html,Unidades BH,Belo Horizonte — Receita Federal,8.5,95.99,5,0,13,18,176,1613,1789,1,8,0,4
-BuscaUnidadesAtendimento,Unidades RF,5-UnidadesDeAtendimento.html,Buscador de Unidades,Unidades de Atendimento ao Contribuinte,8.5,82.33,5,0,12,17,18,55,73,0,8,0,4
-ConsultaCenso,Censo 2022,1-Ibge.html,Portal IBGE,Portal do IBGE,5.5,82.19,7,18,34,59,75,324,399,8,2,2,1
-ConsultaCenso,Censo 2022,2-Censo2022.html,Censo 2022,Censo Demográfico 2022,4.5,92.3,5,23,15,43,15,119,134,7,7,0,1
-ConsultaCenso,Censo 2022,3-ResultadosCenso2022.html,Panorama Censo 2022,Panorama do Censo 2022,4.5,90.59,5,23,15,43,24,1523,1547,7,7,0,1
-ConsultaMapaDeEMpresas,Mapa de Empresas,1-MapaDeEmpresas.html,Mapa de Empresas,Painéis do Mapa de Empresas — Empresas & Negócios,8.5,95.95,7,0,12,19,249,1607,1856,2,7,1,4
-ConsultaMonitoramentoServicos,Monitoramento Serviços,1-GovernoDigital.html,Home Gov Digital,Home — Governo Digital,7.7,95.5,11,0,31,42,306,1818,2124,11,16,2,4
-ConsultaMonitoramentoServicos,Monitoramento Serviços,2-EstrategiasEGovernanca.html,Estratégias Gov.,Estratégias e Governança Digital — Governo Digital,8.4,96.12,5,1,16,22,183,1587,1770,3,10,2,4
-ConsultaMonitoramentoServicos,Monitoramento Serviços,3-TransformacaoDigital.html,Transformação Digital,Transformação Digital — Governo Digital,7.8,96.13,5,10,20,35,179,1631,1810,2,10,2,4
-ConsultaMonitoramentoServicos,Monitoramento Serviços,4-CentralDeQualidade.html,Central de Qualidade,Central de Qualidade — Governo Digital,7.8,96.39,5,10,16,31,182,1620,1802,2,10,2,4
-ConsultaMonitoramentoServicos,Monitoramento Serviços,5-PainelDeMonitoramento.html,Painel Monitoramento,Painel de monitoramento de serviços federais — Governo Digital,7.8,96.15,5,9,16,30,166,1672,1838,2,11,3,4
-ConsultarCPF,Consultar CPF,1-InicioConsultarCadastroCPF.html,Início CPF,Consultar Cadastro de Pessoa Física (CPF) na Receita Federal,8.4,95.96,6,0,18,24,113,1641,1754,9,7,0,4
-ConsultarCPF,Consultar CPF,2-FormularioConsultaCPF.html,Formulário CPF,Comprovante de Situação Cadastral no CPF: Formulário,8.2,84.94,1,1,2,4,10,65,75,2,1,1,0
-ConsultarCPF,Consultar CPF,3-comprovanteSituacaoCPF.html,Comprovante CPF,Comprovante de Situação Cadastral no CPF: Resultado,10.0,89.53,0,0,2,2,11,56,67,2,1,0,0
+BuscaUnidadesAtendimento,T3: Receita Federal,1-ReceitaFederal.html,Home Receita,Receita Federal — Receita Federal,7.0,95.47,17,8,40,65,431,1940,2371,2,32,0,4
+BuscaUnidadesAtendimento,T3: Receita Federal,2-AtendimentoPresencial.html,Atendimento Presencial,Atendimento presencial — Receita Federal,8.4,96.15,5,0,20,25,176,1624,1800,7,8,0,4
+BuscaUnidadesAtendimento,T3: Receita Federal,3-UnidadesMinasGerais.html,Unidades MG,Minas Gerais — Receita Federal,9.0,96.02,5,0,20,25,176,1606,1782,7,8,0,4
+BuscaUnidadesAtendimento,T3: Receita Federal,4-UnidadesBeloHorizonte.html,Unidades BH,Belo Horizonte — Receita Federal,9.1,95.99,5,0,13,18,176,1613,1789,1,8,0,4
+BuscaUnidadesAtendimento,T3: Receita Federal,5-UnidadesDeAtendimento.html,Buscador de Unidades,Unidades de Atendimento ao Contribuinte,5.6,82.33,6,11,28,45,18,55,73,3,9,1,0
+ConsultaCenso,T4: IBGE Censo,1-Ibge.html,Portal IBGE,Portal do IBGE,6.2,82.19,7,18,33,58,75,324,399,8,2,2,1
+ConsultaCenso,T4: IBGE Censo,2-ResultadosCenso2022.html,Panorama Censo 2022,Panorama do Censo 2022,3.9,90.59,38,60,85,183,24,1523,1547,14,5,0,1
+ConsultaMapaDeEMpresas,T5: Mapa de Empresas,1-MapaDeEmpresas.html,Mapa de Empresas,Painéis do Mapa de Empresas — Empresas & Negócios,8.6,95.95,8,0,12,20,249,1607,1856,2,7,1,4
+ConsultaMonitoramentoServicos,T2: Painel de Monitoramento,1-GovernoDigital.html,Home Gov Digital,Home — Governo Digital,7.7,95.5,11,0,33,44,306,1818,2124,12,16,2,4
+ConsultaMonitoramentoServicos,T2: Painel de Monitoramento,2-EstrategiasEGovernanca.html,Estratégias Gov.,Estratégias e Governança Digital — Governo Digital,8.5,96.12,5,1,16,22,183,1587,1770,3,10,2,4
+ConsultaMonitoramentoServicos,T2: Painel de Monitoramento,3-TransformacaoDigital.html,Transformação Digital,Transformação Digital — Governo Digital,7.8,96.13,5,10,20,35,179,1631,1810,2,10,2,4
+ConsultaMonitoramentoServicos,T2: Painel de Monitoramento,4-CentralDeQualidade.html,Central de Qualidade,Central de Qualidade — Governo Digital,7.9,96.39,5,10,16,31,182,1620,1802,2,10,2,4
+ConsultaMonitoramentoServicos,T2: Painel de Monitoramento,5-PainelDeMonitoramento.html,Painel Monitoramento,Painel de monitoramento de serviços federais — Governo Digital,7.9,96.15,5,9,16,30,166,1672,1838,2,11,3,4
+ConsultarCPF,T1: Consulta CPF,1-InicioConsultarCadastroCPF.html,Início CPF,Consultar Cadastro de Pessoa Física (CPF) na Receita Federal,8.5,95.96,6,0,18,24,113,1641,1754,9,7,0,4
+ConsultarCPF,T1: Consulta CPF,2-FormularioConsultaCPF.html,Formulário CPF,Comprovante de Situação Cadastral no CPF: Formulário,5.4,84.94,5,11,22,38,10,65,75,2,7,1,0
+ConsultarCPF,T1: Consulta CPF,3-comprovanteSituacaoCPF.html,Comprovante CPF,Comprovante de Situação Cadastral no CPF: Resultado,6.0,89.53,4,9,23,36,11,56,67,1,7,0,0

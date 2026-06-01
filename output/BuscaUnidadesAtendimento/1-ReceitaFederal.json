@@ -3,13 +3,13 @@
   "summary": {
     "errors": 17,
     "contrast_errors": 8,
-    "alerts": 37,
-    "features": 134,
-    "structure": 124,
+    "alerts": 40,
+    "features": 132,
+    "structure": 125,
     "aria": 286,
-    "aim_score": 6.1,
+    "aim_score": 7,
     "pour_breakdown": {
-      "perceivable": 0,
+      "perceivable": 2,
       "operable": 32,
       "understandable": 0,
       "robust": 4
@@ -17,7 +17,7 @@
     "sr_relevance_breakdown": {
       "critical": 2,
       "high": 0,
-      "medium": 34,
+      "medium": 36,
       "low": 0
     }
   },
@@ -177,7 +177,7 @@
     {
       "category": "alert",
       "category_label": "Alerts",
-      "total": 37,
+      "total": 40,
       "types": [
         {
           "type_id": "alt_duplicate",
@@ -193,6 +193,33 @@
               "hidden": false,
               "description": "A nearby image has the same alternative text 1",
               "label": "A nearby image has the same alternative text"
+            }
+          ]
+        },
+        {
+          "type_id": "alt_long",
+          "type_label": "Long alternative text",
+          "count": 2,
+          "wcag_criteria": [
+            "1.1.1"
+          ],
+          "wcag_level": "A",
+          "pour_dimensions": [
+            "Perceivable"
+          ],
+          "sr_relevance": "medium",
+          "instances": [
+            {
+              "index": 1,
+              "hidden": false,
+              "description": "Long alternative text 1",
+              "label": "Long alternative text"
+            },
+            {
+              "index": 2,
+              "hidden": false,
+              "description": "Long alternative text 2",
+              "label": "Long alternative text"
             }
           ]
         },
@@ -448,7 +475,7 @@
         {
           "type_id": "text_small",
           "type_label": "Very small text",
-          "count": 1,
+          "count": 2,
           "wcag_criteria": null,
           "wcag_level": null,
           "pour_dimensions": null,
@@ -458,6 +485,12 @@
               "index": 1,
               "hidden": true,
               "description": "Very small text 1",
+              "label": "Very small text"
+            },
+            {
+              "index": 2,
+              "hidden": true,
+              "description": "Very small text 2",
               "label": "Very small text"
             }
           ]
@@ -484,12 +517,12 @@
     {
       "category": "feature",
       "category_label": "Features",
-      "total": 134,
+      "total": 132,
       "types": [
         {
           "type_id": "alt",
           "type_label": "Alternative text",
-          "count": 11,
+          "count": 9,
           "wcag_criteria": [
             "1.1.1"
           ],
@@ -549,20 +582,8 @@
             },
             {
               "index": 9,
-              "hidden": false,
-              "description": "Alternative text 9",
-              "label": "Alternative text"
-            },
-            {
-              "index": 10,
-              "hidden": false,
-              "description": "Alternative text 10",
-              "label": "Alternative text"
-            },
-            {
-              "index": 11,
               "hidden": true,
-              "description": "Alternative text 11",
+              "description": "Alternative text 9",
               "label": "Alternative text"
             }
           ]
@@ -1368,12 +1389,12 @@
     {
       "category": "structure",
       "category_label": "Structural Elements",
-      "total": 124,
+      "total": 125,
       "types": [
         {
           "type_id": "h1",
           "type_label": "Heading level 1",
-          "count": 2,
+          "count": 1,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -1387,12 +1408,6 @@
               "index": 1,
               "hidden": false,
               "description": "Heading level 1 1",
-              "label": "Heading level 1"
-            },
-            {
-              "index": 2,
-              "hidden": true,
-              "description": "Heading level 1 2",
               "label": "Heading level 1"
             }
           ]
@@ -1550,7 +1565,7 @@
         {
           "type_id": "ul",
           "type_label": "Unordered list",
-          "count": 91,
+          "count": 93,
           "wcag_criteria": [
             "1.3.1"
           ],
@@ -1868,7 +1883,7 @@
             },
             {
               "index": 52,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 52",
               "label": "Unordered list"
             },
@@ -1880,7 +1895,7 @@
             },
             {
               "index": 54,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 54",
               "label": "Unordered list"
             },
@@ -1952,13 +1967,13 @@
             },
             {
               "index": 66,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 66",
               "label": "Unordered list"
             },
             {
               "index": 67,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 67",
               "label": "Unordered list"
             },
@@ -1976,13 +1991,13 @@
             },
             {
               "index": 70,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 70",
               "label": "Unordered list"
             },
             {
               "index": 71,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 71",
               "label": "Unordered list"
             },
@@ -2036,7 +2051,7 @@
             },
             {
               "index": 80,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 80",
               "label": "Unordered list"
             },
@@ -2054,7 +2069,7 @@
             },
             {
               "index": 83,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 83",
               "label": "Unordered list"
             },
@@ -2084,26 +2099,38 @@
             },
             {
               "index": 88,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 88",
               "label": "Unordered list"
             },
             {
               "index": 89,
-              "hidden": false,
+              "hidden": true,
               "description": "Unordered list 89",
               "label": "Unordered list"
             },
             {
               "index": 90,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 90",
               "label": "Unordered list"
             },
             {
               "index": 91,
-              "hidden": true,
+              "hidden": false,
               "description": "Unordered list 91",
+              "label": "Unordered list"
+            },
+            {
+              "index": 92,
+              "hidden": true,
+              "description": "Unordered list 92",
+              "label": "Unordered list"
+            },
+            {
+              "index": 93,
+              "hidden": true,
+              "description": "Unordered list 93",
               "label": "Unordered list"
             }
           ]
@@ -2357,7 +2384,7 @@
             },
             {
               "index": 4,
-              "hidden": true,
+              "hidden": false,
               "description": "ARIA label 4",
               "label": "ARIA label"
             },
@@ -4009,7 +4036,7 @@
           "instances": [
             {
               "index": 1,
-              "hidden": true,
+              "hidden": false,
               "description": "ARIA hidden 1",
               "label": "ARIA hidden"
             },

@@ -3,7 +3,14 @@
     "source": "ASES — Avaliador e Simulador de Acessibilidade de Sítios (governoeletronico.gov.br)",
     "guideline": "eMAG (interpretação dos critérios WCAG)",
     "score_scale": "0–100 (%) — quanto maior, melhor",
-    "section_keys": ["marcacao", "comportamento", "conteudo", "apresentacao", "multimidia", "formularios"],
+    "section_keys": [
+      "marcacao",
+      "comportamento",
+      "conteudo",
+      "apresentacao",
+      "multimidia",
+      "formularios"
+    ],
     "section_labels": {
       "marcacao": "Marcação",
       "comportamento": "Comportamento",
@@ -20,7 +27,6 @@
       "ConsultaMapaDeEMpresas": "TAREFA 5 — Painel do Mapa de Empresas"
     }
   },
-
   "flows": {
     "ConsultarCPF": [
       {
@@ -29,12 +35,30 @@
         "title": "Consultar Cadastro de Pessoa Física (CPF) na Receita Federal",
         "score": 95.96,
         "sections": {
-          "marcacao":      { "errors": 107, "warnings": 1497 },
-          "comportamento": { "errors":   0, "warnings":   19 },
-          "conteudo":      { "errors":   5, "warnings":   15 },
-          "apresentacao":  { "errors":   0, "warnings":    0 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  110 }
+          "marcacao": {
+            "errors": 107,
+            "warnings": 1497
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 19
+          },
+          "conteudo": {
+            "errors": 5,
+            "warnings": 15
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 110
+          }
         }
       },
       {
@@ -43,12 +67,30 @@
         "title": "Comprovante de Situação Cadastral no CPF: Formulário",
         "score": 84.94,
         "sections": {
-          "marcacao":      { "errors": 5, "warnings": 52 },
-          "comportamento": { "errors": 1, "warnings":  3 },
-          "conteudo":      { "errors": 3, "warnings":  2 },
-          "apresentacao":  { "errors": 0, "warnings":  0 },
-          "multimidia":    { "errors": 0, "warnings":  0 },
-          "formularios":   { "errors": 1, "warnings":  8 }
+          "marcacao": {
+            "errors": 5,
+            "warnings": 52
+          },
+          "comportamento": {
+            "errors": 1,
+            "warnings": 3
+          },
+          "conteudo": {
+            "errors": 3,
+            "warnings": 2
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 8
+          }
         }
       },
       {
@@ -57,16 +99,33 @@
         "title": "Comprovante de Situação Cadastral no CPF: Resultado",
         "score": 89.53,
         "sections": {
-          "marcacao":      { "errors": 7, "warnings": 45 },
-          "comportamento": { "errors": 1, "warnings":  6 },
-          "conteudo":      { "errors": 3, "warnings":  4 },
-          "apresentacao":  { "errors": 0, "warnings":  0 },
-          "multimidia":    { "errors": 0, "warnings":  0 },
-          "formularios":   { "errors": 0, "warnings":  1 }
+          "marcacao": {
+            "errors": 7,
+            "warnings": 45
+          },
+          "comportamento": {
+            "errors": 1,
+            "warnings": 6
+          },
+          "conteudo": {
+            "errors": 3,
+            "warnings": 4
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 0,
+            "warnings": 1
+          }
         }
       }
     ],
-
     "ConsultaMonitoramentoServicos": [
       {
         "source_file": "1-GovernoDigital.html",
@@ -74,12 +133,30 @@
         "title": "Home — Governo Digital",
         "score": 95.5,
         "sections": {
-          "marcacao":      { "errors": 142, "warnings": 1637 },
-          "comportamento": { "errors":   0, "warnings":   16 },
-          "conteudo":      { "errors": 163, "warnings":   61 },
-          "apresentacao":  { "errors":   0, "warnings":    0 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  104 }
+          "marcacao": {
+            "errors": 142,
+            "warnings": 1637
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 16
+          },
+          "conteudo": {
+            "errors": 163,
+            "warnings": 61
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 104
+          }
         }
       },
       {
@@ -88,12 +165,30 @@
         "title": "Estratégias e Governança Digital — Governo Digital",
         "score": 96.12,
         "sections": {
-          "marcacao":      { "errors": 106, "warnings": 1437 },
-          "comportamento": { "errors":   0, "warnings":   13 },
-          "conteudo":      { "errors":  76, "warnings":   33 },
-          "apresentacao":  { "errors":   0, "warnings":    0 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  104 }
+          "marcacao": {
+            "errors": 106,
+            "warnings": 1437
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 13
+          },
+          "conteudo": {
+            "errors": 76,
+            "warnings": 33
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 104
+          }
         }
       },
       {
@@ -102,12 +197,30 @@
         "title": "Transformação Digital — Governo Digital",
         "score": 96.13,
         "sections": {
-          "marcacao":      { "errors": 106, "warnings": 1471 },
-          "comportamento": { "errors":   0, "warnings":   13 },
-          "conteudo":      { "errors":  72, "warnings":   43 },
-          "apresentacao":  { "errors":   0, "warnings":    0 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  104 }
+          "marcacao": {
+            "errors": 106,
+            "warnings": 1471
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 13
+          },
+          "conteudo": {
+            "errors": 72,
+            "warnings": 43
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 104
+          }
         }
       },
       {
@@ -116,12 +229,30 @@
         "title": "Central de Qualidade — Governo Digital",
         "score": 96.39,
         "sections": {
-          "marcacao":      { "errors": 106, "warnings": 1477 },
-          "comportamento": { "errors":   0, "warnings":   14 },
-          "conteudo":      { "errors":  75, "warnings":   25 },
-          "apresentacao":  { "errors":   0, "warnings":    0 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  104 }
+          "marcacao": {
+            "errors": 106,
+            "warnings": 1477
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 14
+          },
+          "conteudo": {
+            "errors": 75,
+            "warnings": 25
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 104
+          }
         }
       },
       {
@@ -130,16 +261,33 @@
         "title": "Painel de monitoramento de serviços federais — Governo Digital",
         "score": 96.15,
         "sections": {
-          "marcacao":      { "errors": 106, "warnings": 1450 },
-          "comportamento": { "errors":   0, "warnings":   13 },
-          "conteudo":      { "errors":  59, "warnings":  105 },
-          "apresentacao":  { "errors":   0, "warnings":    0 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  104 }
+          "marcacao": {
+            "errors": 106,
+            "warnings": 1450
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 13
+          },
+          "conteudo": {
+            "errors": 59,
+            "warnings": 105
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 104
+          }
         }
       }
     ],
-
     "BuscaUnidadesAtendimento": [
       {
         "source_file": "1-ReceitaFederal.html",
@@ -147,12 +295,30 @@
         "title": "Receita Federal — Receita Federal",
         "score": 95.47,
         "sections": {
-          "marcacao":      { "errors": 178, "warnings": 1694 },
-          "comportamento": { "errors":   0, "warnings":   16 },
-          "conteudo":      { "errors": 252, "warnings":  120 },
-          "apresentacao":  { "errors":   0, "warnings":    5 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  105 }
+          "marcacao": {
+            "errors": 178,
+            "warnings": 1694
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 16
+          },
+          "conteudo": {
+            "errors": 252,
+            "warnings": 120
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 5
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 105
+          }
         }
       },
       {
@@ -161,12 +327,30 @@
         "title": "Atendimento presencial — Receita Federal",
         "score": 96.15,
         "sections": {
-          "marcacao":      { "errors": 106, "warnings": 1478 },
-          "comportamento": { "errors":   0, "warnings":   14 },
-          "conteudo":      { "errors":  69, "warnings":   22 },
-          "apresentacao":  { "errors":   0, "warnings":    5 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  105 }
+          "marcacao": {
+            "errors": 106,
+            "warnings": 1478
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 14
+          },
+          "conteudo": {
+            "errors": 69,
+            "warnings": 22
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 5
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 105
+          }
         }
       },
       {
@@ -175,12 +359,30 @@
         "title": "Minas Gerais — Receita Federal",
         "score": 96.02,
         "sections": {
-          "marcacao":      { "errors": 106, "warnings": 1461 },
-          "comportamento": { "errors":   0, "warnings":   14 },
-          "conteudo":      { "errors":  69, "warnings":   21 },
-          "apresentacao":  { "errors":   0, "warnings":    5 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  105 }
+          "marcacao": {
+            "errors": 106,
+            "warnings": 1461
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 14
+          },
+          "conteudo": {
+            "errors": 69,
+            "warnings": 21
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 5
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 105
+          }
         }
       },
       {
@@ -189,12 +391,30 @@
         "title": "Belo Horizonte — Receita Federal",
         "score": 95.99,
         "sections": {
-          "marcacao":      { "errors": 106, "warnings": 1469 },
-          "comportamento": { "errors":   0, "warnings":   12 },
-          "conteudo":      { "errors":  69, "warnings":   22 },
-          "apresentacao":  { "errors":   0, "warnings":    5 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  105 }
+          "marcacao": {
+            "errors": 106,
+            "warnings": 1469
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 12
+          },
+          "conteudo": {
+            "errors": 69,
+            "warnings": 22
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 5
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 105
+          }
         }
       },
       {
@@ -203,16 +423,33 @@
         "title": "Unidades de Atendimento ao Contribuinte",
         "score": 82.33,
         "sections": {
-          "marcacao":      { "errors": 10, "warnings": 45 },
-          "comportamento": { "errors":  2, "warnings":  1 },
-          "conteudo":      { "errors":  6, "warnings":  8 },
-          "apresentacao":  { "errors":  0, "warnings":  0 },
-          "multimidia":    { "errors":  0, "warnings":  0 },
-          "formularios":   { "errors":  0, "warnings":  1 }
+          "marcacao": {
+            "errors": 10,
+            "warnings": 45
+          },
+          "comportamento": {
+            "errors": 2,
+            "warnings": 1
+          },
+          "conteudo": {
+            "errors": 6,
+            "warnings": 8
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 0,
+            "warnings": 1
+          }
         }
       }
     ],
-
     "ConsultaCenso": [
       {
         "source_file": "1-Ibge.html",
@@ -220,44 +457,65 @@
         "title": "Portal do IBGE",
         "score": 82.19,
         "sections": {
-          "marcacao":      { "errors": 34, "warnings": 285 },
-          "comportamento": { "errors":  1, "warnings":   7 },
-          "conteudo":      { "errors": 38, "warnings":  21 },
-          "apresentacao":  { "errors":  1, "warnings":   4 },
-          "multimidia":    { "errors":  0, "warnings":   0 },
-          "formularios":   { "errors":  1, "warnings":   7 }
+          "marcacao": {
+            "errors": 34,
+            "warnings": 285
+          },
+          "comportamento": {
+            "errors": 1,
+            "warnings": 7
+          },
+          "conteudo": {
+            "errors": 38,
+            "warnings": 21
+          },
+          "apresentacao": {
+            "errors": 1,
+            "warnings": 4
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 7
+          }
         }
       },
       {
-        "source_file": "2-Censo2022.html",
-        "ases_url": "https://asesweb.governoeletronico.gov.br/exibir-resultado/5b06bc1d32f7403b",
-        "title": "Censo Demográfico 2022",
-        "score": 92.3,
-        "sections": {
-          "marcacao":      { "errors":  2, "warnings": 107 },
-          "comportamento": { "errors":  1, "warnings":   5 },
-          "conteudo":      { "errors": 12, "warnings":   7 },
-          "apresentacao":  { "errors":  0, "warnings":   0 },
-          "multimidia":    { "errors":  0, "warnings":   0 },
-          "formularios":   { "errors":  0, "warnings":   0 }
-        }
-      },
-      {
-        "source_file": "3-ResultadosCenso2022.html",
+        "source_file": "2-ResultadosCenso2022.html",
         "ases_url": "https://asesweb.governoeletronico.gov.br/exibir-resultado/68d931e324b44bb9",
         "title": "Panorama do Censo 2022",
         "score": 90.59,
         "sections": {
-          "marcacao":      { "errors":  6, "warnings": 1517 },
-          "comportamento": { "errors":  1, "warnings":    2 },
-          "conteudo":      { "errors": 17, "warnings":    4 },
-          "apresentacao":  { "errors":  0, "warnings":    0 },
-          "multimidia":    { "errors":  0, "warnings":    0 },
-          "formularios":   { "errors":  0, "warnings":    0 }
+          "marcacao": {
+            "errors": 6,
+            "warnings": 1517
+          },
+          "comportamento": {
+            "errors": 1,
+            "warnings": 2
+          },
+          "conteudo": {
+            "errors": 17,
+            "warnings": 4
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 0,
+            "warnings": 0
+          }
         }
       }
     ],
-
     "ConsultaMapaDeEMpresas": [
       {
         "source_file": "1-MapaDeEmpresas.html",
@@ -265,12 +523,30 @@
         "title": "Painéis do Mapa de Empresas — Empresas & Negócios",
         "score": 95.95,
         "sections": {
-          "marcacao":      { "errors": 113, "warnings": 1463 },
-          "comportamento": { "errors":   0, "warnings":   13 },
-          "conteudo":      { "errors": 135, "warnings":   27 },
-          "apresentacao":  { "errors":   0, "warnings":    0 },
-          "multimidia":    { "errors":   0, "warnings":    0 },
-          "formularios":   { "errors":   1, "warnings":  104 }
+          "marcacao": {
+            "errors": 113,
+            "warnings": 1463
+          },
+          "comportamento": {
+            "errors": 0,
+            "warnings": 13
+          },
+          "conteudo": {
+            "errors": 135,
+            "warnings": 27
+          },
+          "apresentacao": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "multimidia": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "formularios": {
+            "errors": 1,
+            "warnings": 104
+          }
         }
       }
     ]
