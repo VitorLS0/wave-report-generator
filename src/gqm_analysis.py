@@ -140,6 +140,11 @@ def flow_label(flow_key: str) -> str:
     return FLOW_NAMES.get(flow_key, re.sub(r"([A-Z])", r" \1", flow_key).strip())
 
 
+def flow_code(label: str) -> str:
+    """Extrai apenas o prefixo 'Tx' de rótulos como 'T1: Consulta CPF'."""
+    return label.split(":", 1)[0].strip()
+
+
 # ─── Carregar WAVE + ASES e parear por (flow, source_file) ────────────────────
 
 def load_paired() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, dict]:
@@ -363,16 +368,20 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
     aim_sorted  = df.sort_values("aim_score",  ascending=True).copy()   # menor embaixo, maior topo
     ases_sorted = df.sort_values("ases_score", ascending=True).copy()
 
-    aim_labels  = (aim_sorted ["flow_label"] + " — " + aim_sorted ["page"]).tolist()
-    ases_labels = (ases_sorted["flow_label"] + " — " + ases_sorted["page"]).tolist()
+    aim_labels  = (aim_sorted ["flow_label"].map(flow_code) + " — " + aim_sorted ["page"]).tolist()
+    ases_labels = (ases_sorted["flow_label"].map(flow_code) + " — " + ases_sorted["page"]).tolist()
 
     fig = make_subplots(rows=1, cols=2, shared_yaxes=False,
                         horizontal_spacing=0.04,
                         subplot_titles=("AIM (WAVE) — 0–10  •  ranking próprio",
                                         "ASES — 0–100 (%)  •  ranking próprio"))
 
-    # Uma trace por fluxo em cada subplot. Legenda só na coluna esquerda.
-    for flow_lbl in df["flow_label"].unique():
+    # Uma trace por fluxo em cada subplot, na ordem T1→T5 (de FLOW_NAMES).
+    # Legenda só na coluna esquerda.
+    present = set(df["flow_label"].unique())
+    flow_order = [lbl for lbl in FLOW_NAMES.values() if lbl in present]
+
+    for flow_lbl in flow_order:
         color = FLOW_COLORS.get(flow_lbl, "#64748b")
 
         sa = aim_sorted[aim_sorted["flow_label"] == flow_lbl]
@@ -380,11 +389,11 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
 
         fig.add_trace(go.Bar(
             x=sa["aim_score"],
-            y=(sa["flow_label"] + " — " + sa["page"]).tolist(),
+            y=(sa["flow_label"].map(flow_code) + " — " + sa["page"]).tolist(),
             orientation="h",
             marker_color=color,
             text=sa["aim_score"].round(2), textposition="outside",
-            textfont=dict(size=15, color="#0f172a", family="system-ui, sans-serif"),
+            textfont=dict(size=18, color="#0f172a", family="system-ui, sans-serif"),
             cliponaxis=False,
             hovertemplate="<b>%{y}</b><br>AIM: %{x:.2f}<extra></extra>",
             name=flow_lbl, legendgroup=flow_lbl, showlegend=True,
@@ -392,11 +401,11 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
 
         fig.add_trace(go.Bar(
             x=sb["ases_score"],
-            y=(sb["flow_label"] + " — " + sb["page"]).tolist(),
+            y=(sb["flow_label"].map(flow_code) + " — " + sb["page"]).tolist(),
             orientation="h",
             marker_color=color,
             text=sb["ases_score"].round(2).astype(str) + "%", textposition="outside",
-            textfont=dict(size=15, color="#0f172a", family="system-ui, sans-serif"),
+            textfont=dict(size=18, color="#0f172a", family="system-ui, sans-serif"),
             cliponaxis=False,
             hovertemplate="<b>%{y}</b><br>ASES: %{x:.2f}%<extra></extra>",
             name=flow_lbl, legendgroup=flow_lbl, showlegend=False,
@@ -405,8 +414,8 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
     # Cada lado tem sua ordem (ascendente → melhor fica no topo).
     # Labels do AIM ficam à esquerda; labels do ASES vão à direita para não
     # colidirem com as barras do AIM.
-    tick_font = dict(size=14, color="#1e293b", family="system-ui, sans-serif")
-    axis_tick_font = dict(size=13, color="#475569", family="system-ui, sans-serif")
+    tick_font = dict(size=17, color="#1e293b", family="system-ui, sans-serif")
+    axis_tick_font = dict(size=16, color="#475569", family="system-ui, sans-serif")
     fig.update_yaxes(categoryorder="array", categoryarray=aim_labels,
                      tickfont=tick_font, row=1, col=1)
     fig.update_yaxes(categoryorder="array", categoryarray=ases_labels,
@@ -416,21 +425,22 @@ def chart_rankings_side_by_side(df: pd.DataFrame) -> go.Figure:
 
     # Subtítulos dos subplots (anotações criadas por make_subplots) também maiores.
     for ann in fig["layout"]["annotations"]:
-        ann["font"] = dict(size=15, color="#0f172a", family="system-ui, sans-serif")
+        ann["font"] = dict(size=18, color="#0f172a", family="system-ui, sans-serif")
 
     fig.update_layout(
         paper_bgcolor="white", plot_bgcolor="#f8fafc",
-        font=dict(family="system-ui, sans-serif", size=14, color="#1e293b"),
+        font=dict(family="system-ui, sans-serif", size=17, color="#1e293b"),
         title=dict(text="Ranking teórico — cada ferramenta ordenada pelo seu próprio ranking (melhor no topo)",
                    x=0.02, xanchor="left", y=0.97,
-                   font=dict(size=18, color="#0f172a")),
+                   font=dict(size=22, color="#0f172a")),
         margin=dict(l=260, r=260, t=96, b=100),
         legend=dict(orientation="h", yanchor="top", y=-0.05,
                     xanchor="center", x=0.5,
                     bgcolor="rgba(255,255,255,0.85)",
-                    font=dict(size=13, color="#1e293b")),
+                    traceorder="normal",
+                    font=dict(size=17, color="#1e293b")),
         height=max(520, 46 * len(df)),
-        uniformtext=dict(minsize=13, mode="show"),
+        uniformtext=dict(minsize=15, mode="show"),
     )
     return fig
 
@@ -517,7 +527,7 @@ def chart_pour_aggregate(df: pd.DataFrame) -> go.Figure:
 
 def chart_pour_per_page(df: pd.DataFrame) -> go.Figure:
     d = df.copy()
-    labels = d["flow_label"] + " — " + d["page"]
+    labels = d["flow_label"].map(flow_code) + " — " + d["page"]
     fig = go.Figure()
     for dim, pt in POUR_PT.items():
         fig.add_trace(go.Bar(
@@ -535,7 +545,7 @@ def chart_pour_per_page(df: pd.DataFrame) -> go.Figure:
 
 def chart_ases_sections_per_page(sections: pd.DataFrame) -> go.Figure:
     d = sections.copy()
-    d["page_full"] = d["flow_label"] + " — " + d["page"]
+    d["page_full"] = d["flow_label"].map(flow_code) + " — " + d["page"]
     d["total"] = d["errors"] + d["warnings"]
     pivot = d.pivot_table(index="page_full", columns="section_label",
                           values="total", aggfunc="sum", fill_value=0)
